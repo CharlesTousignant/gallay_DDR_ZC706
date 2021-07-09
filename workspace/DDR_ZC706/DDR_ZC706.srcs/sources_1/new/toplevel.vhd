@@ -41,7 +41,6 @@ entity toplevel is
         -- System inputs
         sys_clk_p : IN std_logic;
         sys_clk_n : IN std_logic;
-        sys_rst : IN std_logic;
         
         -- Memory IOs
             -- INOUTs
@@ -63,7 +62,13 @@ entity toplevel is
         
         ddr3_cs_n : out   std_logic_vector(0 downto 0);
         ddr3_dm : out   std_logic_vector(7 downto 0);
-        ddr3_odt : out   std_logic_vector(0 downto 0)
+        ddr3_odt : out   std_logic_vector(0 downto 0);
+        
+            -- LED
+        led : out std_logic;
+        
+            -- Push button
+        GPIO_SW_LEFT : in std_logic
      );
 end toplevel;
 
@@ -93,23 +98,6 @@ signal ui_clk : std_logic;
 signal ui_clk_sync_rst : std_logic;
 signal init_calib_complete : std_logic;
 
--- Debug signals
-signal ddr3_ila_wrpath : std_logic_vector(390 downto 0);
-signal ddr3_ila_rdpath : std_logic_vector(1023 downto 0);
-signal ddr3_ila_basic : std_logic_vector(119 downto 0);
-signal ddr3_vio_sync_out : std_logic_vector(13 downto 0);
-
-signal dbg_byte_sel : std_logic_vector(3 downto 0);
-signal dbg_sel_pi_incdec : std_logic;
-signal dbg_pi_f_inc : std_logic;
-signal dbg_pi_f_dec : std_logic;
-signal dbg_sel_po_incdec : std_logic;
-signal dbg_po_f_inc : std_logic;
-signal dbg_po_f_stg23_sel : std_logic;
-signal dbg_po_f_dec : std_logic;
-signal dbg_pi_counter_read_val : std_logic_vector(5 downto 0);
-signal dbg_po_counter_read_val : std_logic_vector(8 downto 0);
-
 -- Commands aliases
 constant READ : std_logic_vector(2 downto 0) := "001";
 constant WRITE : std_logic_vector(2 downto 0) := "000";
@@ -121,92 +109,71 @@ constant DEFAULT_VALUE : std_logic_vector(31 downto 0) := (15 downto 0 => '0', o
 signal internal_clk : std_logic;
 
 -- State signal
-signal state : Integer range 0 to 7 := 0;
+signal state : Integer range 0 to 8 := 0;
 
 -- Buffer
 signal read_buffer : std_logic_vector(31 downto 0) := (31 downto 0 => '0');
+signal read_buffer_valid : std_logic := '0';
 
 -- Counters
 signal led_on_counter_value : Integer range 0 to 268435456 := 0; -- 2**28 = 268 435 456
 signal led_off_counter_value : Integer range 0 to 268435456 := 0;
 
-component mig_7series_0
+component mig_7series_nodebug
+
     port (
-    
-        -- Memory interface ports
-        ddr3_dq                        : inout std_logic_vector(63 downto 0);
-        ddr3_dqs_p                     : inout std_logic_vector(7 downto 0);
-        ddr3_dqs_n                     : inout std_logic_vector(7 downto 0);
+        ddr3_dq       : inout std_logic_vector(63 downto 0);
+        ddr3_dqs_p    : inout std_logic_vector(7 downto 0);
+        ddr3_dqs_n    : inout std_logic_vector(7 downto 0);
+        ddr3_addr     : out   std_logic_vector(13 downto 0);
+        ddr3_ba       : out   std_logic_vector(2 downto 0);
+        ddr3_ras_n    : out   std_logic;
+        ddr3_cas_n    : out   std_logic;
+        ddr3_we_n     : out   std_logic;
+        ddr3_reset_n  : out   std_logic;
+        ddr3_ck_p     : out   std_logic_vector(0 downto 0);
+        ddr3_ck_n     : out   std_logic_vector(0 downto 0);
+        ddr3_cke      : out   std_logic_vector(0 downto 0);
+        ddr3_cs_n     : out   std_logic_vector(0 downto 0);
+        ddr3_dm       : out   std_logic_vector(7 downto 0);
+        ddr3_odt      : out   std_logic_vector(0 downto 0);
         
-
-        ddr3_addr                      : out   std_logic_vector(13 downto 0);
-        ddr3_ba                        : out   std_logic_vector(2 downto 0);
-        ddr3_ras_n                     : out   std_logic;
-        ddr3_cas_n                     : out   std_logic;
-        ddr3_we_n                      : out   std_logic;
-        ddr3_reset_n                   : out   std_logic;
+        app_addr                  : in    std_logic_vector(27 downto 0);
+        app_cmd                   : in    std_logic_vector(2 downto 0);
+        app_en                    : in    std_logic;
+        app_wdf_data              : in    std_logic_vector(511 downto 0);
+        app_wdf_end               : in    std_logic;
+        app_wdf_mask         : in    std_logic_vector(63 downto 0);
+        app_wdf_wren              : in    std_logic;
+        app_rd_data               : out   std_logic_vector(511 downto 0);
+        app_rd_data_end           : out   std_logic;
+        app_rd_data_valid         : out   std_logic;
+        app_rdy                   : out   std_logic;
+        app_wdf_rdy               : out   std_logic;
+        app_sr_req                : in    std_logic;
+        app_ref_req               : in    std_logic;
+        app_zq_req                : in    std_logic := '0';
+        app_sr_active             : out   std_logic;
+        app_ref_ack               : out   std_logic;
+        app_zq_ack                : out   std_logic;
         
-        ddr3_ck_p                      : out   std_logic_vector(0 downto 0);
-        ddr3_ck_n                      : out   std_logic_vector(0 downto 0);
-        ddr3_cke                       : out   std_logic_vector(0 downto 0);
+        ui_clk                    : out   std_logic;
+        ui_clk_sync_rst           : out   std_logic;
         
-        ddr3_cs_n                      : out   std_logic_vector(0 downto 0);
-        ddr3_dm                        : out   std_logic_vector(7 downto 0);
-        ddr3_odt                       : out   std_logic_vector(0 downto 0);
-        
-        -- Application interface ports
-        app_addr                       : in    std_logic_vector(27 downto 0);
-        app_cmd                        : in    std_logic_vector(2 downto 0);
-        app_en                         : in    std_logic;
-        app_wdf_data                   : in    std_logic_vector(511 downto 0);
-        app_wdf_end                    : in    std_logic;
-        app_wdf_mask                   : in    std_logic_vector(63 downto 0);
-        app_wdf_wren                   : in    std_logic;
-        app_rd_data                    : out   std_logic_vector(511 downto 0);
-        app_rd_data_end                : out   std_logic;
-        app_rd_data_valid              : out   std_logic;
-        app_rdy                        : out   std_logic;
-        app_wdf_rdy                    : out   std_logic;
-        app_sr_req                     : in    std_logic;
-        app_ref_req                    : in    std_logic;
-        app_zq_req                     : in    std_logic;
-        app_sr_active                  : out   std_logic;
-        app_ref_ack                    : out   std_logic;
-        app_zq_ack                     : out   std_logic;
-        
-        ui_clk                         : out   std_logic;
-        ui_clk_sync_rst                : out   std_logic;
-        init_calib_complete            : out   std_logic;
-        
-        -- Debug signals
-        ddr3_ila_wrpath                : out   std_logic_vector(390 downto 0);
-        ddr3_ila_rdpath                : out   std_logic_vector(1023 downto 0);
-        ddr3_ila_basic                 : out   std_logic_vector(119 downto 0);
-        ddr3_vio_sync_out              : in    std_logic_vector(13 downto 0);
-        
-
-        dbg_byte_sel                   : in    std_logic_vector(3 downto 0);
-        dbg_sel_pi_incdec              : in    std_logic;
-        dbg_pi_f_inc                   : in    std_logic;
-        dbg_pi_f_dec                   : in    std_logic;
-        dbg_sel_po_incdec              : in    std_logic;
-        dbg_po_f_inc                   : in    std_logic;
-        dbg_po_f_stg23_sel             : in    std_logic;
-        dbg_po_f_dec                   : in    std_logic;
-        dbg_pi_counter_read_val        : out   std_logic_vector(5 downto 0);
-        dbg_po_counter_read_val        : out   std_logic_vector(8 downto 0);
+        init_calib_complete       : out   std_logic;
         
         -- System Clock Ports
+        
         sys_clk_p                      : in    std_logic;
         sys_clk_n                      : in    std_logic;
-        sys_rst                        : in    std_logic
-    );
+        sys_rst                     : in    std_logic
 
-end component mig_7series_0;
+  );
+end component mig_7series_nodebug;
 
 begin
 
-u_mig_7series_0 : mig_7series_0
+  u_mig_7series_nodebug : mig_7series_nodebug
     port map (
         -- Memory interface ports
         ddr3_addr                      => ddr3_addr,
@@ -244,40 +211,19 @@ u_mig_7series_0 : mig_7series_0
         app_sr_active                  => app_sr_active,
         app_ref_ack                    => app_ref_ack,
         app_zq_ack                     => app_zq_ack,
+        
         ui_clk                         => ui_clk,
         ui_clk_sync_rst                => ui_clk_sync_rst,
         app_wdf_mask                   => app_wdf_mask,
         
-        -- Debug Ports
-        ddr3_ila_basic                 => ddr3_ila_basic,
-        ddr3_ila_wrpath                => ddr3_ila_wrpath,
-        ddr3_ila_rdpath                => ddr3_ila_rdpath,
-        ddr3_vio_sync_out              => ddr3_vio_sync_out,
-        dbg_pi_counter_read_val        => dbg_pi_counter_read_val,
-        dbg_sel_pi_incdec              => dbg_sel_pi_incdec,
-        dbg_po_counter_read_val        => dbg_po_counter_read_val,
-        dbg_sel_po_incdec              => dbg_sel_po_incdec,
-        dbg_byte_sel                   => dbg_byte_sel,
-        dbg_pi_f_inc                   => dbg_pi_f_inc,
-        dbg_pi_f_dec                   => dbg_pi_f_dec,
-        dbg_po_f_inc                   => dbg_po_f_inc,
-        dbg_po_f_stg23_sel             => dbg_po_f_stg23_sel,
-        dbg_po_f_dec                   => dbg_po_f_dec,
-        
         -- System Clock Ports
         sys_clk_p                       => sys_clk_p,
         sys_clk_n                       => sys_clk_n,
-        sys_rst                         => sys_rst
-    );
-    
+        sys_rst                        => GPIO_SW_LEFT
 
-    -- IBUFDS to transform LVDS (differential) clock to single ended clock.
-    IBUFDS_clk : IBUFDS
-    port map (
-        O => internal_clk,
-        I => sys_clk_p,
-        IB => sys_clk_n
-    );
+   );
+    
+    internal_clk <= ui_clk;
     
     ROUTINE_PROCESS:
     process(internal_clk)
@@ -301,11 +247,9 @@ u_mig_7series_0 : mig_7series_0
                     else
                         state <= 1;
                     end if;
-                    
                 -- S1
                 when 1 =>
                     state <= 2;
-                    
                 -- S2
                 when 2 =>
                     if app_rdy = '1' then
@@ -313,37 +257,43 @@ u_mig_7series_0 : mig_7series_0
                     else
                         state <= 2;
                     end if;
-                    
                 -- S3  
                 when 3 =>
-                    if app_rd_data_valid = '1' then
-                        state <= 4;
-                    else
-                        state <= 3;
-                    end if;
-                    
-                -- S4
+                    state <= 4;
+                -- S4  
                 when 4 =>
-                    if read_buffer = DEFAULT_VALUE then
-                        state <= 6;
+                    if app_rd_data_valid = '1' then
+                        state <= 5;
+                    else
+                        state <= 4;
+                    end if;
+                -- S5
+                when 5 =>
+                    if read_buffer_valid = '1' then
+                        if read_buffer = DEFAULT_VALUE then
+                            state <= 7;
+                        else
+                            state <= 0;
+                        end if;
                     else
                         state <= 5;
                     end if;
-                
-                -- S5
-                when 5 =>
-                    state <= 0;
+                -- S6
                 when 6 =>
-                    if led_on_counter_value = 268435456 then
-                        state <= 7;
-                    else
-                        state <= 6;
-                    end if;
+                    state <= 0;
+                -- S7
                 when 7 =>
+                    if led_on_counter_value = 268435456 then
+                        state <= 8;
+                    else
+                        state <= 7;
+                    end if;
+                -- S8
+                when 8 =>
                     if led_off_counter_value = 268435456 then
                         state <= 0;
                     else
-                        state <= 7;
+                        state <= 8;
                     end if;
             end case;
         end if;
@@ -352,36 +302,18 @@ u_mig_7series_0 : mig_7series_0
     OPERATIONS_PROCESS:
     process(state, internal_clk)
     begin
-        if rising_edge(internal_clk) then
-            -- WRITING
-            if state = 1 then
-                -- Writing command
-                app_cmd <= WRITE;
-                -- Writing address, data and mask
-                app_addr <= (app_addr'length - 1 downto 0 => '0');
-                app_wdf_data(DEFAULT_VALUE'length - 1 downto 0) <= DEFAULT_VALUE;
-                app_wdf_mask <= (app_wdf_mask'length - 1 downto 0 => '0');
-                -- Set Write and App enable = 1
-                app_wdf_wren <= '1';
-                app_en <= '1';
-            end if;
-            
-            -- READING
-            if state = 3 then
-                -- Reading command
-                app_cmd <= READ;
-                -- Reading address
-                app_addr <= (app_addr'length - 1 downto 0 => '0');
-                -- App enable = 1
-                app_en <= '1';
-            end if;
-            
+        if rising_edge(internal_clk) then       
             -- COPYING READ RESULT TO BUFFER
-            if state = 4 then
-                read_buffer <= app_rd_data(read_buffer'length downto 0);
+            if state = 5 then
+                read_buffer <= app_rd_data(read_buffer'length - 1 downto 0);
+                read_buffer_valid <= '1';
+            else
+                read_buffer_valid <= '0';
+                read_buffer <= (read_buffer'length - 1 downto 0 => '0');
             end if;
             
-            if state = 6 then
+            -- COUNTING TO 268435456 (2**28) with LED on
+            if state = 7 then
                 if led_on_counter_value = 268435456 then
                     led_on_counter_value <= 0;
                 else
@@ -389,14 +321,72 @@ u_mig_7series_0 : mig_7series_0
                 end if;
             end if;
             
-            if state = 7 then
+            -- COUNTING TO 268435456 (2**28) with LED off
+            if state = 8 then
                 if led_off_counter_value = 268435456 then
                     led_off_counter_value <= 0;
                 else
                     led_off_counter_value <= led_off_counter_value + 1;
                 end if;
             end if;
+            
         end if;
     end process;
+    
+    OUTPUTS_PROCESS:
+    process(state)
+    begin
+        case state is
+            when 0 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 1 =>
+                -- WRITING MEMORY
+                app_cmd <= WRITE;
+                led <= '0';
+                app_en <= '1';
+                app_wdf_data(DEFAULT_VALUE'length - 1 downto 0) <= DEFAULT_VALUE;
+                app_wdf_data(app_wdf_data'length - 1 downto DEFAULT_VALUE'length) <= (app_wdf_data'length - 1 downto DEFAULT_VALUE'length => '0');
+                app_addr <= (app_addr'length - 1 downto 0 => '0');
+                app_wdf_wren <= '1';
+                app_wdf_end <= '1';
+                app_ref_req <= '0';
+            when 2 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 3 =>
+                -- READING MEMORY
+                app_cmd <= READ;
+                led <= '0';
+                app_en <= '1';
+                app_addr <= (app_addr'length - 1 downto 0 => '0');
+                app_wdf_wren <= '0';
+                app_ref_req <= '1';
+            when 4 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 5 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 6 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 7 => 
+                led <= '1';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+            when 8 =>
+                led <= '0';
+                app_en <= '0';
+                app_wdf_wren <= '0';
+        end case;
+    end process;
+    
+    app_wdf_mask <= (app_wdf_mask'length - 1 downto 0 => '0');
     
 end Behavioral;

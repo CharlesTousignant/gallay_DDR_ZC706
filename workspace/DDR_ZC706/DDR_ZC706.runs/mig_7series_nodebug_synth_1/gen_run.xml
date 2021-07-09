@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="mig_7series_nodebug_synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1625844578">
+  <File Type="PA-TCL" Name="mig_7series_nodebug.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mig_7series_nodebug_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="mig_7series_nodebug_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mig_7series_nodebug.vds"/>
+  <File Type="RDS-UTIL" Name="mig_7series_nodebug_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mig_7series_nodebug_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mig_7series_nodebug.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mig_7series_nodebug_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mig_7series_nodebug_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mig_7series_nodebug">
+    <File Path="$PSRCDIR/sources_1/ip/mig_7series_nodebug/mig_7series_nodebug.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="mig_7series_nodebug"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mig_7series_nodebug">
+    <File Path="$PSRCDIR/sources_1/ip/mig_7series_nodebug/mig_7series_nodebug.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="mig_7series_nodebug"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

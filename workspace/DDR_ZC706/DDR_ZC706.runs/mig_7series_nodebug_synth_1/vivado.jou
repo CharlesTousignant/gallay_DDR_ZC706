@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jul  9 11:29:41 2021
+# Process ID: 2020
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/mig_7series_nodebug_synth_1
+# Command line: vivado.exe -log mig_7series_nodebug.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_7series_nodebug.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/mig_7series_nodebug_synth_1/mig_7series_nodebug.vds
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/mig_7series_nodebug_synth_1\vivado.jou
+#-----------------------------------------------------------
+source mig_7series_nodebug.tcl -notrace

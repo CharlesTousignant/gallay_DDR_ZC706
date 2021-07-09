@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\DDR_ZC706\DDR_ZC706.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission refusée

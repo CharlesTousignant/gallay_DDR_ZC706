@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jul  9 13:43:06 2021
+# Process ID: 9624
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/impl_1
+# Command line: vivado.exe -log sandbox.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source sandbox.tcl -notrace
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/impl_1/sandbox.vdi
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/DDR_ZC706/DDR_ZC706.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source sandbox.tcl -notrace
+Command: open_checkpoint sandbox_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1079.023 ; gain = 0.000
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1079.023 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1529.480 ; gain = 17.453
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1529.480 ; gain = 17.453
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1529.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.1 (64-bit) build 2902540
+open_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1529.480 ; gain = 450.457
+Command: write_bitstream -force sandbox.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z045'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./sandbox.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+19 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 2118.551 ; gain = 589.070
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  9 13:44:12 2021...

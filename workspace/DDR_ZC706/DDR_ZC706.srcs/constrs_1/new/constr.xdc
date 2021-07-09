@@ -734,7 +734,13 @@ set_property SLEW FAST [get_ports {ddr3_ck_n[0]}]
 set_property IOSTANDARD DIFF_SSTL15 [get_ports {ddr3_ck_n[0]}]
 set_property PACKAGE_PIN F10 [get_ports {ddr3_ck_n[0]}]
 
+# LEDs
+set_property PACKAGE_PIN A17 [get_ports led]
+set_property IOSTANDARD LVCMOS15 [get_ports led]
 
+# Push button
+set_property PACKAGE_PIN AK25 [get_ports GPIO_SW_LEFT]
+set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SW_LEFT]
 
 #set_property LOC PHASER_OUT_PHY_X1Y19 [get_cells  -hier -filter {NAME =~ */ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_out}]
 #set_property LOC PHASER_OUT_PHY_X1Y18 [get_cells  -hier -filter {NAME =~ */ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_out}]

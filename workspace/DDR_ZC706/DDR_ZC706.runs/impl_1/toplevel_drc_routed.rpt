@@ -1,0 +1,65 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Jul  9 14:42:46 2021
+| Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
+| Command      : report_drc -file toplevel_drc_routed.rpt -pb toplevel_drc_routed.pb -rpx toplevel_drc_routed.rpx
+| Design       : toplevel
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+------------------------+------------+
+| Rule      | Severity | Description            | Violations |
++-----------+----------+------------------------+------------+
+| PDRC-153  | Warning  | Gated clock check      | 1          |
+| PLCK-23   | Warning  | Clock Placer Checks    | 1          |
+| REQP-1709 | Warning  | Clock output buffering | 1          |
+| ZPS7-1    | Warning  | PS7 block required     | 1          |
++-----------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net app_en is a gated clock net sourced by a combinational pin u_mig_7series_nodebug_i_1/O, cell u_mig_7series_nodebug_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-23#1 Warning
+Clock Placer Checks  
+Sub-optimal placement for a clock-capable IO pin and MMCM pair. 
+Resolution: A dedicated routing path between the two can be used if: (a) The clock-capable IO (CCIO) is placed on a CCIO capable site (b) The MMCM is placed in the same clock region as the CCIO pin. If the IOB is driving multiple MMCMs, all MMCMs must be placed in the same clock region, one clock region above or one clock region below the IOB. Both the above conditions must be met at the same time, else it may lead to longer and less predictable clock insertion delays.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	u_mig_7series_nodebug/u_mig_7series_nodebug_mig/u_ddr3_clk_ibuf/diff_input_clk.u_ibufg_sys_clk (IBUFDS.O) is locked to H9
+	u_mig_7series_nodebug/u_mig_7series_nodebug_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i (MMCME2_ADV.CLKIN1) is provisionally placed by clockplacer on MMCME2_ADV_X0Y0
+
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal u_mig_7series_nodebug/u_mig_7series_nodebug_mig/u_ddr3_infrastructure/pll_clk3_out on the u_mig_7series_nodebug/u_mig_7series_nodebug_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of u_mig_7series_nodebug/u_mig_7series_nodebug_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
