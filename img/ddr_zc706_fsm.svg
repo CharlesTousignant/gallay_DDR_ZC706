@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Généré par Microsoft Visio, SVG Export ddr_zc706_fsm.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="23.8031in" height="11.6929in"
+		viewBox="0 0 1713.83 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st14">
+	<v:documentProperties v:langID="1036" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Multiple process)"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {marker-end:url(#mrkr4-6);stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st2 {fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st3 {fill:#4672c4;stroke:#c8c8c8;stroke-width:0.25}
+		.st4 {fill:#feffff;font-family:Calibri;font-size:1.16666em;font-weight:bold}
+		.st5 {font-size:0.571431em;font-weight:normal}
+		.st6 {marker-end:url(#mrkr4-65);stroke:#4672c4;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st7 {fill:#4672c4;fill-opacity:1;stroke:#4672c4;stroke-opacity:1;stroke-width:0.35714285714286}
+		.st8 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st9 {fill:#3d64ac;font-family:Calibri;font-size:0.666664em}
+		.st10 {font-size:1em}
+		.st11 {marker-end:url(#mrkr4-125);stroke:#4672c4;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st12 {fill:none;stroke:none;stroke-width:0.25}
+		.st13 {fill:#4672c4;font-family:Calibri;font-size:1.00001em}
+		.st14 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-6" class="st2" v:arrowType="4" v:arrowSize="1" v:setback="5.24" refX="-5.24" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8,-2.8) "/>
+		</marker>
+		<marker id="mrkr4-65" class="st7" v:arrowType="4" v:arrowSize="1" v:setback="5.24" refX="-5.24" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8,-2.8) "/>
+		</marker>
+		<marker id="mrkr4-125" class="st7" v:arrowType="4" v:arrowSize="1" v:setback="5.6" refX="-5.6" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-2.8,-2.8) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Page 1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Diagramme de flux" v:index="0"/>
+		<v:layer v:name="Lien" v:index="1"/>
+		<g id="shape20-1" v:mID="20" v:groupContext="shape" v:layerMember="1" transform="translate(1636.84,1122.4) rotate(156.666)">
+			<title>Centre vers centre 1.20</title>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M31.58 825.83 A157.575 157.575 0 0 1 149.91 820.26 L150.24 820.39" class="st1"/>
+		</g>
+		<g id="shape15-7" v:mID="15" v:groupContext="shape" v:layerMember="1" transform="translate(1012.82,-651.968)">
+			<title>Centre vers centre 1.15</title>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M19.66 812.41 A82.9186 82.9186 0 0 1 138.16 801.37 L138.43 801.61" class="st1"/>
+		</g>
+		<g id="shape1-12" v:mID="1" v:groupContext="shape" v:layerMember="0" transform="translate(686.835,-605.905)">
+			<title>Processus de données</title>
+			<desc>S0 App_en = 0 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S0<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape3-18" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(966.756,-605.905)">
+			<title>Processus de données.3</title>
+			<desc>S1 App_en = 1 App_wdf_wren = 1 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S1<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 1<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 1 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape4-24" v:mID="4" v:groupContext="shape" v:layerMember="0" transform="translate(1136.83,-605.905)">
+			<title>Processus de données.4</title>
+			<desc>S2 App_en = 0 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S2<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape5-30" v:mID="5" v:groupContext="shape" v:layerMember="0" transform="translate(1257.31,-446.457)">
+			<title>Processus de données.5</title>
+			<desc>S3 App_en = 1 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S3<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 1<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape6-36" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(1076.6,-368.504)">
+			<title>Processus de données.6</title>
+			<desc>S4 App_en = 0 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S4<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape7-42" v:mID="7" v:groupContext="shape" v:layerMember="0" transform="translate(867.543,-368.504)">
+			<title>Processus de données.7</title>
+			<desc>S5 App_en = 0 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S5<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape8-48" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(658.488,-308.268)">
+			<title>Processus de données.8</title>
+			<desc>S7 App_en = 0 App_wdf_wren = 0 Led = 1</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S7<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 1</tspan><v:newlineChar/></text>		</g>
+		<g id="shape9-54" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(538.016,-496.063)">
+			<title>Processus de données.9</title>
+			<desc>S8 App_en = 0 App_wdf_wren = 0 Led = 0</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Coût" v:type="7" v:format="@" v:langID="1036"/>
+				<v:cp v:nameU="Duration" v:lbl="Durée" v:type="2" v:langID="1036"/>
+				<v:cp v:nameU="Resources" v:lbl="Ressources" v:langID="1036"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="795.827" width="92.13" height="92.126"/>
+			<path d="M0 795.83 A46.063 46.063 0 0 1 92.13 795.83 A46.063 46.063 0 1 1 -0 795.83 Z" class="st3"/>
+			<text x="39.21" y="780.83" class="st4" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>S8<v:newlineChar/><tspan
+						x="27.63" dy="1.425em" class="st5">App_en = 0<v:newlineChar/></tspan><tspan x="15.21" dy="1.2em"
+						class="st5">App_wdf_wren = 0 <v:newlineChar/></tspan><tspan x="34.46" dy="1.2em" class="st5">Led = 0</tspan><v:newlineChar/></text>		</g>
+		<g id="shape10-60" v:mID="10" v:groupContext="shape" v:layerMember="1" transform="translate(732.898,-651.968)">
+			<title>Centre vers centre 1</title>
+			<desc>App_rdy = ‘1’ AND App_wdf_rdy = ‘1’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="139.961" cy="813.543" width="108" height="36"/>
+			<path d="M27.52 819.57 A186.782 186.782 0 0 1 238.69 810.79 L238.99 810.98" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="87.1634" y="803.943" width="105.594" height="19.1997" class="st8"/>
+			<text x="87.16" y="811.14" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rdy = ‘1’ AND App_wdf_rdy <tspan
+						x="133.04" dy="1.2em" class="st10">= </tspan>‘1’</text>		</g>
+		<g id="shape11-69" v:mID="11" v:groupContext="shape" v:layerMember="1"
+				transform="translate(-91.296,361.628) rotate(-101.768)">
+			<title>Boucle sur centre</title>
+			<desc>App_rdy = ‘0’ or App_wdf_rdy = ‘0’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="100.191" cy="847.417" width="108" height="18" transform="rotate(101.768)"/>
+			<path d="M43.83 827.72 A23.8523 23.8523 0 1 1 47.66 860.15 L47.42 859.88" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="757.33" y="-280.519" width="103.68" height="19.1997" transform="rotate(101.768)"
+					class="st8"/>
+			<text x="757.33" y="-273.32" transform="rotate(101.768)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rdy = ‘0’ or App_wdf_rdy = <tspan
+						x="805.15" dy="1.2em" class="st10">‘0’</tspan></text>		</g>
+		<g id="shape16-77" v:mID="16" v:groupContext="shape" v:layerMember="1"
+				transform="translate(714.027,-509.32) rotate(-33.8435)">
+			<title>Boucle sur centre.16</title>
+			<desc>App_rdy = ‘0’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="88.7908" cy="816.105" width="108" height="18" transform="rotate(33.8435)"/>
+			<path d="M43.83 827.72 A25.2132 25.2132 0 1 1 47.47 860.32 L47.24 860.04" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="506.615" y="623.576" width="43.2817" height="9.59985" transform="rotate(33.8435)"
+					class="st8"/>
+			<text x="506.62" y="630.78" transform="rotate(33.8435)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rdy = ‘0’</text>		</g>
+		<g id="shape19-84" v:mID="19" v:groupContext="shape" v:layerMember="1"
+				transform="translate(1854.61,-317.598) rotate(52.9269)">
+			<title>Centre vers centre 1.19</title>
+			<desc>App_rdy = ‘1’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="99.9219" cy="813.543" width="108" height="36" transform="rotate(-52.9269)"/>
+			<path d="M22.59 814.59 A105.862 105.862 0 0 1 164.54 804.24 L164.82 804.47" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="-610.504" y="565.355" width="43.2817" height="9.59985" transform="rotate(-52.9269)"
+					class="st8"/>
+			<text x="-610.5" y="572.56" transform="rotate(-52.9269)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rdy = ‘1’</text>		</g>
+		<g id="shape21-91" v:mID="21" v:groupContext="shape" v:layerMember="1" transform="translate(1122.66,1269.21) rotate(180)">
+			<title>Centre vers centre 1.21</title>
+			<desc>App_rd_data_valid = ‘1’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="104.528" cy="830.906" width="108" height="36" transform="rotate(180)"/>
+			<path d="M33.33 829.87 A224.2 224.2 0 0 1 160.01 825.69 L160.36 825.78" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="-143.276" y="-835.705" width="77.4965" height="9.59985" transform="rotate(180)"
+					class="st8"/>
+			<text x="-143.28" y="-828.51" transform="rotate(180)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rd_data_valid = ‘1’</text>		</g>
+		<g id="shape22-98" v:mID="22" v:groupContext="shape" v:layerMember="1"
+				transform="translate(281.566,390.753) rotate(-87.5104)">
+			<title>Boucle sur centre.22</title>
+			<desc>App_rd_data_valid = ‘0’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90.4476" cy="838.808" width="108" height="18" transform="rotate(87.5104)"/>
+			<path d="M43.83 827.72 A21.5334 21.5334 0 1 1 48.03 859.76 L47.76 859.53" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="803.197" y="-58.7266" width="77.4965" height="9.59985" transform="rotate(87.5104)"
+					class="st8"/>
+			<text x="803.2" y="-51.53" transform="rotate(87.5104)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>App_rd_data_valid = ‘0’</text>		</g>
+		<g id="shape23-105" v:mID="23" v:groupContext="shape" v:layerMember="1"
+				transform="translate(1146.7,1236.3) rotate(163.926)">
+			<title>Centre vers centre 1.23</title>
+			<desc>Read_buffer_valid = ‘1’ AND Read_buffer = DEFAULT_VALUE</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="109.575" cy="844.258" width="108" height="36" transform="rotate(-163.926)"/>
+			<path d="M32.65 828.13 A208.789 208.789 0 0 1 169.39 823.24 L169.73 823.35" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="-390.585" y="-790.515" width="103.086" height="19.1997" transform="rotate(-163.926)"
+					class="st8"/>
+			<text x="-384.98" y="-783.31" transform="rotate(-163.926)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Read_buffer_valid = ‘1’ AND<v:newlineChar/><tspan
+						x="-390.59" dy="1.2em" class="st10">Read_buffer = DEFAULT_VALUE</tspan></text>		</g>
+		<g id="shape26-113" v:mID="26" v:groupContext="shape" v:layerMember="1" transform="translate(318.3,-167.983) rotate(-45)">
+			<title>Boucle sur centre.26</title>
+			<desc>Read_buffer_valid = ‘1’</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.2326" cy="822.597" width="108" height="18" transform="rotate(45)"/>
+			<path d="M43.83 827.72 A20.5845 20.5845 0 1 1 48.2 859.56 L47.92 859.34" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="602.841" y="518.01" width="75.3558" height="9.59985" transform="rotate(45)"
+					class="st8"/>
+			<text x="602.84" y="525.21" transform="rotate(45)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Read_buffer_valid = ‘1’</text>		</g>
+		<g id="shape27-120" v:mID="27" v:groupContext="shape" v:layerMember="1"
+				transform="translate(243.711,937.243) rotate(-127.278)">
+			<title>Centre vers centre 1.27</title>
+			<desc>Read_buffer_valid = ‘1’ AND Read_buffer != DEFAULT_VALUE</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="149.177" cy="841.89" width="108" height="36" transform="rotate(127.278)"/>
+			<path d="M35.43 841.89 L246.69 841.89" class="st11"/>
+			<rect v:rectContext="textBkgnd" x="526.695" y="-638.221" width="105.691" height="19.1997" transform="rotate(127.278)"
+					class="st8"/>
+			<text x="533.6" y="-631.02" transform="rotate(127.278)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Read_buffer_valid = ‘1’ AND<v:newlineChar/><tspan
+						x="526.7" dy="1.2em" class="st10">Read_buffer != DEFAULT_VALUE</tspan></text>		</g>
+		<g id="shape38-129" v:mID="38" v:groupContext="shape" v:layerMember="1" transform="translate(704.551,1329.45) rotate(180)">
+			<title>Boucle sur centre.38</title>
+			<desc>Led_on_counter_value != 2^28</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="105.449" cy="808.37" width="108" height="18" transform="rotate(180)"/>
+			<path d="M43.83 827.72 A24.6214 24.6214 0 1 1 47.55 860.25 L47.31 859.98" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="-156.049" y="-813.17" width="101.199" height="9.59985" transform="rotate(180)"
+					class="st8"/>
+			<text x="-156.05" y="-805.97" transform="rotate(180)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Led_on_counter_value != 2^28</text>		</g>
+		<g id="shape42-136" v:mID="42" v:groupContext="shape" v:layerMember="1"
+				transform="translate(-4.06246,942.141) rotate(-122.681)">
+			<title>Centre vers centre 1.42</title>
+			<desc>Led_on_counter_value = 2^28</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="111.558" cy="841.89" width="108" height="36" transform="rotate(122.681)"/>
+			<path d="M35.43 841.89 L171.45 841.89" class="st11"/>
+			<rect v:rectContext="textBkgnd" x="599.08" y="-553.28" width="98.5938" height="9.59985" transform="rotate(122.681)"
+					class="st8"/>
+			<text x="599.08" y="-546.08" transform="rotate(122.681)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Led_on_counter_value = 2^28</text>		</g>
+		<g id="shape44-143" v:mID="44" v:groupContext="shape" v:layerMember="1"
+				transform="translate(84.1206,-377.599) rotate(-36.4309)">
+			<title>Centre vers centre 1.44</title>
+			<desc>Led_off_counter_value = 2^28</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="92.483" cy="841.89" width="108" height="36" transform="rotate(36.4309)"/>
+			<path d="M35.43 841.89 L133.3 841.89" class="st11"/>
+			<rect v:rectContext="textBkgnd" x="524.731" y="617.641" width="99.2736" height="9.59985" transform="rotate(36.4309)"
+					class="st8"/>
+			<text x="524.73" y="624.84" transform="rotate(36.4309)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Led_off_counter_value = 2^28</text>		</g>
+		<g id="shape45-150" v:mID="45" v:groupContext="shape" v:layerMember="1"
+				transform="translate(68.9371,965.652) rotate(-142.274)">
+			<title>Boucle sur centre.45</title>
+			<desc>Led_off_counter_value != 2^28</desc>
+			<v:userDefs>
+				<v:ud v:nameU="ScaleFactor" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="109.03" cy="854.038" width="108" height="18" transform="rotate(142.274)"/>
+			<path d="M43.83 827.72 A22.2547 22.2547 0 1 1 47.91 859.9 L47.65 859.65" class="st6"/>
+			<rect v:rectContext="textBkgnd" x="385.399" y="-747.011" width="101.879" height="9.59985" transform="rotate(142.274)"
+					class="st8"/>
+			<text x="385.4" y="-739.81" transform="rotate(142.274)" class="st9" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Led_off_counter_value != 2^28</text>		</g>
+		<g id="shape65-157" v:mID="65" v:groupContext="shape" transform="translate(946.205,-719.291)">
+			<title>Feuille.65</title>
+			<desc>Écriture dans la mémoire à l’adresse 0x0 de la valeur DEFAULT...</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="1.17" y="795.94" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Écriture dans la mémoire à <tspan
+						x="5.27" dy="1.2em" class="st10">l</tspan>’adresse 0x0 de la valeur <tspan x="23.79" dy="1.2em"
+						class="st10">DEFAULT_VALUE.</tspan></text>		</g>
+		<g id="shape67-162" v:mID="67" v:groupContext="shape" transform="translate(1286.36,-652.535)">
+			<title>Feuille.67</title>
+			<desc>Attente de la fin de l’opération de l’écriture et du retour à...</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="19.68" y="788.74" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Attente de la fin de <tspan
+						x="2.46" dy="1.2em" class="st10">l</tspan>’opération de l’écriture et <tspan x="6.03" dy="1.2em"
+						class="st10">du retour à l</tspan>’état prêt de <tspan x="37.3" dy="1.2em" class="st10">la mémoire.</tspan></text>		</g>
+		<g id="shape72-168" v:mID="72" v:groupContext="shape" transform="translate(1352.98,-468.283)">
+			<title>Feuille.72</title>
+			<desc>Requête de lecture de la mémoire à l’adresse 0x0.</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="6.99" y="803.14" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Requête de lecture de la <tspan
+						x="5.63" dy="1.2em" class="st10">mémoire à l</tspan>’adresse 0x0.</text>		</g>
+		<g id="shape76-172" v:mID="76" v:groupContext="shape" transform="translate(1056.05,-298.205)">
+			<title>Feuille.76</title>
+			<desc>Attente de la réponse de la requête de lecture en mémoire.</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="6.16" y="795.94" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Attente de la réponse de <tspan
+						x="8.16" dy="1.2em" class="st10">la requête de lecture en </tspan><tspan x="42.91" dy="1.2em" class="st10">mémoire.</tspan></text>		</g>
+		<g id="shape82-177" v:mID="82" v:groupContext="shape" transform="translate(846.992,-290.835)">
+			<title>Feuille.82</title>
+			<desc>Copie de la valeur de retour dans le buffer. Le signal read_b...</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="15.59" y="781.54" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Copie de la valeur de <tspan
+						x="7.74" dy="1.2em" class="st10">retour dans le buffer. Le </tspan><tspan x="7.69" dy="1.2em" class="st10">signal read_buffer_valid </tspan><tspan
+						x="1.78" dy="1.2em" class="st10">est ensuite mis à 1 lorsque </tspan><tspan x="10.23" dy="1.2em"
+						class="st10">la copie est complétée.</tspan></text>		</g>
+		<g id="shape85-184" v:mID="85" v:groupContext="shape" transform="translate(637.937,-227.339)">
+			<title>Feuille.85</title>
+			<desc>Incrémentation du compteur led_on_counter_value jusqu’à 2^28 ...</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="21.16" y="781.54" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Incrémentation du <tspan
+						x="42.73" dy="1.2em" class="st10">compteur </tspan><tspan x="11.63" dy="1.2em" class="st10">led_on_counter_value </tspan><tspan
+						x="12.16" dy="1.2em" class="st10">jusqu</tspan>’à 2^28 (~1.34s à <tspan x="44.43" dy="1.2em" class="st10">200MHz)</tspan></text>		</g>
+		<g id="shape88-191" v:mID="88" v:groupContext="shape" transform="translate(389.197,-482.457)">
+			<title>Feuille.88</title>
+			<desc>Incrémentation du compteur led_off_counter_value jusqu’à 2^28...</desc>
+			<v:textBlock v:margins="rect(1,1,1,1)" v:tabSpace="42.5197"/>
+			<v:textRect cx="66.6142" cy="806.74" width="133.23" height="70.2992"/>
+			<rect x="0" y="771.591" width="133.228" height="70.2992" class="st12"/>
+			<text x="21.16" y="781.54" class="st13" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Incrémentation du <tspan
+						x="42.73" dy="1.2em" class="st10">compteur </tspan><tspan x="11.12" dy="1.2em" class="st10">led_off_counter_value </tspan><tspan
+						x="12.16" dy="1.2em" class="st10">jusqu</tspan>’à 2^28 (~1.34s à <tspan x="44.43" dy="1.2em" class="st10">200MHz)</tspan></text>		</g>
+	</g>
+</svg>
