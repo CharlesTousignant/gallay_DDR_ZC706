@@ -1,80 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1626191892">
-  <File Type="BITSTR-BMM" Name="sandbox_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="sandbox_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="sandbox_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="sandbox_power_routed.rpt"/>
   <File Type="PA-TCL" Name="sandbox.tcl"/>
-  <File Type="OPT-TIMING" Name="sandbox_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="sandbox_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="sandbox_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="sandbox_reports.tcl"/>
-  <File Type="OPT-DRC" Name="sandbox_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="sandbox.hwdef"/>
-  <File Type="PWROPT-DCP" Name="sandbox_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="sandbox_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="sandbox_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="sandbox_placed.dcp"/>
-  <File Type="PLACE-IO" Name="sandbox_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="sandbox_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="sandbox_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="sandbox_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="sandbox_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="sandbox_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="sandbox_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="sandbox_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="sandbox_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="sandbox.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="sandbox_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="sandbox_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="sandbox_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="sandbox.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="sandbox_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="sandbox_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="sandbox_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="sandbox_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="sandbox_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="sandbox_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="sandbox_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="sandbox.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="sandbox_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sandbox_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sandbox_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="sandbox_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="sandbox_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="sandbox_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="sandbox_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="sandbox_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="sandbox_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="sandbox_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="sandbox_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="sandbox_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="sandbox_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="sandbox_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sandbox_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sandbox_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sandbox_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sandbox_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sandbox_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="sandbox_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="sandbox_bus_skew_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="sandbox.vdi"/>
   <File Type="BG-BIT" Name="sandbox.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="sandbox_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-DRC" Name="sandbox.drc"/>
+  <File Type="BG-BGN" Name="sandbox.bgn"/>
+  <File Type="BG-BIN" Name="sandbox.bin"/>
   <File Type="BITSTR-RBT" Name="sandbox.rbt"/>
   <File Type="BITSTR-NKY" Name="sandbox.nky"/>
+  <File Type="BITSTR-BMM" Name="sandbox_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="sandbox.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="sandbox.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sandbox.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-HWDEF" Name="sandbox.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sandbox_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="sandbox_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sandbox_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sandbox_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="sandbox_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="sandbox_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="sandbox_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="sandbox_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sandbox_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="sandbox_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sandbox_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sandbox_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="sandbox.pdi"/>
   <File Type="RCFI_FILE" Name="sandbox.rcfi"/>
   <File Type="CFI_FILE" Name="sandbox.cfi"/>
   <File Type="RNPI_FILE" Name="sandbox.rnpi"/>
   <File Type="NPI_FILE" Name="sandbox.npi"/>
   <File Type="RBD_FILE" Name="sandbox.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="sandbox.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="sandbox.sysdef"/>
-  <File Type="BG-BGN" Name="sandbox.bgn"/>
-  <File Type="BG-DRC" Name="sandbox.drc"/>
-  <File Type="RDI-RDI" Name="sandbox.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/sandbox.v">
@@ -114,9 +74,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -126,5 +84,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
