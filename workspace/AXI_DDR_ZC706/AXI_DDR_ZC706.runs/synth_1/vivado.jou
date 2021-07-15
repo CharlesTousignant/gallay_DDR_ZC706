@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Jul 13 11:58:14 2021
-# Process ID: 11276
+# Start of session at: Thu Jul 15 09:55:32 2021
+# Process ID: 2560
 # Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/synth_1
-# Command line: vivado.exe -log sandbox.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sandbox.tcl
-# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/synth_1/sandbox.vds
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/synth_1/design_1_wrapper.vds
 # Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source sandbox.tcl -notrace
+source design_1_wrapper.tcl -notrace

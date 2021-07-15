@@ -1,0 +1,10 @@
+14:37:46 **** Incremental Build of configuration Debug for project ps_to_pl_fsm_constant_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 50482 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm --sys_config ps_ppl_platform_no_input --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant/_ide/bitstream/design_1_wrapper.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant/Debug/ps_to_pl_fsm_constant.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:37:52 Build Finished (took 5s.872ms)
+

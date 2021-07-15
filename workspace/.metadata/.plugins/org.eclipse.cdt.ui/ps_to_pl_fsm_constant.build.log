@@ -1,0 +1,38 @@
+14:37:45 **** Incremental Build of configuration Debug for project ps_to_pl_fsm_constant ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/sw/ps_ppl_platform_no_input/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:100:18: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+  100 |       din = atoi(&charArray);
+      |                  ^~~~~~~~~~
+      |                  |
+      |                  char (*)[11]
+In file included from ../src/helloworld.c:49:
+c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdlib.h:81:23: note: expected 'const char *' but argument is of type 'char (*)[11]'
+   81 | int atoi (const char *__nptr);
+      |           ~~~~~~~~~~~~^~~~~~
+../src/helloworld.c:69:9: warning: unused variable 'y' [-Wunused-variable]
+   69 |     int y = 0;
+      |         ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: ps_to_pl_fsm_constant.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/sw/ps_ppl_platform_no_input/standalone_domain/bsplib/lib -o "ps_to_pl_fsm_constant.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ps_to_pl_fsm_constant.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size ps_to_pl_fsm_constant.elf  |tee "ps_to_pl_fsm_constant.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  54952	   2598	  22640	  80190	  1393e	ps_to_pl_fsm_constant.elf
+'Finished building: ps_to_pl_fsm_constant.elf.size'
+' '
+
+14:37:46 Build Finished (took 866ms)
+

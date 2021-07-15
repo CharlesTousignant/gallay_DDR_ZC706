@@ -47,13 +47,18 @@ module toplevel(
     output ddr3_we_n, 
     output init_calib_complete,
     
+    // Interface
+    input[29:0] tr_address,
+    input[63:0] tr_din,
+    input tr_wvalid,
+    output[63:0] tr_dout,
+    output tr_rvalid,
+    input tr_mode,
+    output[1:0] tr_state,
+    
     // Application interface ports
     output ui_clk, 
-    output ui_clk_sync_rst, 
-    
-    // AXI slave interface ports
-    output s_axi_awready, 
-    output s_axi_wready
+    output ui_clk_sync_rst
     
     );
     
@@ -202,5 +207,10 @@ module toplevel(
     .sys_clk_n                       (sys_clk_n),  // input				sys_clk_n
     .sys_rst                        (sys_rst) // input sys_rst
     );
+    
+    always @(posedge ui_clk or posedge ui_clk_sync_rst)
+        
+    begin
+    end
     
 endmodule

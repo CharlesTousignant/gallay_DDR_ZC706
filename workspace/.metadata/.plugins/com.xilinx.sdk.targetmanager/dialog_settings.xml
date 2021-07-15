@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent JTAG-SMT2 210251A07C9F&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-JTAG-SMT2-210251A07C9F-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-JTAG-SMT2-210251A07C9F-23731093-0&quot;}}]}" key="devices_info_Local"/>
+	<item value="_ide/bitstream/design_1_wrapper.bit" key="ps_to_pl_fsm_constant-bitFile"/>
+	<item value="false" key="ps_to_pl_fsm_constant-skip_rev_check"/>
+	<item value="ps_to_pl_fsm_constant" key="programfpga.sdxproject"/>
+	<item value="Local" key="ps_to_pl_fsm_constant-target"/>
+	<item value="false" key="ps_to_pl_fsm_constant-partial_bit"/>
+	<item value="" key="ps_to_pl_fsm_constant-bmmFile"/>
+	<item value="Auto Detect" key="ps_to_pl_fsm_constant-device"/>
+</section>
