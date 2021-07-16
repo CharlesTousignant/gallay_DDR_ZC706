@@ -51,16 +51,29 @@ module toplevel(
     input[29:0] tr_address,
     input[63:0] tr_din,
     input tr_wvalid,
-    output[63:0] tr_dout,
-    output tr_rvalid,
+    input tr_rready,
+    output reg[63:0] tr_dout,
+    output reg tr_rvalid,
     input tr_mode,
-    output[1:0] tr_state,
+    output reg tr_state,
+    output reg[1:0] tr_resp,
     
     // Application interface ports
     output ui_clk, 
     output ui_clk_sync_rst
     
     );
+    
+    localparam WRITE = 1'b0;
+    localparam READ = 1'b0;
+    
+    localparam READY = 1'b0;
+    localparam BUSY = 1'b1;
+    
+    localparam OKAY = 1'b00;
+    localparam EXOKAY = 1'b01;
+    localparam SLVERR = 1'b10;
+    localparam DECERR = 1'b11;
     
     // Application interface ports wires
     wire mmcm_locked;
@@ -73,51 +86,51 @@ module toplevel(
     wire app_zq_ack;
     
     // AXI Slave Interface Write Address Ports wires
-    wire[3:0] s_axi_awid;   
-    wire[29:0] s_axi_awaddr; 
-    wire[7:0] s_axi_awlen;  
-    wire[2:0] s_axi_awsize; 
-    wire[1:0] s_axi_awburs;
-    wire[0:0] s_axi_awlock; 
-    wire[3:0] s_axi_awcache;
-    wire[2:0] s_axi_awprot; 
-    wire[3:0] s_axi_awqos;  
-    wire s_axi_awvalid;
-    wire s_axi_awready;
+    reg[3:0] s_axi_awid;   
+    reg[29:0] s_axi_awaddr; 
+    reg[7:0] s_axi_awlen;  
+    reg[2:0] s_axi_awsize; 
+    reg[1:0] s_axi_awburst;
+    reg[0:0] s_axi_awlock; 
+    reg[3:0] s_axi_awcache;
+    reg[2:0] s_axi_awprot; 
+    reg[3:0] s_axi_awqos;  
+    reg s_axi_awvalid;
+    reg s_axi_awready;
     
     // AXI Slave Interface Write Data Ports wires
-    wire[63:0] s_axi_wdata; 
-    wire[7:0] s_axi_wstrb; 
-    wire s_axi_wlast; 
-    wire s_axi_wvalid;
-    wire s_axi_wready;
+    reg[63:0] s_axi_wdata; 
+    reg[7:0] s_axi_wstrb; 
+    reg s_axi_wlast; 
+    reg s_axi_wvalid;
+    reg s_axi_wready;
     
     // AXI Slave Interface Write Response Ports wires
     wire[3:0] s_axi_bid;   
     wire[1:0] s_axi_bresp; 
     wire s_axi_bvalid;
-    wire s_axi_bready;
+    reg s_axi_bready;
     
     // AXI Slave Interface Read Address Ports wires
-    wire[3:0] s_axi_arid;  
-    wire[29:0] s_axi_araddr; 
-    wire[7:0] s_axi_arlen;  
-    wire[2:0] s_axi_arsize; 
-    wire[1:0] s_axi_arburst;
-    wire[0:0] s_axi_arlock; 
-    wire[3:0] s_axi_arcache;
-    wire[2:0] s_axi_arprot; 
-    wire[3:0] s_axi_arqos;  
-    wire s_axi_arvalid;
-    wire s_axi_arready;
+    reg[3:0] s_axi_arid;  
+    reg[29:0] s_axi_araddr; 
+    reg[7:0] s_axi_arlen;  
+    reg[2:0] s_axi_arsize; 
+    reg[1:0] s_axi_arburst;
+    reg[0:0] s_axi_arlock; 
+    reg[3:0] s_axi_arcache;
+    reg[2:0] s_axi_arprot; 
+    reg[3:0] s_axi_arqos;  
+    reg s_axi_arvalid;
+    reg s_axi_arready;
     
     // AXI Slave Interface Read Data Ports wires
-    wire[3:0] s_axi_rid;   
-    wire[63:0] s_axi_rdata; 
-    wire[1:0] s_axi_rresp; 
-    wire s_axi_rlast; 
-    wire s_axi_rvalid;
-    wire s_axi_rready;
+    reg[3:0] s_axi_rid;   
+    reg[63:0] s_axi_rdata; 
+    reg[1:0] s_axi_rresp; 
+    reg s_axi_rlast; 
+    reg s_axi_rvalid;
+    reg s_axi_rready;
     
   
     mig_7series_0 u_mig_7series_0 (
@@ -209,8 +222,77 @@ module toplevel(
     );
     
     always @(posedge ui_clk or posedge ui_clk_sync_rst)
-        
     begin
+        if (ui_clk_sync_rst)
+            begin
+            s_axi_awready = 1'b0;
+            s_axi_wready = 1'b0;
+            s_axi_rready = 1'b0;
+            
+            tr_rvalid = 1'b0;
+            
+            s_axi_arvalid = 1'b0;
+            s_axi_awvalid = 1'b0;
+            s_axi_wvalid = 1'b0;
+            
+            tr_state = READY;
+            end
+        else
+            begin
+                case (tr_mode)
+                    WRITE:
+                        begin
+                            if(tr_wvalid)
+                            begin
+                                s_axi_awlen = 8'b00000000;
+                                s_axi_awsize = 3'b110;
+                                s_axi_awburst = 2'b00;
+                                s_axi_awaddr = tr_address;
+                                s_axi_wdata = tr_din;
+                                s_axi_wstrb = 8'b11111111;
+                                s_axi_wlast = 1'b1;
+                                s_axi_awvalid = 1'b1;
+                                s_axi_wvalid = 1'b1;
+                                s_axi_bready = 1'b1;
+                                
+                                tr_state = BUSY;
+                            end
+                        end
+                    READ:
+                        begin
+                            if(tr_rready)
+                                begin
+                                s_axi_arlen = 8'b00000000;
+                                s_axi_arsize = 3'b110;
+                                s_axi_arburst = 2'b00;
+                                s_axi_araddr = tr_address;
+                                s_axi_arvalid = 1'b1;
+                                s_axi_rready = 1'b1;
+                                
+                                tr_state = BUSY;
+                            end
+                        end
+                endcase
+            end        
+    end
+    
+    // Transaction Response
+    always @(posedge ui_clk)
+    begin
+        if(tr_mode === READ && s_axi_rvalid === 1'b1)
+        begin
+            tr_dout = s_axi_rdata;
+            tr_rvalid = 1'b1;
+            tr_resp = s_axi_rresp;
+            tr_state = READY;
+        end
+        
+        if(tr_mode === WRITE && s_axi_bvalid === 1'b1)
+        begin
+            tr_resp = s_axi_bresp;
+            tr_state = READY;
+        end
+            
     end
     
 endmodule
