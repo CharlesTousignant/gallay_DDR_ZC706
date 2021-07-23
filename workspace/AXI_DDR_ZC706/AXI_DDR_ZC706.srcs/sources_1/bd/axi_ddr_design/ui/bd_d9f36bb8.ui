@@ -1,65 +1,145 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.272047",
-   "Default View_TopLeft":"-1860,-151",
+   "Default View_ScaleFactor":"0.243478",
+   "Default View_TopLeft":"-1035,-8",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1280 -y -40 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1280 -y -20 -defaultsOSRD
-preplace port ddr3_cas_n -pg 1 -lvl 4 -x 1280 -y 630 -defaultsOSRD
-preplace port ddr3_ras_n -pg 1 -lvl 4 -x 1280 -y 610 -defaultsOSRD
-preplace port ddr3_reset_n -pg 1 -lvl 4 -x 1280 -y 670 -defaultsOSRD
-preplace port ddr3_we_n -pg 1 -lvl 4 -x 1280 -y 650 -defaultsOSRD
-preplace port sys_clk_p -pg 1 -lvl 0 -x 0 -y 1270 -defaultsOSRD
-preplace port sys_clk_n -pg 1 -lvl 0 -x 0 -y 1290 -defaultsOSRD
-preplace port sys_rst -pg 1 -lvl 0 -x 0 -y 1310 -defaultsOSRD
-preplace portBus ddr3_dq -pg 1 -lvl 4 -x 1280 -y 510 -defaultsOSRD
-preplace portBus ddr3_dqs_p -pg 1 -lvl 4 -x 1280 -y 530 -defaultsOSRD
-preplace portBus ddr3_dqs_n -pg 1 -lvl 4 -x 1280 -y 550 -defaultsOSRD
-preplace portBus ddr3_addr -pg 1 -lvl 4 -x 1280 -y 570 -defaultsOSRD
-preplace portBus ddr3_ba -pg 1 -lvl 4 -x 1280 -y 590 -defaultsOSRD
-preplace portBus ddr3_cs_n -pg 1 -lvl 4 -x 1280 -y 750 -defaultsOSRD
-preplace portBus ddr3_cke -pg 1 -lvl 4 -x 1280 -y 730 -defaultsOSRD
-preplace portBus ddr3_dm -pg 1 -lvl 4 -x 1280 -y 770 -defaultsOSRD
-preplace portBus ddr3_ck_n -pg 1 -lvl 4 -x 1280 -y 710 -defaultsOSRD
-preplace portBus ddr3_ck_p -pg 1 -lvl 4 -x 1280 -y 690 -defaultsOSRD
-preplace portBus ddr3_odt -pg 1 -lvl 4 -x 1280 -y 790 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 250 -y -30 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 250 -y 350 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 1100 -y 30 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 640 -y 220 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 2 -x 640 -y 910 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 110 470 -40 830
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 1 460 50n
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 3 30 260 470J 330 810
-preplace netloc Net 1 2 2 810J 510 NJ
-preplace netloc Net1 1 2 2 820J 530 NJ
-preplace netloc Net2 1 2 2 830J 550 NJ
-preplace netloc mig_7series_0_ddr3_addr 1 2 2 840J 570 NJ
-preplace netloc mig_7series_0_ddr3_ba 1 2 2 850J 590 NJ
-preplace netloc mig_7series_0_ddr3_cas_n 1 2 2 870J 630 NJ
-preplace netloc mig_7series_0_ddr3_ras_n 1 2 2 860J 610 NJ
-preplace netloc mig_7series_0_ddr3_cs_n 1 2 2 930J 750 NJ
-preplace netloc mig_7series_0_ddr3_cke 1 2 2 920J 730 NJ
-preplace netloc mig_7series_0_ddr3_dm 1 2 2 940J 770 NJ
-preplace netloc mig_7series_0_ddr3_reset_n 1 2 2 890J 670 NJ
-preplace netloc mig_7series_0_ddr3_we_n 1 2 2 880J 650 NJ
-preplace netloc mig_7series_0_ddr3_ck_n 1 2 2 910J 710 NJ
-preplace netloc mig_7series_0_ddr3_ck_p 1 2 2 900J 690 NJ
-preplace netloc mig_7series_0_ddr3_odt 1 2 2 950J 790 NJ
-preplace netloc sys_clk_p_0_1 1 0 2 NJ 1270 NJ
-preplace netloc sys_clk_n_0_1 1 0 2 NJ 1290 NJ
-preplace netloc sys_rst_0_1 1 0 2 NJ 1310 NJ
-preplace netloc processing_system7_0_DDR 1 1 3 460J -30 820 150 1260
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ -90 N -90 1250
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 NJ -50 920
-preplace netloc ps7_0_axi_periph_M00_AXI 1 0 4 40 270 460J 320 NJ 320 1250
-levelinfo -pg 1 0 250 640 1100 1280
-pagesize -pg 1 -db -bbox -sgen -120 -250 1440 1390
+preplace port DDR -pg 1 -lvl 6 -x 2240 -y 1550 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 2240 -y 1570 -defaultsOSRD
+preplace port ddr3_cas_n -pg 1 -lvl 6 -x 2240 -y 950 -defaultsOSRD
+preplace port ddr3_ras_n -pg 1 -lvl 6 -x 2240 -y 930 -defaultsOSRD
+preplace port ddr3_reset_n -pg 1 -lvl 6 -x 2240 -y 990 -defaultsOSRD
+preplace port ddr3_we_n -pg 1 -lvl 6 -x 2240 -y 970 -defaultsOSRD
+preplace port sys_clk_p -pg 1 -lvl 0 -x 0 -y 1880 -defaultsOSRD
+preplace port sys_clk_n -pg 1 -lvl 0 -x 0 -y 1770 -defaultsOSRD
+preplace port sys_rst -pg 1 -lvl 0 -x 0 -y 1900 -defaultsOSRD
+preplace port aresetn -pg 1 -lvl 0 -x 0 -y 1810 -defaultsOSRD
+preplace portBus ddr3_dq -pg 1 -lvl 6 -x 2240 -y 830 -defaultsOSRD
+preplace portBus ddr3_dqs_p -pg 1 -lvl 6 -x 2240 -y 850 -defaultsOSRD
+preplace portBus ddr3_dqs_n -pg 1 -lvl 6 -x 2240 -y 870 -defaultsOSRD
+preplace portBus ddr3_addr -pg 1 -lvl 6 -x 2240 -y 890 -defaultsOSRD
+preplace portBus ddr3_ba -pg 1 -lvl 6 -x 2240 -y 910 -defaultsOSRD
+preplace portBus ddr3_cs_n -pg 1 -lvl 6 -x 2240 -y 1070 -defaultsOSRD
+preplace portBus ddr3_cke -pg 1 -lvl 6 -x 2240 -y 1050 -defaultsOSRD
+preplace portBus ddr3_dm -pg 1 -lvl 6 -x 2240 -y 1090 -defaultsOSRD
+preplace portBus ddr3_ck_n -pg 1 -lvl 6 -x 2240 -y 1030 -defaultsOSRD
+preplace portBus ddr3_ck_p -pg 1 -lvl 6 -x 2240 -y 1010 -defaultsOSRD
+preplace portBus ddr3_odt -pg 1 -lvl 6 -x 2240 -y 1110 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 240 -y 1630 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1070 -y 80 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 630 -y 1030 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 240 -y 1390 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 3 -x 1070 -y 220 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 3 -x 1070 -y 360 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 3 -x 1070 -y 500 -defaultsOSRD
+preplace inst axi_gpio_4 -pg 1 -lvl 3 -x 1070 -y 1650 -defaultsOSRD
+preplace inst axi_gpio_5 -pg 1 -lvl 3 -x 1070 -y 780 -defaultsOSRD
+preplace inst axi_gpio_6 -pg 1 -lvl 3 -x 1070 -y 920 -defaultsOSRD
+preplace inst axi_gpio_7 -pg 1 -lvl 3 -x 1070 -y 1060 -defaultsOSRD
+preplace inst axi_gpio_8 -pg 1 -lvl 3 -x 1070 -y 1340 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 5 -x 2040 -y 1000 -defaultsOSRD
+preplace inst axi_gpio_9 -pg 1 -lvl 3 -x 1070 -y 1200 -defaultsOSRD
+preplace inst axi_gpio_10 -pg 1 -lvl 3 -x 1070 -y 640 -defaultsOSRD
+preplace inst axi_gpio_11 -pg 1 -lvl 3 -x 1070 -y 1810 -defaultsOSRD
+preplace inst axi_gpio_12 -pg 1 -lvl 3 -x 1070 -y 1980 -defaultsOSRD
+preplace inst axi_gpio_13 -pg 1 -lvl 3 -x 1070 -y 1480 -defaultsOSRD
+preplace inst ps_to_mig_interface_0 -pg 1 -lvl 4 -x 1550 -y 1010 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 1290 460 640 880
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 1490 450
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 450 650 890
+preplace netloc axi_gpio_0_gpio_io_o 1 3 1 1310 90n
+preplace netloc axi_gpio_1_gpio_io_o 1 3 1 1260 230n
+preplace netloc axi_gpio_2_gpio_io_o 1 3 1 1280 370n
+preplace netloc axi_gpio_3_gpio_io_o 1 3 1 1240 510n
+preplace netloc ps_to_mig_interface_0_gpio_rdata 1 3 2 NJ 1660 1770
+preplace netloc ps_to_mig_interface_0_gpio_rvalid 1 3 2 1230 500 1750
+preplace netloc ps_to_mig_interface_0_gpio_resp 1 3 2 1220 490 1760
+preplace netloc ps_to_mig_interface_0_gpio_bvalid 1 3 2 1210J 1540 1750
+preplace netloc mig_7series_0_ui_clk 1 3 3 1320 1530 NJ 1530 2210
+preplace netloc sys_clk_n_1 1 0 5 NJ 1770 NJ 1770 930J 1730 NJ 1730 1850J
+preplace netloc sys_clk_p_1 1 0 5 NJ 1880 NJ 1880 820J 1900 NJ 1900 1840J
+preplace netloc sys_rst_1 1 0 5 NJ 1900 NJ 1900 810J 0 1250J 1510 1860J
+preplace netloc ps_to_mig_interface_0_s_axi_awid 1 4 1 N 600
+preplace netloc ps_to_mig_interface_0_s_axi_awaddr 1 4 1 N 620
+preplace netloc ps_to_mig_interface_0_s_axi_awlen 1 4 1 N 640
+preplace netloc ps_to_mig_interface_0_s_axi_awsize 1 4 1 N 660
+preplace netloc ps_to_mig_interface_0_s_axi_awburst 1 4 1 N 680
+preplace netloc ps_to_mig_interface_0_s_axi_awlock 1 4 1 N 700
+preplace netloc ps_to_mig_interface_0_s_axi_awcache 1 4 1 N 720
+preplace netloc ps_to_mig_interface_0_s_axi_awprot 1 4 1 N 740
+preplace netloc ps_to_mig_interface_0_s_axi_awqos 1 4 1 N 760
+preplace netloc ps_to_mig_interface_0_s_axi_awvalid 1 4 1 N 780
+preplace netloc mig_7series_0_s_axi_awready 1 3 2 1290J 510 1850
+preplace netloc ps_to_mig_interface_0_s_axi_wdata 1 4 1 N 820
+preplace netloc ps_to_mig_interface_0_s_axi_wstrb 1 4 1 N 840
+preplace netloc ps_to_mig_interface_0_s_axi_wlast 1 4 1 N 860
+preplace netloc ps_to_mig_interface_0_s_axi_wvalid 1 4 1 N 880
+preplace netloc mig_7series_0_s_axi_wready 1 3 2 1270J 520 1820
+preplace netloc mig_7series_0_s_axi_bid 1 4 1 1850 920n
+preplace netloc ps_to_mig_interface_0_s_axi_bready 1 4 1 1860 920n
+preplace netloc mig_7series_0_s_axi_bresp 1 4 1 1820 940n
+preplace netloc mig_7series_0_s_axi_bvalid 1 4 1 1810 960n
+preplace netloc ps_to_mig_interface_0_s_axi_arid 1 4 1 N 1000
+preplace netloc ps_to_mig_interface_0_s_axi_araddr 1 4 1 N 1020
+preplace netloc ps_to_mig_interface_0_s_axi_arlen 1 4 1 N 1040
+preplace netloc ps_to_mig_interface_0_s_axi_arsize 1 4 1 N 1060
+preplace netloc ps_to_mig_interface_0_s_axi_arburst 1 4 1 N 1080
+preplace netloc ps_to_mig_interface_0_s_axi_arlock 1 4 1 N 1100
+preplace netloc ps_to_mig_interface_0_s_axi_arcache 1 4 1 N 1120
+preplace netloc ps_to_mig_interface_0_s_axi_arprot 1 4 1 N 1140
+preplace netloc ps_to_mig_interface_0_s_axi_arqos 1 4 1 N 1160
+preplace netloc ps_to_mig_interface_0_s_axi_arvalid 1 4 1 N 1180
+preplace netloc mig_7series_0_s_axi_arready 1 3 2 1220J 1500 1820
+preplace netloc mig_7series_0_s_axi_rid 1 4 1 1850 1220n
+preplace netloc mig_7series_0_s_axi_rdata 1 4 1 1840 1240n
+preplace netloc mig_7series_0_s_axi_rresp 1 4 1 1810 1260n
+preplace netloc mig_7series_0_s_axi_rlast 1 4 1 1800 1280n
+preplace netloc mig_7series_0_s_axi_rvalid 1 4 1 1790 1300n
+preplace netloc ps_to_mig_interface_0_s_axi_rready 1 4 1 1860 1220n
+preplace netloc Net 1 5 1 NJ 850
+preplace netloc Net1 1 5 1 NJ 870
+preplace netloc mig_7series_0_ddr3_addr 1 5 1 NJ 890
+preplace netloc mig_7series_0_ddr3_ba 1 5 1 NJ 910
+preplace netloc mig_7series_0_ddr3_ras_n 1 5 1 NJ 930
+preplace netloc mig_7series_0_ddr3_cas_n 1 5 1 NJ 950
+preplace netloc mig_7series_0_ddr3_we_n 1 5 1 NJ 970
+preplace netloc mig_7series_0_ddr3_reset_n 1 5 1 NJ 990
+preplace netloc mig_7series_0_ddr3_ck_p 1 5 1 NJ 1010
+preplace netloc mig_7series_0_ddr3_ck_n 1 5 1 NJ 1030
+preplace netloc mig_7series_0_ddr3_cke 1 5 1 NJ 1050
+preplace netloc mig_7series_0_ddr3_cs_n 1 5 1 NJ 1070
+preplace netloc mig_7series_0_ddr3_dm 1 5 1 NJ 1090
+preplace netloc mig_7series_0_ddr3_odt 1 5 1 NJ 1110
+preplace netloc Net2 1 5 1 NJ 830
+preplace netloc axi_gpio_7_gpio_io_o 1 3 1 1210 1050n
+preplace netloc axi_gpio_9_gpio_io_o 1 3 1 1280 1070n
+preplace netloc ps_to_mig_interface_0_gpio_debug_current_state 1 3 2 1210J 480 1780
+preplace netloc aresetn_1 1 0 4 NJ 1810 NJ 1810 830J 1890 1310
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 3 3 1330 1520 NJ 1520 2220
+preplace netloc ps_to_mig_interface_0_aresetn_sync_out 1 4 1 1830 1420n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 470 710n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 920 980n
+preplace netloc processing_system7_0_DDR 1 1 5 NJ 1550 850J 1560 1300J 1550 NJ 1550 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 790 200n
+preplace netloc processing_system7_0_FIXED_IO 1 1 5 NJ 1570 NJ 1570 NJ 1570 NJ 1570 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 780 60n
+preplace netloc ps7_0_axi_periph_M12_AXI 1 2 1 840 1140n
+preplace netloc ps7_0_axi_periph_M08_AXI 1 2 1 850 1060n
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 930 900n
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 900 760n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 800 340n
+preplace netloc ps7_0_axi_periph_M09_AXI 1 2 1 790 1080n
+preplace netloc ps7_0_axi_periph_M10_AXI 1 2 1 910 620n
+preplace netloc ps7_0_axi_periph_M11_AXI 1 2 1 860 1120n
+preplace netloc ps7_0_axi_periph_M07_AXI 1 2 1 N 1040
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 850 480n
+preplace netloc ps7_0_axi_periph_M13_AXI 1 2 1 870 1160n
+levelinfo -pg 1 0 240 630 1070 1550 2040 2240
+pagesize -pg 1 -db -bbox -sgen -120 -10 2400 2060
 "
 }
 {
-   "da_axi4_cnt":"1",
+   "da_axi4_cnt":"14",
    "da_ps7_cnt":"1"
 }

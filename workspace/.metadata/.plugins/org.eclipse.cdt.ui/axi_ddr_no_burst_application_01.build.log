@@ -1,0 +1,172 @@
+14:46:13 **** Incremental Build of configuration Debug for project axi_ddr_no_burst_application_01 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:118:11: error: 'true' undeclared (first use in this function)
+  118 |     while(true){
+      |           ^~~~
+../src/helloworld.c:118:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:123:21: error: too few arguments to function 'XGpio_DiscreteRead'
+  123 |             state = XGpio_DiscreteRead(&gpio_state);
+      |                     ^~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:54:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xgpio.h:160:5: note: declared here
+  160 | u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+      |     ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:129:18: warning: passing argument 1 of 'scanf' makes pointer from integer without a cast [-Wint-conversion]
+  129 |            scanf(modeChar);
+      |                  ^~~~~~~~
+      |                  |
+      |                  char
+In file included from ../src/helloworld.c:48:
+c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdio.h:202:12: note: expected 'const char * restrict' but argument is of type 'char'
+  202 | int scanf (const char *__restrict, ...)
+      |            ^
+../src/helloworld.c:134:13: error: case label does not reduce to an integer constant
+  134 |             case READ_MODE:
+      |             ^~~~
+../src/helloworld.c:138:14: error: 'adressInt' undeclared (first use in this function); did you mean 'addressInt'?
+  138 |              adressInt = atoi(&addressChar);
+      |              ^~~~~~~~~
+      |              addressInt
+../src/helloworld.c:138:31: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |              adressInt = atoi(&addressChar);
+      |                               ^~~~~~~~~~~~
+      |                               |
+      |                               char (*)[11]
+In file included from ../src/helloworld.c:49:
+c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdlib.h:81:23: note: expected 'const char *' but argument is of type 'char (*)[11]'
+   81 | int atoi (const char *__nptr);
+      |           ~~~~~~~~~~~~^~~~~~
+../src/helloworld.c:139:14: error: too many arguments to function 'print'
+  139 |              print("LECTURE A L'ADRESSE %d \n", adressInt);
+      |              ^~~~~
+In file included from ../src/helloworld.c:51:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xil_printf.h:40:6: note: declared here
+   40 | void print( const char8 *ptr);
+      |      ^~~~~
+../src/helloworld.c:146:21: error: too few arguments to function 'XGpio_DiscreteRead'
+  146 |              }while(XGpio_DiscreteRead(&gpio_rvalid) != 1);
+      |                     ^~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:54:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xgpio.h:160:5: note: declared here
+  160 | u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+      |     ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:148:22: error: too few arguments to function 'XGpio_DiscreteRead'
+  148 |              rdata = XGpio_DiscreteRead(&gpio_rdata);
+      |                      ^~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:54:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xgpio.h:160:5: note: declared here
+  160 | u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+      |     ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:153:14: error: too many arguments to function 'print'
+  153 |              print("Donnee lue: %d", rdata);
+      |              ^~~~~
+In file included from ../src/helloworld.c:51:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xil_printf.h:40:6: note: declared here
+   40 | void print( const char8 *ptr);
+      |      ^~~~~
+../src/helloworld.c:155:13: error: case label does not reduce to an integer constant
+  155 |             case WRITE_MODE:
+      |             ^~~~
+../src/helloworld.c:159:29: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+  159 |              dataInt = atoi(&dataChar);
+      |                             ^~~~~~~~~
+      |                             |
+      |                             char (*)[11]
+In file included from ../src/helloworld.c:49:
+c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdlib.h:81:23: note: expected 'const char *' but argument is of type 'char (*)[11]'
+   81 | int atoi (const char *__nptr);
+      |           ~~~~~~~~~~~~^~~~~~
+../src/helloworld.c:162:31: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+  162 |              adressInt = atoi(&addressChar);
+      |                               ^~~~~~~~~~~~
+      |                               |
+      |                               char (*)[11]
+In file included from ../src/helloworld.c:49:
+c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\include\stdlib.h:81:23: note: expected 'const char *' but argument is of type 'char (*)[11]'
+   81 | int atoi (const char *__nptr);
+      |           ~~~~~~~~~~~~^~~~~~
+../src/helloworld.c:164:66: error: 'adresseInt' undeclared (first use in this function); did you mean 'addressInt'?
+  164 |              print("ECRITURE A L'ADRESSE %d de la valeur %d \n", adresseInt, dataInt);
+      |                                                                  ^~~~~~~~~~
+      |                                                                  addressInt
+../src/helloworld.c:164:14: error: too many arguments to function 'print'
+  164 |              print("ECRITURE A L'ADRESSE %d de la valeur %d \n", adresseInt, dataInt);
+      |              ^~~~~
+In file included from ../src/helloworld.c:51:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xil_printf.h:40:6: note: declared here
+   40 | void print( const char8 *ptr);
+      |      ^~~~~
+../src/helloworld.c:172:62: error: expected expression before ')' token
+  172 |              }while(/*XGpio_DiscreteRead(&gpio_bvalid) != 1*/);
+      |                                                              ^
+../src/helloworld.c:176:21: error: too few arguments to function 'XGpio_DiscreteRead'
+  176 |              resp = XGpio_DiscreteRead(&gpio_resp);
+      |                     ^~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:54:
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/sw/axi_ddr_no_burst_platform/standalone_domain/bspinclude/include/xgpio.h:160:5: note: declared here
+  160 | u32 XGpio_DiscreteRead(XGpio *InstancePtr, unsigned Channel);
+      |     ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:180:15: error: case label does not reduce to an integer constant
+  180 |               case OKAY:
+      |               ^~~~
+../src/helloworld.c:183:15: error: case label does not reduce to an integer constant
+  183 |               case EXOKAY:
+      |               ^~~~
+../src/helloworld.c:186:15: error: case label does not reduce to an integer constant
+  186 |               case SLVERR:
+      |               ^~~~
+../src/helloworld.c:189:15: error: case label does not reduce to an integer constant
+  189 |               case DECERR:
+      |               ^~~~
+../src/helloworld.c:197:63: error: expected ';' before '}' token
+  197 |              print("Sélectionnez une option entre 0 et 1. \n")
+      |                                                               ^
+      |                                                               ;
+  198 |            }
+      |            ~                                                   
+../src/helloworld.c:115:9: warning: unused variable 'addressInt' [-Wunused-variable]
+  115 |     int addressInt = 0;
+      |         ^~~~~~~~~~
+../src/helloworld.c:105:9: warning: unused variable 'address' [-Wunused-variable]
+  105 |     int address = 0;
+      |         ^~~~~~~
+../src/helloworld.c:103:9: warning: unused variable 'wdata' [-Wunused-variable]
+  103 |     int wdata = 0;
+      |         ^~~~~
+../src/helloworld.c:101:15: warning: variable 'DECERR' set but not used [-Wunused-but-set-variable]
+  101 |     const int DECERR = 3;
+      |               ^~~~~~
+../src/helloworld.c:100:15: warning: variable 'SLVERR' set but not used [-Wunused-but-set-variable]
+  100 |     const int SLVERR = 2;
+      |               ^~~~~~
+../src/helloworld.c:99:15: warning: variable 'EXOKAY' set but not used [-Wunused-but-set-variable]
+   99 |     const int EXOKAY = 1;
+      |               ^~~~~~
+../src/helloworld.c:98:15: warning: variable 'OKAY' set but not used [-Wunused-but-set-variable]
+   98 |     const int OKAY = 0;
+      |               ^~~~
+../src/helloworld.c:96:15: warning: variable 'WRITE_MODE' set but not used [-Wunused-but-set-variable]
+   96 |     const int WRITE_MODE = 1;
+      |               ^~~~~~~~~~
+../src/helloworld.c:95:15: warning: variable 'READ_MODE' set but not used [-Wunused-but-set-variable]
+   95 |     const int READ_MODE = 0;
+      |               ^~~~~~~~~
+../src/helloworld.c:92:15: warning: unused variable 'BUSY_STATE' [-Wunused-variable]
+   92 |     const int BUSY_STATE = 1;
+      |               ^~~~~~~~~~
+../src/helloworld.c:63:111: warning: unused variable 'gpio_bvalid' [-Wunused-variable]
+   63 |     XGpio gpio_wdata, gpio_wvalid, gpio_address, gpio_rready, gpio_rdata, gpio_rvalid, gpio_resp, gpio_state, gpio_bvalid;
+      |                                                                                                               ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+
+14:46:13 Build Finished (took 552ms)
+

@@ -1,0 +1,1598 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Jul 23 16:49:38 2021
+| Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file axi_ddr_design_wrapper_methodology_drc_routed.rpt -pb axi_ddr_design_wrapper_methodology_drc_routed.pb -rpx axi_ddr_design_wrapper_methodology_drc_routed.rpx
+| Design       : axi_ddr_design_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 307
++-----------+------------------+--------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                            | Violations |
++-----------+------------------+--------------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks         | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks                  | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                           | 1          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain        | 12         |
+| TIMING-18 | Warning          | Missing input or output delay                          | 3          |
+| TIMING-20 | Warning          | Non-clocked latch                                      | 222        |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects            | 1          |
+| XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
+| REQP-1959 | Advisory         | connects_SERDES_RST_driver_not_FF                      | 64         |
++-----------+------------------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_pll_i are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_pll_i]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_pll_i are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_pll_i]
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ref_dll_lock, with 2 or more inputs, drives asynchronous preset/clear pin(s) axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r1_reg/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[0]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[10]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[11]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[1]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[2]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[3]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[4]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[5]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[6]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[7]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[8]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rst_sync_r_reg[9]/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep/PRE,
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep__0/PRE (the first 15 of 57 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X142Y327 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X139Y325 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X143Y326 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X137Y326 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X142Y325 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X140Y325 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X141Y326 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X141Y328 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X141Y323 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X138Y325 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X143Y324 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X140Y327 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on aresetn relative to clock(s) sys_clk_p
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on sys_rst relative to clock(s) sys_clk_p
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on ddr3_reset_n relative to clock(s) sys_clk_p
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/awaddr_buffer_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[30] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[31] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rdata_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_resp_valid_reg cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_resp_valid_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rvalid_reg cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/gpio_rvalid_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#117 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#118 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#119 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#120 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#121 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#122 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#123 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#124 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#125 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_arvalid_reg cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_arvalid_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#126 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#127 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#128 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#129 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#130 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#131 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#132 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#133 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#134 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#135 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#136 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#137 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#138 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#139 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#140 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#141 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#142 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#143 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#144 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#145 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#146 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#147 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#148 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#149 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#150 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#151 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#152 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#153 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#154 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#155 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#156 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awvalid_reg cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awvalid_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#157 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_rready_reg cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_rready_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#158 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#159 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#160 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#161 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#162 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#163 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#164 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#165 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#166 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#167 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#168 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#169 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#170 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#171 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#172 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#173 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#174 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#175 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#176 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#177 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#178 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#179 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#180 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#181 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[30] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#182 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[31] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#183 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#184 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#185 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#186 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#187 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#188 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#189 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wdata_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#190 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wstrb_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_wstrb_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#191 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[0] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#192 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[10] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#193 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[11] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#194 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[12] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#195 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[13] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#196 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[14] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#197 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[15] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#198 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[16] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#199 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[17] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#200 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[18] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#201 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[19] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#202 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[1] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#203 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[20] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#204 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[21] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#205 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[22] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#206 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[23] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#207 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[24] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#208 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[25] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#209 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[26] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#210 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[27] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#211 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[28] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#212 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[29] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#213 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[2] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#214 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[30] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#215 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[31] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#216 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[3] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#217 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[4] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#218 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[5] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#219 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[6] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#220 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[7] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#221 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[8] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#222 Warning
+Non-clocked latch  
+The latch axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[9] cannot be properly analyzed as its control pin axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '14' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_1/axi_ddr_design_mig_7series_0_1/user_design/constraints/axi_ddr_design_mig_7series_0_1.xdc (Line: 831)
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 5.000 [get_ports sys_clk_p] (Source: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/constrs_1/new/constr.xdc (Line: 12))
+Previous: create_clock -period 5.000 [get_ports sys_clk_p] (Source: c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_1/axi_ddr_design_mig_7series_0_1/user_design/constraints/axi_ddr_design_mig_7series_0_1.xdc (Line: 30))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 5.000 [get_ports sys_clk_p] (Source: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/constrs_1/new/constr.xdc (Line: 12))
+Previous: create_clock -period 5.000 [get_ports sys_clk_p] (Source: c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_1/axi_ddr_design_mig_7series_0_1/user_design/constraints/axi_ddr_design_mig_7series_0_1.xdc (Line: 30))
+Related violations: <none>
+
+REQP-1959#1 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#2 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#3 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#4 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#5 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#6 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#7 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#8 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#9 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#10 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#11 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#12 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#13 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#14 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#15 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#16 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#17 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#18 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#19 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#20 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#21 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#22 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#23 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#24 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#25 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#26 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#27 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#28 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#29 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#30 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#31 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#32 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#33 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#34 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#35 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#36 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#37 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#38 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#39 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#40 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#41 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#42 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#43 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#44 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#45 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#46 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#47 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#48 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/ddr_byte_group_io/input_[8].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#49 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[0].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#50 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#51 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#52 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#53 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#54 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#55 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#56 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#57 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[1].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#58 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[2].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#59 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[3].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#60 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[4].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#61 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[5].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#62 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[6].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#63 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[7].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+REQP-1959#64 Advisory
+connects_SERDES_RST_driver_not_FF  
+axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/input_[9].iserdes_dq_.iserdesdq: The RST pin should only be driven by a Flip-flop.
+Related violations: <none>
+
+

@@ -1,0 +1,10 @@
+17:35:11 **** Incremental Build of configuration Debug for project axi_ddr_no_burst_application_07 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+
+17:35:11 Build Finished (took 294ms)
+

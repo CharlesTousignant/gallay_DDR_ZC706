@@ -1,0 +1,219 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date             : Fri Jul 23 16:49:50 2021
+| Host             : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
+| Command          : report_power -file axi_ddr_design_wrapper_power_routed.rpt -pb axi_ddr_design_wrapper_power_summary_routed.pb -rpx axi_ddr_design_wrapper_power_routed.rpx
+| Design           : axi_ddr_design_wrapper
+| Device           : xc7z045ffg900-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 4.235        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.998        |
+| Device Static (W)        | 0.237        |
+| Effective TJA (C/W)      | 1.8          |
+| Max Ambient (C)          | 77.5         |
+| Junction Temperature (C) | 32.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.153 |       51 |       --- |             --- |
+| Slice Logic              |     0.052 |    36432 |       --- |             --- |
+|   LUT as Logic           |     0.046 |    13189 |    218600 |            6.03 |
+|   LUT as Distributed RAM |     0.002 |     1644 |     70400 |            2.34 |
+|   Register               |     0.002 |    14064 |    437200 |            3.22 |
+|   CARRY4                 |     0.001 |      359 |     54650 |            0.66 |
+|   F7/F8 Muxes            |    <0.001 |      371 |    218600 |            0.17 |
+|   LUT as Shift Register  |    <0.001 |      648 |     70400 |            0.92 |
+|   Others                 |    <0.001 |      715 |       --- |             --- |
+|   BUFG                   |     0.000 |        6 |        32 |           18.75 |
+| Signals                  |     0.081 |    28276 |       --- |             --- |
+| MMCM                     |     0.215 |        2 |         8 |           25.00 |
+| PLL                      |     0.133 |        1 |         8 |           12.50 |
+| I/O                      |     1.132 |      118 |       362 |           32.60 |
+| PHASER                   |     0.661 |       44 |       --- |             --- |
+| XADC                     |     0.004 |        1 |       --- |             --- |
+| PS7                      |     1.567 |        1 |       --- |             --- |
+| Static Power             |     0.237 |          |           |                 |
+| Total                    |     4.235 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.581 |       0.512 |      0.069 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.513 |       0.470 |      0.043 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.424 |       0.423 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       2.000 |     0.218 |       0.218 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.738 |       0.717 |      0.021 |       NA    | Unspecified | NA         |
+| Vccpaux   |       1.800 |     0.084 |       0.074 |      0.010 |       NA    | Unspecified | NA         |
+| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
+| Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |       NA    | Unspecified | NA         |
+| Vcco_mio0 |       1.800 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco_mio1 |       1.800 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.022 |       0.002 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.3                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                     | Domain                                                                                                                                                                                                                                 | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk_fpga_0                                                                                                                                                | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                                                                                                                                                      |            20.0 |
+| clk_pll_i                                                                                                                                                 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                    |             5.0 |
+| clk_ref_mmcm_400                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_mmcm_400                                                                                                                                    |             2.5 |
+| freq_refclk                                                                                                                                               | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/freq_refclk                                                                                                                                  |             1.3 |
+| iserdes_clkdiv                                                                                                                                            | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_1                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_2                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_3                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_4                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_5                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_6                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv       |             2.5 |
+| iserdes_clkdiv_7                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv       |             2.5 |
+| mem_refclk                                                                                                                                                | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mem_refclk                                                                                                                                   |             1.3 |
+| mmcm_clkfbout                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/mmcm_clkfbout                                                                                                                                       |             5.0 |
+| mmcm_ps_clk_bufg_in                                                                                                                                       | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk_bufg_in                                                                                                                          |            10.0 |
+| oserdes_clk                                                                                                                                               | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk          |             1.3 |
+| oserdes_clk_1                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk          |             1.3 |
+| oserdes_clk_10                                                                                                                                            | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk          |             1.3 |
+| oserdes_clk_2                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk          |             1.3 |
+| oserdes_clk_3                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk          |             1.3 |
+| oserdes_clk_4                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk          |             1.3 |
+| oserdes_clk_5                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk          |             1.3 |
+| oserdes_clk_6                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk          |             1.3 |
+| oserdes_clk_7                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk          |             1.3 |
+| oserdes_clk_8                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk          |             1.3 |
+| oserdes_clk_9                                                                                                                                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk          |             1.3 |
+| oserdes_clkdiv                                                                                                                                            | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_1                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_10                                                                                                                                         | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_2                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_3                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_4                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv       |             5.0 |
+| oserdes_clkdiv_5                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv       |             5.0 |
+| oserdes_clkdiv_6                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv       |             5.0 |
+| oserdes_clkdiv_7                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_8                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv       |             2.5 |
+| oserdes_clkdiv_9                                                                                                                                          | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv       |             2.5 |
+| pll_clk3_out                                                                                                                                              | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/pll_clk3_out                                                                                                                                 |             5.0 |
+| pll_clkfbout                                                                                                                                              | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/pll_clkfbout                                                                                                                                 |             5.0 |
+| sync_pulse                                                                                                                                                | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/sync_pulse                                                                                                                                   |            20.0 |
+| sys_clk_p                                                                                                                                                 | sys_clk_p                                                                                                                                                                                                                              |             5.0 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/A_rst_primitives_reg |             1.3 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_2.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/A_rst_primitives_reg |             1.3 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------+-----------+
+| Name                                       | Power (W) |
++--------------------------------------------+-----------+
+| axi_ddr_design_wrapper                     |     3.998 |
+|   axi_ddr_design_i                         |     3.998 |
+|     axi_gpio_4                             |     0.001 |
+|       U0                                   |     0.001 |
+|     mig_7series_0                          |     2.423 |
+|       u_axi_ddr_design_mig_7series_0_1_mig |     2.415 |
+|     processing_system7_0                   |     1.567 |
+|       inst                                 |     1.567 |
+|     ps7_0_axi_periph                       |     0.003 |
+|       s00_couplers                         |     0.003 |
++--------------------------------------------+-----------+
+
+

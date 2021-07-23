@@ -1,0 +1,30 @@
+17:35:41 **** Build of configuration Debug for project axi_ddr_no_burst_application_ver2 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_ver2/export/axi_ddr_no_burst_platform_ver2/sw/axi_ddr_no_burst_platform_ver2/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_ver2/export/axi_ddr_no_burst_platform_ver2/sw/axi_ddr_no_burst_platform_ver2/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: axi_ddr_no_burst_application_ver2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_ver2/export/axi_ddr_no_burst_platform_ver2/sw/axi_ddr_no_burst_platform_ver2/standalone_domain/bsplib/lib -o "axi_ddr_no_burst_application_ver2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: axi_ddr_no_burst_application_ver2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size axi_ddr_no_burst_application_ver2.elf  |tee "axi_ddr_no_burst_application_ver2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65750	   2710	  22640	  91100	  163dc	axi_ddr_no_burst_application_ver2.elf
+'Finished building: axi_ddr_no_burst_application_ver2.elf.size'
+' '
+
+17:35:42 Build Finished (took 843ms)
+

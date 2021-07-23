@@ -5,37 +5,70 @@
 
 # XDC: new/constr_01.xdc
 
-# Block Designs: bd/design_1/design_1.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
+# Block Designs: bd/axi_ddr_design/axi_ddr_design.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design || ORIG_REF_NAME==axi_ddr_design} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_processing_system7_0_0/axi_ddr_design_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_processing_system7_0_0 || ORIG_REF_NAME==axi_ddr_design_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_fsm_01_0_0/design_1_fsm_01_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_fsm_01_0_0 || ORIG_REF_NAME==design_1_fsm_01_0_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_0_0/axi_ddr_design_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_0_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_0_0 || ORIG_REF_NAME==design_1_axi_gpio_0_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_ps7_0_axi_periph_0/axi_ddr_design_ps7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==axi_ddr_design_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_1_0 || ORIG_REF_NAME==design_1_axi_gpio_1_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_rst_ps7_0_50M_0/axi_ddr_design_rst_ps7_0_50M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_rst_ps7_0_50M_0 || ORIG_REF_NAME==axi_ddr_design_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_xbar_0/axi_ddr_design_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_xbar_0 || ORIG_REF_NAME==axi_ddr_design_xbar_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_ps_to_mig_interface_0_0/axi_ddr_design_ps_to_mig_interface_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_ps_to_mig_interface_0_0 || ORIG_REF_NAME==axi_ddr_design_ps_to_mig_interface_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ps7_0_axi_periph_0/design_1_ps7_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_1_ps7_0_axi_periph_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_1_0/axi_ddr_design_axi_gpio_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_1_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_50M_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_2_0/axi_ddr_design_axi_gpio_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_2_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_2_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_2_0/design_1_axi_gpio_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_2_0 || ORIG_REF_NAME==design_1_axi_gpio_2_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_3_0/axi_ddr_design_axi_gpio_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_3_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_3_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_util_ds_buf_0_0 || ORIG_REF_NAME==design_1_util_ds_buf_0_0} -quiet] -quiet
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_4_0/axi_ddr_design_axi_gpio_4_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_4_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_4_0} -quiet] -quiet
 
-# XDC: bd/design_1/design_1_ooc.xdc
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_5_0/axi_ddr_design_axi_gpio_5_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_5_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_5_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_6_0/axi_ddr_design_axi_gpio_6_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_6_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_6_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_7_0/axi_ddr_design_axi_gpio_7_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_7_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_7_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_8_0/axi_ddr_design_axi_gpio_8_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_8_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_8_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_1/axi_ddr_design_mig_7series_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_mig_7series_0_1 || ORIG_REF_NAME==axi_ddr_design_mig_7series_0_1} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_9_0/axi_ddr_design_axi_gpio_9_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_9_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_9_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_10_0/axi_ddr_design_axi_gpio_10_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_10_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_10_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_11_0/axi_ddr_design_axi_gpio_11_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_11_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_11_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_12_0/axi_ddr_design_axi_gpio_12_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_12_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_12_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_13_0/axi_ddr_design_axi_gpio_13_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_13_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_13_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_auto_pc_0/axi_ddr_design_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_auto_pc_0 || ORIG_REF_NAME==axi_ddr_design_auto_pc_0} -quiet] -quiet
+
+# XDC: bd/axi_ddr_design/axi_ddr_design_ooc.xdc

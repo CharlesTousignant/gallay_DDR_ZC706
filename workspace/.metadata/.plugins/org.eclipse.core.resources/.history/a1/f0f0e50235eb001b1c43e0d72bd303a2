@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="ps_to_pl_fsm_constant" location="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_to_pl_fsm_constant" platform="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm" platformUID="xilinx:zc706::0.0(custom)" systemProject="ps_to_pl_fsm_constant_system" sysConfig="ps_ppl_platform_no_input" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="60f8fb798ec486db8e9c8640c41686dd">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.873606523">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.183274083" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

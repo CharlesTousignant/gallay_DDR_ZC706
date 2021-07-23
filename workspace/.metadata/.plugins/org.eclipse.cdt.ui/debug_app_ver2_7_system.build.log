@@ -1,0 +1,10 @@
+17:01:30 **** Incremental Build of configuration Debug for project debug_app_ver2_7_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 60195 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm --sys_config debug_platform_ver2_7 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:01:36 Build Finished (took 5s.391ms)
+

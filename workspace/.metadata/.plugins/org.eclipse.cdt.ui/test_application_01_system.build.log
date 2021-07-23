@@ -1,0 +1,10 @@
+17:37:20 **** Build of configuration Debug for project test_application_01_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 62340 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/test_platform_01.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/test_platform_01.xpfm --sys_config test_platform_01 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01/_ide/bitstream/test_hardware_01.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01/Debug/test_application_01.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01/_ide/bitstream/test_hardware_01.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+17:37:25 Build Finished (took 5s.409ms)
+

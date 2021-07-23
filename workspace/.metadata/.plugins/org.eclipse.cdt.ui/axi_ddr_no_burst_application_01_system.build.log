@@ -1,0 +1,10 @@
+14:46:14 **** Incremental Build of configuration Debug for project axi_ddr_no_burst_application_01_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 63705 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/axi_ddr_no_burst_platform.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform/export/axi_ddr_no_burst_platform/axi_ddr_no_burst_platform.xpfm --sys_config axi_ddr_no_burst_platform --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01/_ide/bitstream/axi_ddr_design_no_burst.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01/Debug/axi_ddr_no_burst_application_01.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01/_ide/bitstream/axi_ddr_design_no_burst.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_application_01_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+14:46:19 Build Finished (took 5s.583ms)
+

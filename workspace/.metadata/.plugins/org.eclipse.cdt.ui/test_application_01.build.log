@@ -1,0 +1,82 @@
+17:37:19 **** Build of configuration Debug for project test_application_01 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/sw/test_platform_01/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:126:13: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  126 |    printf("%d", XGpio_DiscreteRead(&gpio_rdata, 1));
+      |            ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |   |
+      |             int u32 {aka long unsigned int}
+      |            %ld
+../src/helloworld.c:113:6: warning: unused variable 'dataInt' [-Wunused-variable]
+  113 |  int dataInt = 0;
+      |      ^~~~~~~
+../src/helloworld.c:112:6: warning: unused variable 'addressInt' [-Wunused-variable]
+  112 |  int addressInt = 0;
+      |      ^~~~~~~~~~
+../src/helloworld.c:108:6: warning: unused variable 'resp' [-Wunused-variable]
+  108 |  int resp = 0;
+      |      ^~~~
+../src/helloworld.c:107:6: warning: unused variable 'state' [-Wunused-variable]
+  107 |  int state = 0;
+      |      ^~~~~
+../src/helloworld.c:106:6: warning: unused variable 'address' [-Wunused-variable]
+  106 |  int address = 0;
+      |      ^~~~~~~
+../src/helloworld.c:105:6: warning: unused variable 'rdata' [-Wunused-variable]
+  105 |  int rdata = 0;
+      |      ^~~~~
+../src/helloworld.c:104:6: warning: unused variable 'wdata' [-Wunused-variable]
+  104 |  int wdata = 0;
+      |      ^~~~~
+../src/helloworld.c:102:12: warning: unused variable 'DECERR' [-Wunused-variable]
+  102 |  const int DECERR = 3;
+      |            ^~~~~~
+../src/helloworld.c:101:12: warning: unused variable 'SLVERR' [-Wunused-variable]
+  101 |  const int SLVERR = 2;
+      |            ^~~~~~
+../src/helloworld.c:100:12: warning: unused variable 'EXOKAY' [-Wunused-variable]
+  100 |  const int EXOKAY = 1;
+      |            ^~~~~~
+../src/helloworld.c:99:12: warning: unused variable 'OKAY' [-Wunused-variable]
+   99 |  const int OKAY = 0;
+      |            ^~~~
+../src/helloworld.c:97:12: warning: unused variable 'WRITE_MODE' [-Wunused-variable]
+   97 |  const int WRITE_MODE = 1;
+      |            ^~~~~~~~~~
+../src/helloworld.c:96:12: warning: unused variable 'READ_MODE' [-Wunused-variable]
+   96 |  const int READ_MODE = 0;
+      |            ^~~~~~~~~
+../src/helloworld.c:94:12: warning: unused variable 'READY_STATE' [-Wunused-variable]
+   94 |  const int READY_STATE = 0;
+      |            ^~~~~~~~~~~
+../src/helloworld.c:93:12: warning: unused variable 'BUSY_STATE' [-Wunused-variable]
+   93 |  const int BUSY_STATE = 1;
+      |            ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/sw/test_platform_01/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: test_application_01.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/sw/test_platform_01/standalone_domain/bsplib/lib -o "test_application_01.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_application_01.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test_application_01.elf  |tee "test_application_01.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64188	   2694	  22640	  89522	  15db2	test_application_01.elf
+'Finished building: test_application_01.elf.size'
+' '
+
+17:37:19 Build Finished (took 915ms)
+

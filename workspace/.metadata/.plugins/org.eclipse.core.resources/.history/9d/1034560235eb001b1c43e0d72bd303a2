@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="test_application_01" location="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_application_01" platform="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/test_platform_01/export/test_platform_01/test_platform_01.xpfm" platformUID="xilinx:zc706::0.0(custom)" systemProject="test_application_01_system" sysConfig="test_platform_01" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="5ac8c86b434934daf5135b41f167e132">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.63489872">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1017077091" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

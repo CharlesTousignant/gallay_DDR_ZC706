@@ -1,4 +1,4 @@
-14:37:45 **** Incremental Build of configuration Debug for project ps_to_pl_fsm_constant ****
+17:36:47 **** Build of configuration Debug for project ps_to_pl_fsm_constant ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -22,6 +22,11 @@ c:\xilinx\vitis\2020.1\gnu\aarch32\nt\gcc-arm-none-eabi\aarch32-xilinx-eabi\usr\
       |         ^
 'Finished building: ../src/helloworld.c'
 ' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/sw/ps_ppl_platform_no_input/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
 'Building target: ps_to_pl_fsm_constant.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/sw/ps_ppl_platform_no_input/standalone_domain/bsplib/lib -o "ps_to_pl_fsm_constant.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -34,5 +39,5 @@ arm-none-eabi-size ps_to_pl_fsm_constant.elf  |tee "ps_to_pl_fsm_constant.elf.si
 'Finished building: ps_to_pl_fsm_constant.elf.size'
 ' '
 
-14:37:46 Build Finished (took 866ms)
+17:36:47 Build Finished (took 856ms)
 

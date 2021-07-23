@@ -1,0 +1,89 @@
+17:26:11 **** Build of configuration Debug for project axi_ddr_no_burst_application_05 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_v5/export/axi_ddr_no_burst_platform_v5/sw/axi_ddr_no_burst_platform_v5/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:129:13: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 *' {aka 'long unsigned int *'} [-Wformat=]
+  129 |     scanf("%d", &addressInt);
+      |            ~^   ~~~~~~~~~~~
+      |             |   |
+      |             |   u32 * {aka long unsigned int *}
+      |             int *
+      |            %ld
+../src/helloworld.c:131:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  131 |     printf("Lecture a l'adresse: %d \n", addressInt);
+      |                                  ~^      ~~~~~~~~~~
+      |                                   |      |
+      |                                   int    u32 {aka long unsigned int}
+      |                                  %ld
+../src/helloworld.c:165:13: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 *' {aka 'long unsigned int *'} [-Wformat=]
+  165 |     scanf("%d", &dataInt);
+      |            ~^   ~~~~~~~~
+      |             |   |
+      |             |   u32 * {aka long unsigned int *}
+      |             int *
+      |            %ld
+../src/helloworld.c:168:13: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'u32 *' {aka 'long unsigned int *'} [-Wformat=]
+  168 |     scanf("%d", &addressInt);
+      |            ~^   ~~~~~~~~~~~
+      |             |   |
+      |             |   u32 * {aka long unsigned int *}
+      |             int *
+      |            %ld
+../src/helloworld.c:171:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  171 |     printf("Ecriture a l'adresse %d de la valeur %d \n", addressInt,
+      |                                  ~^                      ~~~~~~~~~~
+      |                                   |                      |
+      |                                   int                    u32 {aka long unsigned int}
+      |                                  %ld
+../src/helloworld.c:171:51: warning: format '%d' expects argument of type 'int', but argument 3 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  171 |     printf("Ecriture a l'adresse %d de la valeur %d \n", addressInt,
+      |                                                  ~^
+      |                                                   |
+      |                                                   int
+      |                                                  %ld
+  172 |       dataInt);
+      |       ~~~~~~~                                      
+      |       |
+      |       u32 {aka long unsigned int}
+../src/helloworld.c:107:6: warning: unused variable 'state' [-Wunused-variable]
+  107 |  int state = 0;
+      |      ^~~~~
+../src/helloworld.c:106:6: warning: unused variable 'address' [-Wunused-variable]
+  106 |  int address = 0;
+      |      ^~~~~~~
+../src/helloworld.c:104:6: warning: unused variable 'wdata' [-Wunused-variable]
+  104 |  int wdata = 0;
+      |      ^~~~~
+../src/helloworld.c:94:12: warning: unused variable 'READY_STATE' [-Wunused-variable]
+   94 |  const int READY_STATE = 0;
+      |            ^~~~~~~~~~~
+../src/helloworld.c:93:12: warning: unused variable 'BUSY_STATE' [-Wunused-variable]
+   93 |  const int BUSY_STATE = 1;
+      |            ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_v5/export/axi_ddr_no_burst_platform_v5/sw/axi_ddr_no_burst_platform_v5/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: axi_ddr_no_burst_application_05.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/axi_ddr_no_burst_platform_v5/export/axi_ddr_no_burst_platform_v5/sw/axi_ddr_no_burst_platform_v5/standalone_domain/bsplib/lib -o "axi_ddr_no_burst_application_05.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: axi_ddr_no_burst_application_05.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size axi_ddr_no_burst_application_05.elf  |tee "axi_ddr_no_burst_application_05.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65574	   2694	  22640	  90908	  1631c	axi_ddr_no_burst_application_05.elf
+'Finished building: axi_ddr_no_burst_application_05.elf.size'
+' '
+
+17:26:12 Build Finished (took 1s.59ms)
+

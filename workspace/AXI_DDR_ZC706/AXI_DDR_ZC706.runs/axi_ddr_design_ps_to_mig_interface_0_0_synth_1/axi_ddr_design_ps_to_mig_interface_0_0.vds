@@ -1,0 +1,274 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jul 23 16:41:57 2021
+# Process ID: 2796
+# Current directory: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/axi_ddr_design_ps_to_mig_interface_0_0_synth_1
+# Command line: vivado.exe -log axi_ddr_design_ps_to_mig_interface_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_ddr_design_ps_to_mig_interface_0_0.tcl
+# Log file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/axi_ddr_design_ps_to_mig_interface_0_0_synth_1/axi_ddr_design_ps_to_mig_interface_0_0.vds
+# Journal file: C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/axi_ddr_design_ps_to_mig_interface_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axi_ddr_design_ps_to_mig_interface_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-5591] Ignoring specified user repository that is part of the Xilinx supplied IP repositories; it will get loaded with the Xilinx repositories: c:/Xilinx/Vivado/2020.1/data/ip/xilinx/axi_master_burst_v2_0
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.cache/ip 
+Command: synth_design -top axi_ddr_design_ps_to_mig_interface_0_0 -part xc7z045ffg900-2 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'axi_ddr_design_ps_to_mig_interface_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13760
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1390.027 ; gain = 242.219
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axi_ddr_design_ps_to_mig_interface_0_0' [c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_ps_to_mig_interface_0_0/synth/axi_ddr_design_ps_to_mig_interface_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'ps_to_mig_interface' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:107]
+WARNING: [Synth 8-614] signal 'STATE' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:186]
+WARNING: [Synth 8-614] signal 'gpio_wdata' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:186]
+WARNING: [Synth 8-614] signal 'gpio_address' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:186]
+WARNING: [Synth 8-614] signal 'wdata_buffer' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+WARNING: [Synth 8-614] signal 'awaddr_buffer' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+WARNING: [Synth 8-614] signal 's_axi_bresp' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+WARNING: [Synth 8-614] signal 'araddr_buffer' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+WARNING: [Synth 8-614] signal 'rdata_buffer' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+WARNING: [Synth 8-614] signal 's_axi_rresp' is read in the process but is not in the sensitivity list [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:200]
+INFO: [Synth 8-256] done synthesizing module 'ps_to_mig_interface' (1#1) [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:107]
+INFO: [Synth 8-6155] done synthesizing module 'axi_ddr_design_ps_to_mig_interface_0_0' (2#1) [c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_ps_to_mig_interface_0_0/synth/axi_ddr_design_ps_to_mig_interface_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1443.410 ; gain = 295.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1443.410 ; gain = 295.602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1443.410 ; gain = 295.602
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1443.410 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1541.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1542.109 ; gain = 1.051
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'STATE_reg' in module 'ps_to_mig_interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   reset |                      00000000001 |                             0000
+                    idle |                      00000000010 |                             0001
+            write_buffer |                      00000000100 |                             0010
+                   write |                      00000001000 |                             0011
+              write_wait |                      00000010000 |                             0100
+              write_resp |                      00000100000 |                             0101
+        read_buffer_addr |                      00001000000 |                             0110
+                    read |                      00010000000 |                             0111
+               read_wait |                      00100000000 |                             1000
+        read_buffer_data |                      01000000000 |                             1001
+               read_resp |                      10000000000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'STATE_reg' using encoding 'one-hot' in module 'ps_to_mig_interface'
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awaddr_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:207]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awlen_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:233]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awsize_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:234]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awburst_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:235]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awprot_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:208]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_awvalid_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:209]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_wdata_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:228]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_wstrb_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:219]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_wlast_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:231]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_bready_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:210]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_araddr_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:214]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_arlen_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:256]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_arsize_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:257]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_arburst_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:258]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_arvalid_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:216]
+WARNING: [Synth 8-327] inferring latch for variable 's_axi_rready_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:217]
+WARNING: [Synth 8-327] inferring latch for variable 'gpio_rdata_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:270]
+WARNING: [Synth 8-327] inferring latch for variable 'gpio_rvalid_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:221]
+WARNING: [Synth 8-327] inferring latch for variable 'gpio_resp_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:248]
+WARNING: [Synth 8-327] inferring latch for variable 'gpio_resp_valid_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:222]
+WARNING: [Synth 8-327] inferring latch for variable 'awaddr_buffer_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:191]
+WARNING: [Synth 8-327] inferring latch for variable 'araddr_buffer_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:193]
+WARNING: [Synth 8-327] inferring latch for variable 'wdata_buffer_reg' [C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/ps_to_mig_interface.vhd:190]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  11 Input   30 Bit        Muxes := 2     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	  11 Input    4 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1542.109 ; gain = 394.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1557.746 ; gain = 409.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |    65|
+|2     |LUT3 |     7|
+|3     |LUT4 |     3|
+|4     |LUT5 |     5|
+|5     |LUT6 |     2|
+|6     |FDRE |    43|
+|7     |FDSE |     1|
+|8     |LD   |   224|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1562.574 ; gain = 316.066
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1562.574 ; gain = 414.766
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1574.625 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1585.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 224 instances were transformed.
+  LD => LDCE: 224 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 1585.621 ; gain = 504.879
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/axi_ddr_design_ps_to_mig_interface_0_0_synth_1/axi_ddr_design_ps_to_mig_interface_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.runs/axi_ddr_design_ps_to_mig_interface_0_0_synth_1/axi_ddr_design_ps_to_mig_interface_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axi_ddr_design_ps_to_mig_interface_0_0_utilization_synth.rpt -pb axi_ddr_design_ps_to_mig_interface_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 23 16:42:49 2021...

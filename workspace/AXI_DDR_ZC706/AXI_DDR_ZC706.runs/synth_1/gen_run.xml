@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1626357143">
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1627072910">
+  <File Type="PA-TCL" Name="axi_ddr_design_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="axi_ddr_design_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="axi_ddr_design_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="axi_ddr_design_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="axi_ddr_design_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="axi_ddr_design_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="axi_ddr_design_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="axi_ddr_design_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="axi_ddr_design_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ps_to_mig_interface.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/axi_ddr_design/axi_ddr_design.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/axi_ddr_design/hdl/axi_ddr_design_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/fsm_01.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -20,6 +41,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -27,6 +49,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -54,9 +77,28 @@
         <Attr Name="ScopedToCell" Val="mig_7series_0"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_0/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="axi_ddr_design_mig_7series_0_0"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_mig_7series_0_1/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="axi_ddr_design_mig_7series_0_1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hdl/lib_pkg_v1_0/hdl/lib_pkg_v1_0_rfs.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopModule" Val="axi_ddr_design_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -74,7 +116,7 @@
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constr_01.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constr.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -89,12 +131,22 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_8_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_fsm_01_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_util_ds_buf_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_axi_gpio_10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_ddr_design_ps_to_mig_interface_0_0"/>
 </GenRun>

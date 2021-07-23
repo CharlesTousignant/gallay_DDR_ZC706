@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="debug_app_ver2_7" location="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7" platform="C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm" platformUID="xilinx:zc706::0.0(custom)" systemProject="debug_app_ver2_7_system" sysConfig="debug_platform_ver2_7" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="a0d34fe9829a5771219c596afaed84db">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1864462351">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.676764489" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

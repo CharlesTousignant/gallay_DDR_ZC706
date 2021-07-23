@@ -1,6 +1,9 @@
-# Push button
+# Push buttons
 set_property PACKAGE_PIN AK25 [get_ports sys_rst]
 set_property IOSTANDARD LVCMOS25 [get_ports sys_rst]
+
+set_property PACKAGE_PIN K15 [get_ports aresetn]
+set_property IOSTANDARD LVCMOS15 [get_ports aresetn]
 
 # LED
 set_property PACKAGE_PIN A17 [get_ports led]

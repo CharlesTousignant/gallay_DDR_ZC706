@@ -93,3 +93,244 @@ timestamp=[2021-07-15 14:35:01], mode=BUILD, duration=0:00:00.879, duration_ms=8
 timestamp=[2021-07-15 14:35:07], mode=BUILD, duration=0:00:05.871, duration_ms=5871, data={name=ps_to_pl_fsm_constant_system, configuration=Debug, clean_build=false}
 timestamp=[2021-07-15 14:37:46], mode=BUILD, duration=0:00:00.878, duration_ms=878, data={name=ps_to_pl_fsm_constant, configuration=Debug, clean_build=false}
 timestamp=[2021-07-15 14:37:52], mode=BUILD, duration=0:00:05.876, duration_ms=5876, data={name=ps_to_pl_fsm_constant_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 10:55:28], mode=WORKBENCH_START, duration=0:00:09.586, duration_ms=9586, data={}
+timestamp=[2021-07-21 10:55:29], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.085, duration_ms=85, data={}
+timestamp=[2021-07-21 10:55:29], mode=WORKBENCH_UI_INIT, duration=0:00:01.005, duration_ms=1005, data={editors_count=10, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-21 10:56:18], mode=PLATFORM_CREATION, duration=0:00:16.942, duration_ms=16942, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 11:00:07], mode=PLATFORM_GENERATION, duration=0:00:45.541, duration_ms=45541, data={name=axi_ddr_no_burst_platform}
+timestamp=[2021-07-21 11:02:54], mode=APP_CREATION, duration=0:00:07.761, duration_ms=7761, data={name=axi_ddr_no_burst_application_01, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform, application_type=application}
+timestamp=[2021-07-21 11:03:03], mode=BUILD, duration=0:00:01.115, duration_ms=1115, data={name=axi_ddr_no_burst_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 11:03:09], mode=BUILD, duration=0:00:05.614, duration_ms=5614, data={name=axi_ddr_no_burst_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:15:03], mode=PLATFORM_CREATION, duration=0:00:12.441, duration_ms=12441, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 12:16:56], mode=PLATFORM_GENERATION, duration=0:00:44.647, duration_ms=44647, data={name=axi_ddr_no_burst_platform_v2}
+timestamp=[2021-07-21 12:17:46], mode=APP_CREATION, duration=0:00:07.888, duration_ms=7888, data={name=axi_ddr_no_burst_application_02, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v2, application_type=application}
+timestamp=[2021-07-21 12:19:35], mode=BUILD, duration=0:00:01.044, duration_ms=1044, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:19:41], mode=BUILD, duration=0:00:05.399, duration_ms=5399, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:20:13], mode=BUILD, duration=0:00:00.560, duration_ms=560, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:20:19], mode=BUILD, duration=0:00:05.345, duration_ms=5345, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:21:22], mode=BUILD, duration=0:00:00.551, duration_ms=551, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:21:27], mode=BUILD, duration=0:00:05.345, duration_ms=5345, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:21:30], mode=BUILD, duration=0:00:00.569, duration_ms=569, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:57:04], mode=BUILD, duration=0:00:00.554, duration_ms=554, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:57:36], mode=BUILD, duration=0:00:00.557, duration_ms=557, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 12:57:40], mode=BUILD, duration=0:00:00.505, duration_ms=505, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:17], mode=BUILD, duration=0:00:00.544, duration_ms=544, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:26], mode=BUILD, duration=0:00:00.561, duration_ms=561, data={name=axi_ddr_no_burst_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:32], mode=BUILD, duration=0:00:05.407, duration_ms=5407, data={name=axi_ddr_no_burst_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:32], mode=BUILD, duration=0:00:00.559, duration_ms=559, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:38], mode=BUILD, duration=0:00:05.307, duration_ms=5307, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:40], mode=BUILD, duration=0:00:00.302, duration_ms=302, data={name=ps_to_pl_fsm_constant, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:02:46], mode=BUILD, duration=0:00:05.315, duration_ms=5315, data={name=ps_to_pl_fsm_constant_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:05:14], mode=BUILD, duration=0:00:00.558, duration_ms=558, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:06:42], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:06:52], mode=BUILD, duration=0:00:00.930, duration_ms=930, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:27:19], mode=BUILD, duration=0:00:00.864, duration_ms=864, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:30:10], mode=BUILD, duration=0:00:00.869, duration_ms=869, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:33:29], mode=BUILD, duration=0:00:00.944, duration_ms=944, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:37:37], mode=BUILD, duration=0:00:00.875, duration_ms=875, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:48:55], mode=BUILD, duration=0:00:00.876, duration_ms=876, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:52:18], mode=BUILD, duration=0:00:00.873, duration_ms=873, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:52:23], mode=BUILD, duration=0:00:05.366, duration_ms=5366, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:56:05], mode=BUILD, duration=0:00:00.877, duration_ms=877, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:56:51], mode=BUILD, duration=0:00:00.873, duration_ms=873, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:56:57], mode=BUILD, duration=0:00:05.375, duration_ms=5375, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 13:59:58], mode=BUILD, duration=0:00:00.885, duration_ms=885, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:00:04], mode=BUILD, duration=0:00:05.421, duration_ms=5421, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:04:31], mode=BUILD, duration=0:00:00.856, duration_ms=856, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:04:36], mode=BUILD, duration=0:00:05.364, duration_ms=5364, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:07:35], mode=BUILD, duration=0:00:00.865, duration_ms=865, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:07:41], mode=BUILD, duration=0:00:05.365, duration_ms=5365, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:29:31], mode=BUILD, duration=0:00:00.932, duration_ms=932, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:29:37], mode=BUILD, duration=0:00:05.410, duration_ms=5410, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:35:07], mode=BUILD, duration=0:00:00.867, duration_ms=867, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:35:10], mode=BUILD, duration=0:00:00.298, duration_ms=298, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:35:16], mode=BUILD, duration=0:00:05.394, duration_ms=5394, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:37:11], mode=BUILD, duration=0:00:00.868, duration_ms=868, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:37:17], mode=BUILD, duration=0:00:05.369, duration_ms=5369, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:40:03], mode=BUILD, duration=0:00:00.862, duration_ms=862, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:40:09], mode=BUILD, duration=0:00:05.432, duration_ms=5432, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:44:29], mode=PLATFORM_CREATION, duration=0:00:13.311, duration_ms=13311, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 14:45:51], mode=APP_CREATION, duration=0:00:08.100, duration_ms=8100, data={name=axi_ddr_no_burst_application_03, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v3, application_type=application}
+timestamp=[2021-07-21 14:46:13], mode=BUILD, duration=0:00:00.560, duration_ms=560, data={name=axi_ddr_no_burst_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:46:19], mode=BUILD, duration=0:00:05.588, duration_ms=5588, data={name=axi_ddr_no_burst_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:46:20], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=axi_ddr_no_burst_application_02, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:46:25], mode=BUILD, duration=0:00:05.363, duration_ms=5363, data={name=axi_ddr_no_burst_application_02_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:47:10], mode=PLATFORM_GENERATION, duration=0:00:44.809, duration_ms=44809, data={name=axi_ddr_no_burst_platform_v3}
+timestamp=[2021-07-21 14:47:11], mode=BUILD, duration=0:00:00.996, duration_ms=996, data={name=axi_ddr_no_burst_application_03, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:47:17], mode=BUILD, duration=0:00:05.550, duration_ms=5550, data={name=axi_ddr_no_burst_application_03_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:47:18], mode=BUILD, duration=0:00:00.304, duration_ms=304, data={name=ps_to_pl_fsm_constant, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:47:23], mode=BUILD, duration=0:00:05.227, duration_ms=5227, data={name=ps_to_pl_fsm_constant_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:48:07], mode=BUILD, duration=0:00:00.858, duration_ms=858, data={name=axi_ddr_no_burst_application_03, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:48:13], mode=BUILD, duration=0:00:05.328, duration_ms=5328, data={name=axi_ddr_no_burst_application_03_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:49:04], mode=BUILD, duration=0:00:00.856, duration_ms=856, data={name=axi_ddr_no_burst_application_03, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 14:49:10], mode=BUILD, duration=0:00:05.364, duration_ms=5364, data={name=axi_ddr_no_burst_application_03_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 16:20:12], mode=WORKBENCH_START, duration=0:00:09.955, duration_ms=9955, data={}
+timestamp=[2021-07-21 16:20:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.225, duration_ms=225, data={}
+timestamp=[2021-07-21 16:20:13], mode=WORKBENCH_UI_INIT, duration=0:00:01.092, duration_ms=1092, data={editors_count=19, platform_editors_count=5, projects_count=13, platform_projects_count=4, active_platform_editor=false, projects=RemoteSystemsTempFiles,axi_ddr_no_burst_application_01,axi_ddr_no_burst_application_01_system,axi_ddr_no_burst_application_02,axi_ddr_no_burst_application_02_system,axi_ddr_no_burst_application_03,axi_ddr_no_burst_application_03_system,axi_ddr_no_burst_platform,axi_ddr_no_burst_platform_v2,axi_ddr_no_burst_platform_v3,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-21 16:44:37], mode=PLATFORM_CREATION, duration=0:00:15.964, duration_ms=15964, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 16:46:34], mode=PLATFORM_GENERATION, duration=0:00:44.785, duration_ms=44785, data={name=axi_ddr_no_burst_platform_v4}
+timestamp=[2021-07-21 16:50:14], mode=APP_CREATION, duration=0:00:06.680, duration_ms=6680, data={name=axi_ddr_no_burst_application_04, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v4, application_type=application}
+timestamp=[2021-07-21 16:51:05], mode=BUILD, duration=0:00:01.118, duration_ms=1118, data={name=axi_ddr_no_burst_application_04, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 16:51:11], mode=BUILD, duration=0:00:05.601, duration_ms=5601, data={name=axi_ddr_no_burst_application_04_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 16:52:58], mode=BUILD, duration=0:00:00.881, duration_ms=881, data={name=axi_ddr_no_burst_application_04, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 16:53:04], mode=BUILD, duration=0:00:05.310, duration_ms=5310, data={name=axi_ddr_no_burst_application_04_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:19:25], mode=PLATFORM_CREATION, duration=0:00:13.224, duration_ms=13224, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 17:22:59], mode=APP_CREATION, duration=0:00:08.198, duration_ms=8198, data={name=axi_ddr_no_burst_application_05, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v5, application_type=application}
+timestamp=[2021-07-21 17:24:34], mode=PLATFORM_GENERATION, duration=0:00:43.987, duration_ms=43987, data={name=axi_ddr_no_burst_platform_v5}
+timestamp=[2021-07-21 17:26:12], mode=BUILD, duration=0:00:01.083, duration_ms=1083, data={name=axi_ddr_no_burst_application_05, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:26:17], mode=BUILD, duration=0:00:05.390, duration_ms=5390, data={name=axi_ddr_no_burst_application_05_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:49:32], mode=WORKBENCH_START, duration=0:00:08.460, duration_ms=8460, data={}
+timestamp=[2021-07-21 17:49:33], mode=WORKBENCH_UI_INIT, duration=0:00:00.856, duration_ms=856, data={editors_count=18, platform_editors_count=4, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=RemoteSystemsTempFiles,axi_ddr_no_burst_application_04,axi_ddr_no_burst_application_04_system,axi_ddr_no_burst_application_05,axi_ddr_no_burst_application_05_system,axi_ddr_no_burst_platform_v4,axi_ddr_no_burst_platform_v5,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-21 17:49:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.075, duration_ms=75, data={}
+timestamp=[2021-07-21 17:50:10], mode=PLATFORM_CREATION, duration=0:00:13.739, duration_ms=13739, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 17:51:33], mode=PLATFORM_GENERATION, duration=0:00:43.888, duration_ms=43888, data={name=axi_ddr_no_burst_platform_v6}
+timestamp=[2021-07-21 17:53:02], mode=APP_CREATION, duration=0:00:06.999, duration_ms=6999, data={name=axi_ddr_no_burst_application_06, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v6, application_type=application}
+timestamp=[2021-07-21 17:53:28], mode=BUILD, duration=0:00:01.079, duration_ms=1079, data={name=axi_ddr_no_burst_application_06, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:53:34], mode=BUILD, duration=0:00:05.387, duration_ms=5387, data={name=axi_ddr_no_burst_application_06_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:53:58], mode=BUILD, duration=0:00:00.876, duration_ms=876, data={name=axi_ddr_no_burst_application_06, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:54:15], mode=BUILD, duration=0:00:00.808, duration_ms=808, data={name=axi_ddr_no_burst_application_06, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 17:54:21], mode=BUILD, duration=0:00:05.320, duration_ms=5320, data={name=axi_ddr_no_burst_application_06_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:25:10], mode=PLATFORM_CREATION, duration=0:00:12.906, duration_ms=12906, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-21 18:26:20], mode=PLATFORM_GENERATION, duration=0:00:44.318, duration_ms=44318, data={name=axi_ddr_no_burst_platform_v7}
+timestamp=[2021-07-21 18:27:27], mode=APP_CREATION, duration=0:00:08.265, duration_ms=8265, data={name=axi_ddr_no_burst_application_07, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_v7, application_type=application}
+timestamp=[2021-07-21 18:28:19], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:28:25], mode=BUILD, duration=0:00:05.442, duration_ms=5442, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:29:21], mode=BUILD, duration=0:00:00.889, duration_ms=889, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:29:27], mode=BUILD, duration=0:00:05.306, duration_ms=5306, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:30:02], mode=BUILD, duration=0:00:00.877, duration_ms=877, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:30:08], mode=BUILD, duration=0:00:05.358, duration_ms=5358, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:36:49], mode=BUILD, duration=0:00:01.049, duration_ms=1049, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:37:42], mode=BUILD, duration=0:00:00.381, duration_ms=381, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:38:46], mode=BUILD, duration=0:00:06.449, duration_ms=6449, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:40:32], mode=WORKBENCH_START, duration=0:00:08.322, duration_ms=8322, data={}
+timestamp=[2021-07-21 18:40:33], mode=WORKBENCH_UI_INIT, duration=0:00:00.840, duration_ms=840, data={editors_count=26, platform_editors_count=6, projects_count=16, platform_projects_count=5, active_platform_editor=false, projects=RemoteSystemsTempFiles,axi_ddr_no_burst_application_04,axi_ddr_no_burst_application_04_system,axi_ddr_no_burst_application_05,axi_ddr_no_burst_application_05_system,axi_ddr_no_burst_application_06,axi_ddr_no_burst_application_06_system,axi_ddr_no_burst_application_07,axi_ddr_no_burst_application_07_system,axi_ddr_no_burst_platform_v4,axi_ddr_no_burst_platform_v5,axi_ddr_no_burst_platform_v6,axi_ddr_no_burst_platform_v7,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-21 18:40:33], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.080, duration_ms=80, data={}
+timestamp=[2021-07-21 18:41:07], mode=PLATFORM_GENERATION, duration=0:00:26.908, duration_ms=26908, data={name=axi_ddr_no_burst_platform_v7}
+timestamp=[2021-07-21 18:41:11], mode=BUILD, duration=0:00:01.020, duration_ms=1020, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-21 18:41:17], mode=BUILD, duration=0:00:05.450, duration_ms=5450, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 08:30:34], mode=WORKBENCH_START, duration=0:00:10.762, duration_ms=10762, data={}
+timestamp=[2021-07-22 08:30:36], mode=WORKBENCH_UI_INIT, duration=0:00:01.368, duration_ms=1368, data={editors_count=26, platform_editors_count=6, projects_count=16, platform_projects_count=5, active_platform_editor=false, projects=RemoteSystemsTempFiles,axi_ddr_no_burst_application_04,axi_ddr_no_burst_application_04_system,axi_ddr_no_burst_application_05,axi_ddr_no_burst_application_05_system,axi_ddr_no_burst_application_06,axi_ddr_no_burst_application_06_system,axi_ddr_no_burst_application_07,axi_ddr_no_burst_application_07_system,axi_ddr_no_burst_platform_v4,axi_ddr_no_burst_platform_v5,axi_ddr_no_burst_platform_v6,axi_ddr_no_burst_platform_v7,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-22 08:30:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.434, duration_ms=434, data={}
+timestamp=[2021-07-22 08:42:47], mode=PLATFORM_CREATION, duration=0:00:16.533, duration_ms=16533, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 08:44:31], mode=PLATFORM_GENERATION, duration=0:00:46.652, duration_ms=46652, data={name=test_platform_01}
+timestamp=[2021-07-22 08:47:09], mode=APP_CREATION, duration=0:00:07.915, duration_ms=7915, data={name=test_application_01, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=test_platform_01, application_type=application}
+timestamp=[2021-07-22 08:49:30], mode=BUILD, duration=0:00:01.132, duration_ms=1132, data={name=test_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 08:49:37], mode=BUILD, duration=0:00:05.678, duration_ms=5678, data={name=test_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 08:58:22], mode=BUILD, duration=0:00:00.945, duration_ms=945, data={name=test_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 08:58:28], mode=BUILD, duration=0:00:05.393, duration_ms=5393, data={name=test_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 09:00:48], mode=BUILD, duration=0:00:00.883, duration_ms=883, data={name=test_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 09:00:54], mode=BUILD, duration=0:00:05.639, duration_ms=5639, data={name=test_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 14:51:26], mode=PLATFORM_CREATION, duration=0:00:14.938, duration_ms=14938, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 14:53:47], mode=PLATFORM_GENERATION, duration=0:00:37.172, duration_ms=37172, data={name=axi_ddr_no_burst_platform_ver2}
+timestamp=[2021-07-22 14:54:22], mode=APP_CREATION, duration=0:00:07.652, duration_ms=7652, data={name=axi_ddr_no_burst_application_ver2, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_ver2, application_type=application}
+timestamp=[2021-07-22 14:54:31], mode=BUILD, duration=0:00:00.922, duration_ms=922, data={name=axi_ddr_no_burst_application_ver2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 14:54:37], mode=BUILD, duration=0:00:05.579, duration_ms=5579, data={name=axi_ddr_no_burst_application_ver2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 15:36:12], mode=BUILD, duration=0:00:00.748, duration_ms=748, data={name=axi_ddr_no_burst_application_ver2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 15:36:18], mode=BUILD, duration=0:00:05.318, duration_ms=5318, data={name=axi_ddr_no_burst_application_ver2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 16:00:18], mode=BUILD, duration=0:00:00.745, duration_ms=745, data={name=axi_ddr_no_burst_application_ver2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 16:00:24], mode=BUILD, duration=0:00:05.384, duration_ms=5384, data={name=axi_ddr_no_burst_application_ver2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 16:24:40], mode=PLATFORM_CREATION, duration=0:00:12.556, duration_ms=12556, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 16:25:58], mode=PLATFORM_GENERATION, duration=0:00:35.768, duration_ms=35768, data={name=axi_ddr_ni_burst_platform_ver2_1}
+timestamp=[2021-07-22 16:27:19], mode=PLATFORM_CREATION, duration=0:00:12.020, duration_ms=12020, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 16:28:21], mode=PLATFORM_GENERATION, duration=0:00:35.534, duration_ms=35534, data={name=axi_ddr_no_burst_platform_ver2_1}
+timestamp=[2021-07-22 16:29:09], mode=APP_CREATION, duration=0:00:07.627, duration_ms=7627, data={name=axi_ddr_no_burst_application_ver2_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_ver2_1, application_type=application}
+timestamp=[2021-07-22 16:29:56], mode=BUILD, duration=0:00:00.874, duration_ms=874, data={name=axi_ddr_no_burst_application_ver2_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 16:30:02], mode=BUILD, duration=0:00:05.394, duration_ms=5394, data={name=axi_ddr_no_burst_application_ver2_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 16:57:01], mode=WORKBENCH_START, duration=0:00:09.570, duration_ms=9570, data={}
+timestamp=[2021-07-22 16:57:02], mode=WORKBENCH_UI_INIT, duration=0:00:00.870, duration_ms=870, data={editors_count=29, platform_editors_count=5, projects_count=16, platform_projects_count=5, active_platform_editor=false, projects=RemoteSystemsTempFiles,axi_ddr_no_burst_application_07,axi_ddr_no_burst_application_07_system,axi_ddr_no_burst_application_ver2,axi_ddr_no_burst_application_ver2_1,axi_ddr_no_burst_application_ver2_1_system,axi_ddr_no_burst_application_ver2_system,axi_ddr_no_burst_platform_v7,axi_ddr_no_burst_platform_ver2,axi_ddr_no_burst_platform_ver2_1,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system,test_application_01,test_application_01_system,test_platform_01}
+timestamp=[2021-07-22 16:57:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.132, duration_ms=132, data={}
+timestamp=[2021-07-22 16:57:57], mode=PLATFORM_CREATION, duration=0:00:13.894, duration_ms=13894, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 16:58:39], mode=PLATFORM_GENERATION, duration=0:00:35.642, duration_ms=35642, data={name=axi_ddr_no_burst_platform_debug_ver2_1}
+timestamp=[2021-07-22 16:59:22], mode=APP_CREATION, duration=0:00:07.078, duration_ms=7078, data={name=app_debug_v2_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=axi_ddr_no_burst_platform_debug_ver2_1, application_type=application}
+timestamp=[2021-07-22 17:04:20], mode=BUILD, duration=0:00:00.880, duration_ms=880, data={name=app_debug_v2_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:04:25], mode=BUILD, duration=0:00:05.396, duration_ms=5396, data={name=app_debug_v2_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:26:42], mode=PLATFORM_CREATION, duration=0:00:12.911, duration_ms=12911, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 17:27:35], mode=PLATFORM_GENERATION, duration=0:00:35.881, duration_ms=35881, data={name=debug_platform_ver2_2}
+timestamp=[2021-07-22 17:28:43], mode=APP_CREATION, duration=0:00:08.125, duration_ms=8125, data={name=debug_app_ver2_2, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_2, application_type=application}
+timestamp=[2021-07-22 17:34:05], mode=BUILD, duration=0:00:00.812, duration_ms=812, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:34:08], mode=BUILD, duration=0:00:02.358, duration_ms=2358, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:03], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=app_debug_v2_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:08], mode=BUILD, duration=0:00:05.402, duration_ms=5402, data={name=app_debug_v2_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:11], mode=BUILD, duration=0:00:00.305, duration_ms=305, data={name=axi_ddr_no_burst_application_07, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:17], mode=BUILD, duration=0:00:05.474, duration_ms=5474, data={name=axi_ddr_no_burst_application_07_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:39], mode=PLATFORM_GENERATION, duration=0:00:21.686, duration_ms=21686, data={name=axi_ddr_no_burst_platform_ver2}
+timestamp=[2021-07-22 17:35:42], mode=BUILD, duration=0:00:00.854, duration_ms=854, data={name=axi_ddr_no_burst_application_ver2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:35:48], mode=BUILD, duration=0:00:05.339, duration_ms=5339, data={name=axi_ddr_no_burst_application_ver2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:09], mode=PLATFORM_GENERATION, duration=0:00:21.528, duration_ms=21528, data={name=axi_ddr_no_burst_platform_ver2_1}
+timestamp=[2021-07-22 17:36:13], mode=BUILD, duration=0:00:00.882, duration_ms=882, data={name=axi_ddr_no_burst_application_ver2_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:18], mode=BUILD, duration=0:00:05.397, duration_ms=5397, data={name=axi_ddr_no_burst_application_ver2_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:19], mode=BUILD, duration=0:00:00.685, duration_ms=685, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:22], mode=BUILD, duration=0:00:02.361, duration_ms=2361, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:44], mode=PLATFORM_GENERATION, duration=0:00:21.950, duration_ms=21950, data={name=ps_ppl_platform_no_input}
+timestamp=[2021-07-22 17:36:47], mode=BUILD, duration=0:00:00.865, duration_ms=865, data={name=ps_to_pl_fsm_constant, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:36:53], mode=BUILD, duration=0:00:05.321, duration_ms=5321, data={name=ps_to_pl_fsm_constant_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:37:16], mode=PLATFORM_GENERATION, duration=0:00:22.590, duration_ms=22590, data={name=test_platform_01}
+timestamp=[2021-07-22 17:37:19], mode=BUILD, duration=0:00:00.935, duration_ms=935, data={name=test_application_01, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:37:25], mode=BUILD, duration=0:00:05.421, duration_ms=5421, data={name=test_application_01_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:37:47], mode=BUILD, duration=0:00:00.495, duration_ms=495, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:37:50], mode=BUILD, duration=0:00:02.380, duration_ms=2380, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:38:50], mode=BUILD, duration=0:00:00.742, duration_ms=742, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:38:55], mode=BUILD, duration=0:00:05.357, duration_ms=5357, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:41:54], mode=BUILD, duration=0:00:00.426, duration_ms=426, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:42:00], mode=BUILD, duration=0:00:05.344, duration_ms=5344, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:42:45], mode=BUILD, duration=0:00:00.732, duration_ms=732, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:42:51], mode=BUILD, duration=0:00:05.300, duration_ms=5300, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:47:35], mode=BUILD, duration=0:00:00.684, duration_ms=684, data={name=debug_app_ver2_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 17:47:41], mode=BUILD, duration=0:00:05.344, duration_ms=5344, data={name=debug_app_ver2_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 18:10:48], mode=PLATFORM_CREATION, duration=0:00:12.745, duration_ms=12745, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-22 18:11:45], mode=PLATFORM_GENERATION, duration=0:00:36.234, duration_ms=36234, data={name=debug_platform_ver2_3}
+timestamp=[2021-07-22 18:12:38], mode=APP_CREATION, duration=0:00:08.471, duration_ms=8471, data={name=debug_app_ver2_3, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_3, application_type=application}
+timestamp=[2021-07-22 18:13:20], mode=BUILD, duration=0:00:00.927, duration_ms=927, data={name=debug_app_ver2_3, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 18:13:26], mode=BUILD, duration=0:00:05.398, duration_ms=5398, data={name=debug_app_ver2_3_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 18:15:33], mode=BUILD, duration=0:00:00.753, duration_ms=753, data={name=debug_app_ver2_3, configuration=Debug, clean_build=false}
+timestamp=[2021-07-22 18:15:38], mode=BUILD, duration=0:00:05.337, duration_ms=5337, data={name=debug_app_ver2_3_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:19:39], mode=WORKBENCH_START, duration=0:00:09.916, duration_ms=9916, data={}
+timestamp=[2021-07-23 11:19:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.500, duration_ms=500, data={}
+timestamp=[2021-07-23 11:19:41], mode=WORKBENCH_UI_INIT, duration=0:00:01.367, duration_ms=1367, data={editors_count=41, platform_editors_count=8, projects_count=25, platform_projects_count=8, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_debug_v2_1,app_debug_v2_1_system,axi_ddr_no_burst_application_07,axi_ddr_no_burst_application_07_system,axi_ddr_no_burst_application_ver2,axi_ddr_no_burst_application_ver2_1,axi_ddr_no_burst_application_ver2_1_system,axi_ddr_no_burst_application_ver2_system,axi_ddr_no_burst_platform_debug_ver2_1,axi_ddr_no_burst_platform_v7,axi_ddr_no_burst_platform_ver2,axi_ddr_no_burst_platform_ver2_1,debug_app_ver2_2,debug_app_ver2_2_system,debug_app_ver2_3,debug_app_ver2_3_system,debug_platform_ver2_2,debug_platform_ver2_3,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system,test_application_01,test_application_01_system,test_platform_01}
+timestamp=[2021-07-23 11:21:59], mode=PLATFORM_CREATION, duration=0:00:14.842, duration_ms=14842, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-23 11:23:36], mode=PLATFORM_GENERATION, duration=0:00:46.076, duration_ms=46076, data={name=debug_platform_ver2_4}
+timestamp=[2021-07-23 11:24:14], mode=APP_CREATION, duration=0:00:07.545, duration_ms=7545, data={name=debug_app_ver2_4, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_4, application_type=application}
+timestamp=[2021-07-23 11:27:41], mode=BUILD, duration=0:00:01.196, duration_ms=1196, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:27:47], mode=BUILD, duration=0:00:05.655, duration_ms=5655, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:29:25], mode=BUILD, duration=0:00:00.881, duration_ms=881, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:29:31], mode=BUILD, duration=0:00:05.437, duration_ms=5437, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:35:03], mode=BUILD, duration=0:00:00.872, duration_ms=872, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:35:10], mode=BUILD, duration=0:00:00.319, duration_ms=319, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:35:16], mode=BUILD, duration=0:00:05.357, duration_ms=5357, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:39:52], mode=BUILD, duration=0:00:01.138, duration_ms=1138, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:39:59], mode=BUILD, duration=0:00:06.346, duration_ms=6346, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:41:24], mode=BUILD, duration=0:00:01.116, duration_ms=1116, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:41:31], mode=BUILD, duration=0:00:06.570, duration_ms=6570, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:43:52], mode=BUILD, duration=0:00:00.868, duration_ms=868, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:43:58], mode=BUILD, duration=0:00:05.428, duration_ms=5428, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:45:51], mode=BUILD, duration=0:00:00.920, duration_ms=920, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:45:57], mode=BUILD, duration=0:00:05.355, duration_ms=5355, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:50:15], mode=BUILD, duration=0:00:00.863, duration_ms=863, data={name=debug_app_ver2_4, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 11:50:21], mode=BUILD, duration=0:00:05.382, duration_ms=5382, data={name=debug_app_ver2_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:15:31], mode=WORKBENCH_START, duration=0:00:08.412, duration_ms=8412, data={}
+timestamp=[2021-07-23 12:15:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.856, duration_ms=856, data={editors_count=36, platform_editors_count=5, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=RemoteSystemsTempFiles,debug_app_ver2_2,debug_app_ver2_2_system,debug_app_ver2_4,debug_app_ver2_4_system,debug_platform_ver2_2,debug_platform_ver2_4,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-23 12:15:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.106, duration_ms=106, data={}
+timestamp=[2021-07-23 12:16:11], mode=PLATFORM_CREATION, duration=0:00:13.608, duration_ms=13608, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-23 12:17:03], mode=PLATFORM_GENERATION, duration=0:00:44.913, duration_ms=44913, data={name=debug_platform_ver2_5}
+timestamp=[2021-07-23 12:17:46], mode=APP_CREATION, duration=0:00:07.382, duration_ms=7382, data={name=debug_app_ver2_5, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_5, application_type=application}
+timestamp=[2021-07-23 12:18:20], mode=BUILD, duration=0:00:01.195, duration_ms=1195, data={name=debug_app_ver2_5, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:18:48], mode=BUILD, duration=0:00:00.872, duration_ms=872, data={name=debug_app_ver2_5, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:18:51], mode=BUILD, duration=0:00:00.313, duration_ms=313, data={name=debug_app_ver2_5, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:18:57], mode=BUILD, duration=0:00:05.349, duration_ms=5349, data={name=debug_app_ver2_5_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:35:19], mode=WORKBENCH_START, duration=0:00:08.404, duration_ms=8404, data={}
+timestamp=[2021-07-23 12:35:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.900, duration_ms=900, data={editors_count=40, platform_editors_count=6, projects_count=13, platform_projects_count=4, active_platform_editor=false, projects=RemoteSystemsTempFiles,debug_app_ver2_2,debug_app_ver2_2_system,debug_app_ver2_4,debug_app_ver2_4_system,debug_app_ver2_5,debug_app_ver2_5_system,debug_platform_ver2_2,debug_platform_ver2_4,debug_platform_ver2_5,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-23 12:35:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.080, duration_ms=80, data={}
+timestamp=[2021-07-23 12:36:00], mode=PLATFORM_CREATION, duration=0:00:13.867, duration_ms=13867, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-23 12:37:20], mode=PLATFORM_GENERATION, duration=0:00:44.689, duration_ms=44689, data={name=debug_platform_ver2_6}
+timestamp=[2021-07-23 12:39:58], mode=PLATFORM_CREATION, duration=0:00:10.549, duration_ms=10549, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-23 12:40:50], mode=PLATFORM_GENERATION, duration=0:00:44.567, duration_ms=44567, data={name=debug_platform_ver2_6}
+timestamp=[2021-07-23 12:41:51], mode=APP_CREATION, duration=0:00:06.927, duration_ms=6927, data={name=debug_app_ver2_6, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_6, application_type=application}
+timestamp=[2021-07-23 12:42:53], mode=BUILD, duration=0:00:01.120, duration_ms=1120, data={name=debug_app_ver2_6, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 12:42:59], mode=BUILD, duration=0:00:05.371, duration_ms=5371, data={name=debug_app_ver2_6_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 16:53:27], mode=PLATFORM_CREATION, duration=0:00:13.230, duration_ms=13230, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-23 16:56:58], mode=PLATFORM_GENERATION, duration=0:00:45.619, duration_ms=45619, data={name=debug_platform_ver2_7}
+timestamp=[2021-07-23 16:58:31], mode=APP_CREATION, duration=0:00:07.510, duration_ms=7510, data={name=debug_app_ver2_7, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=debug_platform_ver2_7, application_type=application}
+timestamp=[2021-07-23 16:59:24], mode=BUILD, duration=0:00:01.179, duration_ms=1179, data={name=debug_app_ver2_7, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 16:59:30], mode=BUILD, duration=0:00:05.427, duration_ms=5427, data={name=debug_app_ver2_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 17:01:30], mode=BUILD, duration=0:00:00.861, duration_ms=861, data={name=debug_app_ver2_7, configuration=Debug, clean_build=false}
+timestamp=[2021-07-23 17:01:36], mode=BUILD, duration=0:00:05.397, duration_ms=5397, data={name=debug_app_ver2_7_system, configuration=Debug, clean_build=false}
