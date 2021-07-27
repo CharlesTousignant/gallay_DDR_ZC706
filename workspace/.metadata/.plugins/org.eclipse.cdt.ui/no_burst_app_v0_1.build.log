@@ -1,0 +1,92 @@
+15:45:37 **** Incremental Build of configuration Debug for project no_burst_app_v0_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/sw/no_burst_platform_v0_1/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  130 |    printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:131:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  131 |    printf("WREADY: %d", XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |                    ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                     |   |
+      |                     int u32 {aka long unsigned int}
+      |                    %ld
+../src/helloworld.c:132:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  132 |    printf("ARREADY: %d", XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:143:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:144:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  144 |     printf("WREADY: %d", XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:145:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  145 |     printf("ARREADY: %d", XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:156:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  156 |      printf("STATE: %d \n", XGpio_DiscreteRead(&gpio_debug_current_state, 1));
+      |                     ~^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |      |
+      |                      int    u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:194:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  194 |     printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:195:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  195 |     printf("WREADY: %d", XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:196:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  196 |     printf("ARREADY: %d", XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:205:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  205 |      printf("STATE: %d \n",XGpio_DiscreteRead(&gpio_debug_current_state, 1));
+      |                     ~^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |     |
+      |                      int   u32 {aka long unsigned int}
+      |                     %ld
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: no_burst_app_v0_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/sw/no_burst_platform_v0_1/standalone_domain/bsplib/lib -o "no_burst_app_v0_1.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: no_burst_app_v0_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size no_burst_app_v0_1.elf  |tee "no_burst_app_v0_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66438	   2774	  22640	  91852	  166cc	no_burst_app_v0_1.elf
+'Finished building: no_burst_app_v0_1.elf.size'
+' '
+
+15:45:38 Build Finished (took 847ms)
+

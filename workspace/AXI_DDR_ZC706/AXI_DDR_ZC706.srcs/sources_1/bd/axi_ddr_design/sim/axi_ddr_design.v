@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Fri Jul 23 16:41:42 2021
+//Date        : Tue Jul 27 15:57:59 2021
 //Host        : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 //Command     : generate_target axi_ddr_design.bd
 //Design      : axi_ddr_design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "axi_ddr_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=axi_ddr_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=36,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=16,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=14,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "axi_ddr_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "axi_ddr_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=axi_ddr_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=38,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=16,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=14,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "axi_ddr_design.hwdef" *) 
 module axi_ddr_design
    (DDR_addr,
     DDR_ba,
@@ -102,6 +102,8 @@ module axi_ddr_design
   wire [0:0]axi_gpio_3_gpio_io_o;
   wire [0:0]axi_gpio_7_gpio_io_o;
   wire [0:0]axi_gpio_9_gpio_io_o;
+  wire debounce_0_output;
+  wire debounce_n_0_output;
   wire [13:0]mig_7series_0_ddr3_addr;
   wire [2:0]mig_7series_0_ddr3_ba;
   wire mig_7series_0_ddr3_cas_n;
@@ -773,6 +775,14 @@ module axi_ddr_design
         .s_axi_wready(ps7_0_axi_periph_M09_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M09_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M09_AXI_WVALID));
+  axi_ddr_design_debounce_0_0 debounce_0
+       (.button_in(sys_rst_1),
+        .button_out(debounce_0_output),
+        .clk(mig_7series_0_ui_clk));
+  axi_ddr_design_debounce_n_0_0 debounce_n_0
+       (.button_in(aresetn_1),
+        .button_out(debounce_n_0_output),
+        .clk(mig_7series_0_ui_clk));
   axi_ddr_design_mig_7series_0_1 mig_7series_0
        (.aresetn(ps_to_mig_interface_0_aresetn_sync_out),
         .ddr3_addr(mig_7series_0_ddr3_addr),
@@ -829,7 +839,7 @@ module axi_ddr_design
         .s_axi_wvalid(ps_to_mig_interface_0_s_axi_wvalid),
         .sys_clk_n(sys_clk_n_1),
         .sys_clk_p(sys_clk_p_1),
-        .sys_rst(sys_rst_1),
+        .sys_rst(debounce_0_output),
         .ui_clk(mig_7series_0_ui_clk),
         .ui_clk_sync_rst(mig_7series_0_ui_clk_sync_rst));
   axi_ddr_design_processing_system7_0_0 processing_system7_0
@@ -1206,7 +1216,7 @@ module axi_ddr_design
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
   axi_ddr_design_ps_to_mig_interface_0_0 ps_to_mig_interface_0
-       (.aresetn_in(aresetn_1),
+       (.aresetn_in(debounce_n_0_output),
         .aresetn_sync_out(ps_to_mig_interface_0_aresetn_sync_out),
         .gpio_address(axi_gpio_2_gpio_io_o),
         .gpio_debug_current_state(ps_to_mig_interface_0_gpio_debug_current_state),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="axi_ddr_design_ps_to_mig_interface_0_0_synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1627072910">
+<GenRun Id="axi_ddr_design_ps_to_mig_interface_0_0_synth_1" LaunchPart="xc7z045ffg900-2" LaunchTime="1627415888">
   <File Type="PA-TCL" Name="axi_ddr_design_ps_to_mig_interface_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="axi_ddr_design_ps_to_mig_interface_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="axi_ddr_design_ps_to_mig_interface_0_0_reports.tcl"/>

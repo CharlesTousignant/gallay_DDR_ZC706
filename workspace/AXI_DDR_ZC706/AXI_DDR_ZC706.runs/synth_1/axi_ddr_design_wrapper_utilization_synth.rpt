@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Jul 23 16:43:49 2021
+| Date         : Tue Jul 27 16:00:12 2021
 | Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file axi_ddr_design_wrapper_utilization_synth.rpt -pb axi_ddr_design_wrapper_utilization_synth.pb
 | Design       : axi_ddr_design_wrapper
@@ -167,6 +167,8 @@ Table of Contents
 | axi_ddr_design_ps_to_mig_interface_0_0 |    1 |
 | axi_ddr_design_processing_system7_0_0  |    1 |
 | axi_ddr_design_mig_7series_0_1         |    1 |
+| axi_ddr_design_debounce_n_0_0          |    1 |
+| axi_ddr_design_debounce_0_0            |    1 |
 | axi_ddr_design_axi_gpio_9_0            |    1 |
 | axi_ddr_design_axi_gpio_8_0            |    1 |
 | axi_ddr_design_axi_gpio_7_0            |    1 |

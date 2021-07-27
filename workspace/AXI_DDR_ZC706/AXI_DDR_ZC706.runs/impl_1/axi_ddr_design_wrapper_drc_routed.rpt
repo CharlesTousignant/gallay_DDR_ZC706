@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Jul 23 16:49:25 2021
+| Date         : Tue Jul 27 16:06:10 2021
 | Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command      : report_drc -file axi_ddr_design_wrapper_drc_routed.rpt -pb axi_ddr_design_wrapper_drc_routed.pb -rpx axi_ddr_design_wrapper_drc_routed.rpx
 | Design       : axi_ddr_design_wrapper
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 9
 +-----------+----------+------------------------+------------+
 | Rule      | Severity | Description            | Violations |
 +-----------+----------+------------------------+------------+
 | PDRC-153  | Warning  | Gated clock check      | 4          |
-| PDRC-157  | Warning  | Slice clock routing    | 1          |
+| PDRC-157  | Warning  | Slice clock routing    | 3          |
 | PLCK-23   | Warning  | Clock Placer Checks    | 1          |
 | REQP-1709 | Warning  | Clock output buffering | 1          |
 +-----------+----------+------------------------+------------+
@@ -58,7 +58,17 @@ Related violations: <none>
 
 PDRC-157#1 Warning
 Slice clock routing  
-For SLICE_X86Y242: more than 2 non-clock pins of the SLICE are driven by different global clocks. This condition should be corrected as it easily becomes congested and will fail to route.
+For SLICE_X94Y237: more than 2 non-clock pins of the SLICE are driven by different global clocks. This condition should be corrected as it easily becomes congested and will fail to route.
+Related violations: <none>
+
+PDRC-157#2 Warning
+Slice clock routing  
+For SLICE_X98Y202: more than 2 non-clock pins of the SLICE are driven by different global clocks. This condition should be corrected as it easily becomes congested and will fail to route.
+Related violations: <none>
+
+PDRC-157#3 Warning
+Slice clock routing  
+For SLICE_X98Y203: more than 2 non-clock pins of the SLICE are driven by different global clocks. This condition should be corrected as it easily becomes congested and will fail to route.
 Related violations: <none>
 
 PLCK-23#1 Warning

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Jul 23 16:42:49 2021
+// Date        : Tue Jul 27 15:59:05 2021
 // Host        : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ axi_ddr_design_ps_to_mig_interface_0_0_sim_netlist.v
@@ -265,9 +265,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ps_to_mig_interface
     gpio_rvalid,
     gpio_resp,
     gpio_resp_valid,
+    aresetn_sync_out,
     s_axi_wstrb,
     gpio_debug_current_state,
-    aresetn_sync_out,
     aresetn_in,
     ui_clk_sync_rst,
     ui_clk,
@@ -294,9 +294,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ps_to_mig_interface
   output gpio_rvalid;
   output [1:0]gpio_resp;
   output gpio_resp_valid;
+  output aresetn_sync_out;
   output [0:0]s_axi_wstrb;
   output [3:0]gpio_debug_current_state;
-  output aresetn_sync_out;
   input aresetn_in;
   input ui_clk_sync_rst;
   input ui_clk;
@@ -901,10 +901,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ps_to_mig_interface
         .GE(1'b1),
         .Q(araddr_buffer[9]));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'h2)) 
     aresetn_sync_out_i_1
-       (.I0(\FSM_onehot_STATE_reg_n_0_[0] ),
-        .I1(aresetn_in),
+       (.I0(aresetn_in),
+        .I1(\FSM_onehot_STATE_reg_n_0_[0] ),
         .O(aresetn_sync_out_i_1_n_0));
   FDRE aresetn_sync_out_reg
        (.C(ui_clk),

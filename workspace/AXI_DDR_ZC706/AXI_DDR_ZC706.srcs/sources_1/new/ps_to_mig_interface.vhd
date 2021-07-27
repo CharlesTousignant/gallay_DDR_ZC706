@@ -280,7 +280,7 @@ begin
     begin
         if rising_edge(ui_clk) then
             if STATE /= RESET then
-                aresetn_sync_out <= not aresetn_in;
+                aresetn_sync_out <= aresetn_in;
             else
                 aresetn_sync_out <= '0';
             end if;

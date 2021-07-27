@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Wed Jul 21 17:06:02 2021
+// Date        : Wed Jul 21 17:06:01 2021
 // Host        : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_4_0/axi_ddr_design_axi_gpio_4_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top axi_ddr_design_axi_gpio_4_0 -prefix
+//               axi_ddr_design_axi_gpio_4_0_ axi_ddr_design_axi_gpio_4_0_stub.v
 // Design      : axi_ddr_design_axi_gpio_4_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z045ffg900-2

@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# ps_to_mig_interface
+# debounce, debounce_n, ps_to_mig_interface
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -515,6 +515,28 @@ proc create_root_design { parentCell } {
    CONFIG.C_GPIO_WIDTH {1} \
  ] $axi_gpio_13
 
+  # Create instance: debounce_0, and set properties
+  set block_name debounce
+  set block_cell_name debounce_0
+  if { [catch {set debounce_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $debounce_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: debounce_n_0, and set properties
+  set block_name debounce_n
+  set block_cell_name debounce_n_0
+  if { [catch {set debounce_n_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $debounce_n_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: mig_7series_0, and set properties
   set mig_7series_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0 ]
 
@@ -981,13 +1003,15 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Net [get_bd_ports ddr3_dqs_p] [get_bd_pins mig_7series_0/ddr3_dqs_p]
   connect_bd_net -net Net1 [get_bd_ports ddr3_dqs_n] [get_bd_pins mig_7series_0/ddr3_dqs_n]
   connect_bd_net -net Net2 [get_bd_ports ddr3_dq] [get_bd_pins mig_7series_0/ddr3_dq]
-  connect_bd_net -net aresetn_1 [get_bd_ports aresetn] [get_bd_pins ps_to_mig_interface_0/aresetn_in]
+  connect_bd_net -net aresetn_1 [get_bd_ports aresetn] [get_bd_pins debounce_n_0/button_in]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_wdata]
   connect_bd_net -net axi_gpio_1_gpio_io_o [get_bd_pins axi_gpio_1/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_wvalid]
   connect_bd_net -net axi_gpio_2_gpio_io_o [get_bd_pins axi_gpio_2/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_address]
   connect_bd_net -net axi_gpio_3_gpio_io_o [get_bd_pins axi_gpio_3/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_rready]
   connect_bd_net -net axi_gpio_7_gpio_io_o [get_bd_pins axi_gpio_7/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_rdata_ack]
   connect_bd_net -net axi_gpio_9_gpio_io_o [get_bd_pins axi_gpio_9/gpio_io_o] [get_bd_pins ps_to_mig_interface_0/gpio_resp_ack]
+  connect_bd_net -net debounce_0_output [get_bd_pins debounce_0/button_out] [get_bd_pins mig_7series_0/sys_rst]
+  connect_bd_net -net debounce_n_0_output [get_bd_pins debounce_n_0/button_out] [get_bd_pins ps_to_mig_interface_0/aresetn_in]
   connect_bd_net -net mig_7series_0_ddr3_addr [get_bd_ports ddr3_addr] [get_bd_pins mig_7series_0/ddr3_addr]
   connect_bd_net -net mig_7series_0_ddr3_ba [get_bd_ports ddr3_ba] [get_bd_pins mig_7series_0/ddr3_ba]
   connect_bd_net -net mig_7series_0_ddr3_cas_n [get_bd_ports ddr3_cas_n] [get_bd_pins mig_7series_0/ddr3_cas_n]
@@ -1011,7 +1035,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net mig_7series_0_s_axi_rresp [get_bd_pins mig_7series_0/s_axi_rresp] [get_bd_pins ps_to_mig_interface_0/s_axi_rresp]
   connect_bd_net -net mig_7series_0_s_axi_rvalid [get_bd_pins mig_7series_0/s_axi_rvalid] [get_bd_pins ps_to_mig_interface_0/s_axi_rvalid]
   connect_bd_net -net mig_7series_0_s_axi_wready [get_bd_pins axi_gpio_11/gpio_io_i] [get_bd_pins mig_7series_0/s_axi_wready] [get_bd_pins ps_to_mig_interface_0/s_axi_wready]
-  connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins ps_to_mig_interface_0/ui_clk]
+  connect_bd_net -net mig_7series_0_ui_clk [get_bd_pins debounce_0/clk] [get_bd_pins debounce_n_0/clk] [get_bd_pins mig_7series_0/ui_clk] [get_bd_pins ps_to_mig_interface_0/ui_clk]
   connect_bd_net -net mig_7series_0_ui_clk_sync_rst [get_bd_pins mig_7series_0/ui_clk_sync_rst] [get_bd_pins ps_to_mig_interface_0/ui_clk_sync_rst]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins axi_gpio_10/s_axi_aclk] [get_bd_pins axi_gpio_11/s_axi_aclk] [get_bd_pins axi_gpio_12/s_axi_aclk] [get_bd_pins axi_gpio_13/s_axi_aclk] [get_bd_pins axi_gpio_2/s_axi_aclk] [get_bd_pins axi_gpio_3/s_axi_aclk] [get_bd_pins axi_gpio_4/s_axi_aclk] [get_bd_pins axi_gpio_5/s_axi_aclk] [get_bd_pins axi_gpio_6/s_axi_aclk] [get_bd_pins axi_gpio_7/s_axi_aclk] [get_bd_pins axi_gpio_8/s_axi_aclk] [get_bd_pins axi_gpio_9/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/M09_ACLK] [get_bd_pins ps7_0_axi_periph/M10_ACLK] [get_bd_pins ps7_0_axi_periph/M11_ACLK] [get_bd_pins ps7_0_axi_periph/M12_ACLK] [get_bd_pins ps7_0_axi_periph/M13_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
@@ -1050,7 +1074,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins axi_gpio_10/s_axi_aresetn] [get_bd_pins axi_gpio_11/s_axi_aresetn] [get_bd_pins axi_gpio_12/s_axi_aresetn] [get_bd_pins axi_gpio_13/s_axi_aresetn] [get_bd_pins axi_gpio_2/s_axi_aresetn] [get_bd_pins axi_gpio_3/s_axi_aresetn] [get_bd_pins axi_gpio_4/s_axi_aresetn] [get_bd_pins axi_gpio_5/s_axi_aresetn] [get_bd_pins axi_gpio_6/s_axi_aresetn] [get_bd_pins axi_gpio_7/s_axi_aresetn] [get_bd_pins axi_gpio_8/s_axi_aresetn] [get_bd_pins axi_gpio_9/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/M09_ARESETN] [get_bd_pins ps7_0_axi_periph/M10_ARESETN] [get_bd_pins ps7_0_axi_periph/M11_ARESETN] [get_bd_pins ps7_0_axi_periph/M12_ARESETN] [get_bd_pins ps7_0_axi_periph/M13_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net sys_clk_n_1 [get_bd_ports sys_clk_n] [get_bd_pins mig_7series_0/sys_clk_n]
   connect_bd_net -net sys_clk_p_1 [get_bd_ports sys_clk_p] [get_bd_pins mig_7series_0/sys_clk_p]
-  connect_bd_net -net sys_rst_1 [get_bd_ports sys_rst] [get_bd_pins mig_7series_0/sys_rst]
+  connect_bd_net -net sys_rst_1 [get_bd_ports sys_rst] [get_bd_pins debounce_0/button_in]
 
   # Create address segments
   assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force

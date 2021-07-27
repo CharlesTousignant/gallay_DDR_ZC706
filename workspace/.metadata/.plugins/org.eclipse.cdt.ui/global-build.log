@@ -1,6 +1,6 @@
-Nothing to build in platform 'debug_platform_ver2_7'
+Nothing to build in platform 'no_burst_platform_v0_2'
 
-17:01:29 **** Incremental Build of configuration Debug for project debug_app_ver2_7 ****
+16:13:56 **** Incremental Build of configuration Debug for project no_burst_app_v0_2 ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,7 +8,7 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/sw/debug_platform_ver2_7/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/sw/no_burst_platform_v0_2/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
 ../src/helloworld.c:130:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
   130 |    printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
@@ -78,21 +78,21 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
       |                     %ld
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: debug_app_ver2_7.elf'
+'Building target: no_burst_app_v0_2.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/sw/debug_platform_ver2_7/standalone_domain/bsplib/lib -o "debug_app_ver2_7.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: debug_app_ver2_7.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/sw/no_burst_platform_v0_2/standalone_domain/bsplib/lib -o "no_burst_app_v0_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: no_burst_app_v0_2.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size debug_app_ver2_7.elf  |tee "debug_app_ver2_7.elf.size"
+arm-none-eabi-size no_burst_app_v0_2.elf  |tee "no_burst_app_v0_2.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  66438	   2774	  22640	  91852	  166cc	debug_app_ver2_7.elf
-'Finished building: debug_app_ver2_7.elf.size'
+  66438	   2774	  22640	  91852	  166cc	no_burst_app_v0_2.elf
+'Finished building: no_burst_app_v0_2.elf.size'
 ' '
-17:01:30 **** Incremental Build of configuration Debug for project debug_app_ver2_7_system ****
+16:13:58 **** Incremental Build of configuration Debug for project no_burst_app_v0_2_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 60195 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/system.bif
-sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm --sys_config debug_platform_ver2_7 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit
-Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 52421 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/no_burst_platform_v0_2.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/no_burst_platform_v0_2.xpfm --sys_config no_burst_platform_v0_2 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

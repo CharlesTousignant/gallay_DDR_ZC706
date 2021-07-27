@@ -1,0 +1,10 @@
+16:13:58 **** Incremental Build of configuration Debug for project no_burst_app_v0_2_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 52421 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/no_burst_platform_v0_2.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/no_burst_platform_v0_2.xpfm --sys_config no_burst_platform_v0_2 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:14:03 Build Finished (took 5s.397ms)
+

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Jul 23 16:49:54 2021
+| Date         : Tue Jul 27 16:06:39 2021
 | Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file axi_ddr_design_wrapper_clock_utilization_routed.rpt
 | Design       : axi_ddr_design_wrapper
@@ -64,17 +64,17 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock               | Driver Pin                                                                                                                             | Net                                                                                                                                      |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |       13064 |               0 |        5.000 | clk_pll_i           | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 5 |       13128 |               0 |        5.000 | clk_pll_i           | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O                             | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
 | g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 5 |        1861 |               0 |       20.000 | clk_fpga_0          | axi_ddr_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O                                                         | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                                                                                     |
-| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 4 |          62 |               3 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG_inst/O                                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
+| g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y2  | n/a          |                 2 |          62 |               3 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG_inst/O                                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y19 | n/a          |                 2 |          60 |               0 |        5.000 | sys_clk_p           | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_200.u_bufg_clk_ref/O                        | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK                                                   |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 3 |          32 |               8 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG_inst/O                                                  | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG                                                           |
-| g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 5 |          32 |              38 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG_inst/O                                                   | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
-| g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 2 |          31 |               0 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG_inst/O                                                   | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG                                                            |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y3  | n/a          |                 1 |          32 |               8 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG_inst/O                                                  | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG                                                           |
+| g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 3 |          32 |              38 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG_inst/O                                                   | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
+| g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y5  | n/a          |                 1 |          31 |               0 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG_inst/O                                                   | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG                                                            |
 | g7        | src7      | BUFG/O          | None       | BUFGCTRL_X0Y6  | n/a          |                 2 |          31 |               0 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG_inst/O                                                   | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG                                                            |
-| g8        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 4 |          30 |               4 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG_inst/O                                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                                                                        |
+| g8        | src8      | BUFG/O          | None       | BUFGCTRL_X0Y4  | n/a          |                 1 |          30 |               4 |              |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG_inst/O                                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                                                                        |
 | g9        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y18 | n/a          |                 3 |          22 |               0 |       10.000 | mmcm_ps_clk_bufg_in | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/gen_mmcm.u_bufg_mmcm_ps_clk/O                | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
-| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 3 |          18 |               0 |        2.500 | clk_ref_mmcm_400    | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400/O | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
+| g10       | src9      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |          18 |               0 |        2.500 | clk_ref_mmcm_400    | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400/O | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
 | g11       | src10     | BUFH/O          | None       | BUFHCE_X1Y60   | X1Y5         |                 1 |           1 |               0 |        5.000 | pll_clk3_out        | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O                            | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/pll_clk3                                       |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------+----------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -90,13 +90,13 @@ Table of Contents
 | src0      | g0        | MMCME2_ADV/CLKFBOUT | MMCME2_ADV_X1Y5 | MMCME2_ADV_X1Y5 | X1Y5         |           1 |               0 |               5.000 | clk_pll_i           | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT   | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/clk_pll_i           |
 | src0      | g9        | MMCME2_ADV/CLKOUT0  | MMCME2_ADV_X1Y5 | MMCME2_ADV_X1Y5 | X1Y5         |           1 |               0 |              10.000 | mmcm_ps_clk_bufg_in | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i/CLKOUT0    | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk_bufg_in |
 | src1      | g1        | PS7/FCLKCLK[0]      | PS7_X0Y0        | PS7_X0Y0        | X0Y6         |           1 |               0 |              20.000 | clk_fpga_0          | axi_ddr_design_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]                                                          | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]                                             |
-| src2      | g2        | FDRE/Q              | None            | SLICE_X93Y167   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[2]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0                                                   |
+| src2      | g2        | FDRE/Q              | None            | SLICE_X94Y168   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[2]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0                                                   |
 | src3      | g3        | IBUFDS/O            | IOB_X1Y274      | IOB_X1Y274      | X1Y5         |           3 |               0 |               5.000 | sys_clk_p           | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_clk_ibuf/diff_input_clk.u_ibufg_sys_clk/O | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_clk_ibuf/sys_clk_ibufg             |
-| src4      | g4        | FDRE/Q              | None            | SLICE_X93Y167   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[10]/Q                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]                                     |
-| src5      | g5        | FDRE/Q              | None            | SLICE_X93Y165   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[3]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]                                      |
+| src4      | g4        | FDRE/Q              | None            | SLICE_X94Y171   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[10]/Q                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]                                     |
+| src5      | g5        | FDRE/Q              | None            | SLICE_X94Y170   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[3]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]                                      |
 | src6      | g6        | LUT2/O              | None            | SLICE_X90Y146   | X1Y2         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2/O                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0                                      |
 | src7      | g7        | LUT2/O              | None            | SLICE_X90Y146   | X1Y2         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2/O                                               | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0                                      |
-| src8      | g8        | FDRE/Q              | None            | SLICE_X93Y167   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[6]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0                                                  |
+| src8      | g8        | FDRE/Q              | None            | SLICE_X94Y168   | X1Y3         |           1 |               0 |                     |                     | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg[6]/Q                                                | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0                                                  |
 | src9      | g10       | MMCME2_ADV/CLKOUT1  | None            | MMCME2_ADV_X0Y0 | X0Y0         |           1 |               0 |               2.500 | clk_ref_mmcm_400    | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i/CLKOUT1   | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_mmcm_400           |
 | src10     | g11       | PLLE2_ADV/CLKOUT3   | PLLE2_ADV_X1Y5  | PLLE2_ADV_X1Y5  | X1Y5         |           1 |               0 |               5.000 | pll_clk3_out        | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3            | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/pll_clk3_out        |
 +-----------+-----------+---------------------+-----------------+-----------------+--------------+-------------+-----------------+---------------------+---------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
@@ -140,14 +140,14 @@ Table of Contents
 | X1Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  3700 |    0 |  1050 |    0 |    80 |    0 |    40 |    0 |    60 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4500 |    0 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
 | X1Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  3700 |    1 |  1050 |    0 |    80 |    0 |    40 |    0 |    60 |
-| X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   14 |  4500 |    6 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
-| X1Y3              |    5 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |   11 |  3550 |    5 |  1000 |    0 |    70 |    0 |    35 |    0 |    60 |
-| X0Y4              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  679 |  4500 |  172 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
-| X1Y4              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    8 |    50 | 7790 |  4100 | 2416 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
-| X0Y5              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  757 |  3200 |  296 |  1000 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X1Y5              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    2 |    50 | 4011 |  3500 | 1251 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
-| X0Y6              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |   25 |  3200 |   15 |  1000 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X1Y6              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    3 |    50 |    6 |    50 |  555 |  3500 |  158 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
+| X0Y3              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   30 |  4500 |    3 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X1Y3              |    6 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |  199 |  3550 |   65 |  1000 |    0 |    70 |    0 |    35 |    0 |    60 |
+| X0Y4              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  124 |  4500 |   28 |  1600 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X1Y4              |   10 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    8 |    50 | 8151 |  4100 | 2400 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
+| X0Y5              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  737 |  3200 |  322 |  1000 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X1Y5              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    2 |    50 | 3927 |  3500 | 1172 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
+| X0Y6              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |   35 |  3200 |    6 |  1000 |    0 |    40 |    0 |    20 |    0 |    40 |
+| X1Y6              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    3 |    50 |    6 |    50 |  703 |  3500 |  226 |  1150 |    0 |   100 |    0 |    50 |    0 |    60 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -160,9 +160,9 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y6 |  1 |  4 |
-| Y5 |  1 | 10 |
-| Y4 |  5 | 10 |
-| Y3 |  1 |  5 |
+| Y5 |  1 |  5 |
+| Y4 |  1 | 10 |
+| Y3 |  1 |  6 |
 | Y2 |  0 |  1 |
 | Y1 |  0 |  0 |
 | Y0 |  0 |  0 |
@@ -175,7 +175,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock     | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                           |
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_pll_i |       5.000 | {0.000 2.500} |       12651 |        0 |              1 |        0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK |
+| g0        | BUFG/O          | n/a               | clk_pll_i |       5.000 | {0.000 2.500} |       12715 |        0 |              1 |        0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK |
 +-----------+-----------------+-------------------+-----------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -183,17 +183,17 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+-------+
-|    | X0 | X1    |
-+----+----+-------+
-| Y6 |  0 |   547 |
-| Y5 |  0 |  3986 |
-| Y4 |  0 |  8108 |
-| Y3 |  0 |    11 |
-| Y2 |  0 |     0 |
-| Y1 |  0 |     0 |
-| Y0 |  0 |     0 |
-+----+----+-------+
++----+-----+-------+
+|    | X0  | X1    |
++----+-----+-------+
+| Y6 |   0 |   684 |
+| Y5 |   0 |  3844 |
+| Y4 |   0 |  7967 |
+| Y3 |  30 |   191 |
+| Y2 |   0 |     0 |
+| Y1 |   0 |     0 |
+| Y0 |   0 |     0 |
++----+-----+-------+
 
 
 8. Device Cell Placement Summary for Global Clock g1
@@ -213,9 +213,9 @@ All Modules
 +----+------+------+
 |    | X0   | X1   |
 +----+------+------+
-| Y6 |   30 |    0 |
-| Y5 |  819 |   49 |
-| Y4 |  679 |  284 |
+| Y6 |   40 |    0 |
+| Y5 |  799 |  144 |
+| Y4 |  124 |  754 |
 | Y3 |    0 |    0 |
 | Y2 |    0 |    0 |
 | Y1 |    0 |    0 |
@@ -241,9 +241,9 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y6 |  0 |   0 |
-| Y5 |  0 |   8 |
-| Y4 |  6 |  49 |
-| Y3 |  0 |   2 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |  60 |
+| Y3 |  0 |   5 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -264,17 +264,17 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+-----+
-|    | X0  | X1  |
-+----+-----+-----+
-| Y6 |   0 |  46 |
-| Y5 |   0 |   0 |
-| Y4 |   0 |   0 |
-| Y3 |  14 |   0 |
-| Y2 |   0 |   0 |
-| Y1 |   0 |   0 |
-| Y0 |   0 |   0 |
-+----+-----+-----+
++----+----+-----+
+|    | X0 | X1  |
++----+----+-----+
+| Y6 |  0 |  46 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |   0 |
+| Y3 |  0 |  14 |
+| Y2 |  0 |   0 |
+| Y1 |  0 |   0 |
+| Y0 |  0 |   0 |
++----+----+-----+
 
 
 11. Device Cell Placement Summary for Global Clock g4
@@ -296,8 +296,8 @@ All Modules
 +----+----+-----+
 | Y6 |  0 |   0 |
 | Y5 |  0 |   0 |
-| Y4 |  3 |  36 |
-| Y3 |  0 |   1 |
+| Y4 |  0 |  40 |
+| Y3 |  0 |   0 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -322,9 +322,9 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y6 |  0 |   0 |
-| Y5 |  0 |   7 |
-| Y4 |  1 |  59 |
-| Y3 |  0 |   2 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |  62 |
+| Y3 |  0 |   7 |
 | Y2 |  0 |   1 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -349,8 +349,8 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y6 |  0 |   0 |
-| Y5 |  0 |   4 |
-| Y4 |  0 |  27 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |  31 |
 | Y3 |  0 |   0 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
@@ -376,9 +376,9 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y6 |  0 |   0 |
-| Y5 |  0 |   6 |
-| Y4 |  0 |  25 |
-| Y3 |  0 |   0 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |  26 |
+| Y3 |  0 |   5 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -403,9 +403,9 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y6 |  0 |   0 |
-| Y5 |  0 |   9 |
-| Y4 |  1 |  22 |
-| Y3 |  0 |   2 |
+| Y5 |  0 |   0 |
+| Y4 |  0 |  34 |
+| Y3 |  0 |   0 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -429,8 +429,8 @@ All Modules
 +----+----+-----+
 |    | X0 | X1  |
 +----+----+-----+
-| Y6 |  0 |   5 |
-| Y5 |  0 |  13 |
+| Y6 |  0 |  16 |
+| Y5 |  0 |   2 |
 | Y4 |  0 |   4 |
 | Y3 |  0 |   0 |
 | Y2 |  0 |   0 |
@@ -458,8 +458,8 @@ All Modules
 +----+----+-----+
 | Y6 |  0 |   1 |
 | Y5 |  0 |   1 |
-| Y4 |  0 |  16 |
-| Y3 |  0 |   0 |
+| Y4 |  0 |   1 |
+| Y3 |  0 |  15 |
 | Y2 |  0 |   0 |
 | Y1 |  0 |   0 |
 | Y0 |  0 |   0 |
@@ -509,11 +509,11 @@ All Modules
 20. Clock Region Cell Placement per Global Clock: Region X0Y3
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------+
-| g3        | n/a   | BUFG/O          | None       |          14 |               0 | 14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                           |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          30 |               0 | 30 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -522,15 +522,16 @@ All Modules
 21. Clock Region Cell Placement per Global Clock: Region X1Y3
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                           |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          11 |               0 | 11 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK |
-| g2        | n/a   | BUFG/O          | None       |           0 |               2 |  1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                              |
-| g4        | n/a   | BUFG/O          | None       |           0 |               1 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG                |
-| g5        | n/a   | BUFG/O          | None       |           0 |               2 |  1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                 |
-| g8        | n/a   | BUFG/O          | None       |           0 |               2 |  1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                             |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                      |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |         191 |               0 | 170 |     21 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
+| g2        | n/a   | BUFG/O          | None       |           4 |               1 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
+| g3        | n/a   | BUFG/O          | None       |          14 |               0 |  14 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK                                                   |
+| g5        | n/a   | BUFG/O          | None       |           0 |               7 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
+| g7        | n/a   | BUFG/O          | None       |           5 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG                                                            |
+| g10       | n/a   | BUFG/O          | None       |          15 |               0 |  15 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -539,15 +540,11 @@ All Modules
 22. Clock Region Cell Placement per Global Clock: Region X0Y4
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |         679 |               0 | 679 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                           |
-| g2        | n/a   | BUFG/O          | None       |           5 |               1 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG               |
-| g4        | n/a   | BUFG/O          | None       |           0 |               3 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG |
-| g5        | n/a   | BUFG/O          | None       |           0 |               1 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG  |
-| g8        | n/a   | BUFG/O          | None       |           0 |               1 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG              |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
+| g1        | n/a   | BUFG/O          | None       |         124 |               0 | 124 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0 |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -559,16 +556,16 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        8108 |               0 | 7491 |    568 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
-| g1        | n/a   | BUFG/O          | None       |         284 |               0 |  284 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                                                                                     |
-| g2        | n/a   | BUFG/O          | None       |          49 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
-| g4        | n/a   | BUFG/O          | None       |          32 |               4 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG                                                           |
-| g5        | n/a   | BUFG/O          | None       |          32 |              27 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
-| g6        | n/a   | BUFG/O          | None       |          27 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG                                                            |
-| g7        | n/a   | BUFG/O          | None       |          25 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG                                                            |
-| g8        | n/a   | BUFG/O          | None       |          21 |               1 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                                                                        |
+| g0        | n/a   | BUFG/O          | None       |        7967 |               0 | 7397 |    521 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
+| g1        | n/a   | BUFG/O          | None       |         754 |               0 |  754 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                                                                                     |
+| g2        | n/a   | BUFG/O          | None       |          58 |               2 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
+| g4        | n/a   | BUFG/O          | None       |          32 |               8 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG                                                           |
+| g5        | n/a   | BUFG/O          | None       |          32 |              30 |    1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
+| g6        | n/a   | BUFG/O          | None       |          31 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG                                                            |
+| g7        | n/a   | BUFG/O          | None       |          26 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG                                                            |
+| g8        | n/a   | BUFG/O          | None       |          30 |               4 |    1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                                                                        |
 | g9        | n/a   | BUFG/O          | None       |           4 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
-| g10       | n/a   | BUFG/O          | None       |          16 |               0 |   15 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
+| g10       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -581,7 +578,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |         819 |               0 | 757 |     62 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |         799 |               0 | 737 |     62 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -594,14 +591,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        3986 |               0 | 3950 |     16 |    0 |   0 |  0 |    1 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
-| g1        | n/a   | BUFG/O          | None       |          49 |               0 |   49 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                                                                                     |
-| g2        | n/a   | BUFG/O          | None       |           8 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG                                                                         |
-| g5        | n/a   | BUFG/O          | None       |           0 |               7 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG                                                            |
-| g6        | n/a   | BUFG/O          | None       |           4 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG                                                            |
-| g7        | n/a   | BUFG/O          | None       |           6 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG                                                            |
-| g8        | n/a   | BUFG/O          | None       |           9 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG                                                                        |
-| g9        | n/a   | BUFG/O          | None       |          13 |               0 |   12 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
+| g0        | n/a   | BUFG/O          | None       |        3844 |               0 | 3782 |     42 |    0 |   0 |  0 |    1 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
+| g1        | n/a   | BUFG/O          | None       |         144 |               0 |  144 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0                                                                                     |
+| g9        | n/a   | BUFG/O          | None       |           2 |               0 |    1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
 | g10       | n/a   | BUFG/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
 | g11       | n/a   | BUFH/O          | None       |           1 |               0 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/pll_clk3                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
@@ -616,7 +608,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |          30 |               0 | 25 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          40 |               0 | 35 |      4 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -629,9 +621,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                      |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         547 |               0 | 508 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
+| g0        | n/a   | BUFG/O          | None       |         684 |               0 | 645 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK                                            |
 | g3        | n/a   | BUFG/O          | None       |          46 |               0 |  45 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK                                                   |
-| g9        | n/a   | BUFG/O          | None       |           5 |               0 |   2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
+| g9        | n/a   | BUFG/O          | None       |          16 |               0 |  13 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk                                    |
 | g10       | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -666,42 +658,42 @@ set_property LOC IOB_X1Y274 [get_ports sys_clk_p]
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG}] -add {CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/wdata_buffer__0_BUFG}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG" driven by instance "axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG_inst" located at site "BUFGCTRL_X0Y6"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_awaddr_reg[29]_i_2_n_0_BUFG}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG" driven by instance "axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG_inst" located at site "BUFGCTRL_X0Y5"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/s_axi_araddr_reg[29]_i_2_n_0_BUFG}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG" driven by instance "axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG_inst" located at site "BUFGCTRL_X0Y4"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG}] -add {CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/araddr_buffer__0_BUFG}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG" driven by instance "axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG_inst" located at site "BUFGCTRL_X0Y1"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG}] -add {CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[3]_BUFG}] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG" driven by instance "axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG_inst" located at site "BUFGCTRL_X0Y3"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG}] -add {CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/ps_to_mig_interface_0/inst/FSM_onehot_STATE_reg_n_0_[10]_BUFG}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
 # Clock net "axi_ddr_design_i/processing_system7_0/inst/FCLK_CLK0" driven by instance "axi_ddr_design_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG" located at site "BUFGCTRL_X0Y17"
@@ -715,14 +707,14 @@ resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/processing_system7_0/inst/FCL
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0}] -add {CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_300_400_en.clk_ref_400.u_bufg_clk_ref_400_n_0}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup
 
 # Clock net "axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK" driven by instance "axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/clk_ref_200.u_bufg_clk_ref" located at site "BUFGCTRL_X0Y19"
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK}] -add {CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_iodelay_ctrl/CLK}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup
 
 # Clock net "axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/mmcm_ps_clk" driven by instance "axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/gen_mmcm.u_bufg_mmcm_ps_clk" located at site "BUFGCTRL_X0Y18"
@@ -736,5 +728,5 @@ resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_desig
 #startgroup
 create_pblock {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK}
 add_cells_to_pblock [get_pblocks  {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/gen_mmcm.mmcm_i} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK"}]]]
-resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK}] -add {CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
+resize_pblock [get_pblocks {CLKAG_axi_ddr_design_i/mig_7series_0/u_axi_ddr_design_mig_7series_0_1_mig/u_ddr3_infrastructure/CLK}] -add {CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4 CLOCKREGION_X1Y5:CLOCKREGION_X1Y5 CLOCKREGION_X1Y6:CLOCKREGION_X1Y6}
 #endgroup

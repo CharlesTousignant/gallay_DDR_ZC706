@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Jul 23 16:42:49 2021
+-- Date        : Tue Jul 27 15:59:05 2021
 -- Host        : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ axi_ddr_design_ps_to_mig_interface_0_0_sim_netlist.vhdl
@@ -26,9 +26,9 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ps_to_mig_interface is
     gpio_rvalid : out STD_LOGIC;
     gpio_resp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio_resp_valid : out STD_LOGIC;
+    aresetn_sync_out : out STD_LOGIC;
     s_axi_wstrb : out STD_LOGIC_VECTOR ( 0 to 0 );
     gpio_debug_current_state : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    aresetn_sync_out : out STD_LOGIC;
     aresetn_in : in STD_LOGIC;
     ui_clk_sync_rst : in STD_LOGIC;
     ui_clk : in STD_LOGIC;
@@ -1015,11 +1015,11 @@ begin
     );
 aresetn_sync_out_i_1: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"2"
     )
         port map (
-      I0 => \FSM_onehot_STATE_reg_n_0_[0]\,
-      I1 => aresetn_in,
+      I0 => aresetn_in,
+      I1 => \FSM_onehot_STATE_reg_n_0_[0]\,
       O => aresetn_sync_out_i_1_n_0
     );
 aresetn_sync_out_reg: unisim.vcomponents.FDRE

@@ -68,6 +68,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_
 # IP: bd/axi_ddr_design/ip/axi_ddr_design_axi_gpio_13_0/axi_ddr_design_axi_gpio_13_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_axi_gpio_13_0 || ORIG_REF_NAME==axi_ddr_design_axi_gpio_13_0} -quiet] -quiet
 
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_debounce_0_0/axi_ddr_design_debounce_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_debounce_0_0 || ORIG_REF_NAME==axi_ddr_design_debounce_0_0} -quiet] -quiet
+
+# IP: bd/axi_ddr_design/ip/axi_ddr_design_debounce_n_0_0/axi_ddr_design_debounce_n_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_debounce_n_0_0 || ORIG_REF_NAME==axi_ddr_design_debounce_n_0_0} -quiet] -quiet
+
 # IP: bd/axi_ddr_design/ip/axi_ddr_design_auto_pc_0/axi_ddr_design_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axi_ddr_design_auto_pc_0 || ORIG_REF_NAME==axi_ddr_design_auto_pc_0} -quiet] -quiet
 

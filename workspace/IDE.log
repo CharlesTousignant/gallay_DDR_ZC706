@@ -4839,3 +4839,348 @@ con
 17:22:42 ERROR : An unexpected exception occurred in the module 'reading platform'
 17:22:42 ERROR : An unexpected exception occurred in the module 'reading platform'
 17:22:42 ERROR : An unexpected exception occurred in the module 'reading platform'
+17:57:02 INFO  : Disconnected from the channel tcfchan#8.
+14:18:38 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\temp_xsdb_launch_script.tcl
+14:18:40 INFO  : XSCT server has started successfully.
+14:18:40 INFO  : plnx-install-location is set to ''
+14:18:40 INFO  : Successfully done setting XSCT server connection channel  
+14:18:40 INFO  : Successfully done setting workspace for the tool. 
+14:18:45 INFO  : Platform repository initialization has completed.
+14:18:45 INFO  : Registering command handlers for Vitis TCF services
+14:18:48 INFO  : Successfully done query RDI_DATADIR 
+14:19:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:19:28 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+14:19:28 INFO  : 'jtag frequency' command is executed.
+14:19:28 INFO  : Context for 'APU' is selected.
+14:19:28 INFO  : System reset is completed.
+14:19:31 INFO  : 'after 3000' command is executed.
+14:19:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+14:19:39 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit"
+14:19:39 INFO  : Context for 'APU' is selected.
+14:19:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/hw/axi_ddr_hardware_v2_7_debug.xsa'.
+14:19:39 INFO  : 'configparams force-mem-access 1' command is executed.
+14:19:39 INFO  : Context for 'APU' is selected.
+14:19:39 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/psinit/ps7_init.tcl' is done.
+14:19:40 INFO  : 'ps7_init' command is executed.
+14:19:40 INFO  : 'ps7_post_config' command is executed.
+14:19:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:19:40 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:19:40 INFO  : 'configparams force-mem-access 0' command is executed.
+14:19:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/hw/axi_ddr_hardware_v2_7_debug.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:19:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:19:40 INFO  : 'con' command is executed.
+14:19:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:19:40 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_debug_app_ver2_7_system_standalone.tcl'
+14:22:42 INFO  : Disconnected from the channel tcfchan#1.
+14:22:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:22:42 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+14:22:42 INFO  : 'jtag frequency' command is executed.
+14:22:42 INFO  : Context for 'APU' is selected.
+14:22:42 INFO  : System reset is completed.
+14:22:45 INFO  : 'after 3000' command is executed.
+14:22:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+14:22:53 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit"
+14:22:53 INFO  : Context for 'APU' is selected.
+14:22:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/hw/axi_ddr_hardware_v2_7_debug.xsa'.
+14:22:56 INFO  : 'configparams force-mem-access 1' command is executed.
+14:22:56 INFO  : Context for 'APU' is selected.
+14:22:56 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/psinit/ps7_init.tcl' is done.
+14:22:56 INFO  : 'ps7_init' command is executed.
+14:22:56 INFO  : 'ps7_post_config' command is executed.
+14:22:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:57 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:22:57 INFO  : 'configparams force-mem-access 0' command is executed.
+14:22:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/bitstream/axi_ddr_hardware_v2_7_debug.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/hw/axi_ddr_hardware_v2_7_debug.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_app_ver2_7/Debug/debug_app_ver2_7.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:22:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:22:57 INFO  : 'con' command is executed.
+14:22:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:22:57 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\systemdebugger_debug_app_ver2_7_system_standalone.tcl'
+15:39:37 INFO  : Result from executing command 'getProjects': debug_platform_ver2_7;no_burst_platform_v0_1;ps_ppl_platform_no_input
+15:39:37 INFO  : Result from executing command 'getPlatforms': debug_platform_ver2_7|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm;ps_ppl_platform_no_input|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm
+15:40:44 INFO  : Result from executing command 'getProjects': debug_platform_ver2_7;no_burst_platform_v0_1;ps_ppl_platform_no_input
+15:40:44 INFO  : Result from executing command 'getPlatforms': debug_platform_ver2_7|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm;no_burst_platform_v0_1|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/no_burst_platform_v0_1.xpfm;ps_ppl_platform_no_input|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm
+15:44:42 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_1'...
+15:45:22 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_1'...
+15:45:37 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_1'...
+15:46:40 INFO  : Disconnected from the channel tcfchan#2.
+15:46:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:46:42 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+15:46:42 INFO  : 'jtag frequency' command is executed.
+15:46:42 INFO  : Context for 'APU' is selected.
+15:46:42 INFO  : System reset is completed.
+15:46:45 INFO  : 'after 3000' command is executed.
+15:46:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+15:46:53 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/bitstream/no_burst_v0_1.bit"
+15:46:53 INFO  : Context for 'APU' is selected.
+15:46:53 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/hw/no_burst_v0_1.xsa'.
+15:46:53 INFO  : 'configparams force-mem-access 1' command is executed.
+15:46:53 INFO  : Context for 'APU' is selected.
+15:46:53 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/psinit/ps7_init.tcl' is done.
+15:46:53 INFO  : 'ps7_init' command is executed.
+15:46:53 INFO  : 'ps7_post_config' command is executed.
+15:46:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:46:54 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/Debug/no_burst_app_v0_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:46:54 INFO  : 'configparams force-mem-access 0' command is executed.
+15:46:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/bitstream/no_burst_v0_1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/hw/no_burst_v0_1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/Debug/no_burst_app_v0_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:46:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:46:54 INFO  : 'con' command is executed.
+15:46:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:46:54 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\debugger_no_burst_app_v0_1-default.tcl'
+15:49:49 INFO  : Disconnected from the channel tcfchan#7.
+15:49:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:49:50 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+15:49:50 INFO  : 'jtag frequency' command is executed.
+15:49:50 INFO  : Context for 'APU' is selected.
+15:49:50 INFO  : System reset is completed.
+15:49:53 INFO  : 'after 3000' command is executed.
+15:49:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+15:50:01 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/bitstream/no_burst_v0_1.bit"
+15:50:01 INFO  : Context for 'APU' is selected.
+15:50:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/hw/no_burst_v0_1.xsa'.
+15:50:01 INFO  : 'configparams force-mem-access 1' command is executed.
+15:50:01 INFO  : Context for 'APU' is selected.
+15:50:01 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/psinit/ps7_init.tcl' is done.
+15:50:01 INFO  : 'ps7_init' command is executed.
+15:50:01 INFO  : 'ps7_post_config' command is executed.
+15:50:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:01 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/Debug/no_burst_app_v0_1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:50:02 INFO  : 'configparams force-mem-access 0' command is executed.
+15:50:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/bitstream/no_burst_v0_1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/hw/no_burst_v0_1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_1/Debug/no_burst_app_v0_1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:50:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:02 INFO  : 'con' command is executed.
+15:50:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:50:02 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\debugger_no_burst_app_v0_1-default.tcl'
+16:08:53 INFO  : Result from executing command 'getProjects': debug_platform_ver2_7;no_burst_platform_v0_1;no_burst_platform_v0_2;ps_ppl_platform_no_input
+16:08:53 INFO  : Result from executing command 'getPlatforms': debug_platform_ver2_7|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm;no_burst_platform_v0_1|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/no_burst_platform_v0_1.xpfm;ps_ppl_platform_no_input|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm
+16:09:44 INFO  : Result from executing command 'getProjects': debug_platform_ver2_7;no_burst_platform_v0_1;no_burst_platform_v0_2;ps_ppl_platform_no_input
+16:09:45 INFO  : Result from executing command 'getPlatforms': debug_platform_ver2_7|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/debug_platform_ver2_7/export/debug_platform_ver2_7/debug_platform_ver2_7.xpfm;no_burst_platform_v0_1|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_1/export/no_burst_platform_v0_1/no_burst_platform_v0_1.xpfm;no_burst_platform_v0_2|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/no_burst_platform_v0_2.xpfm;ps_ppl_platform_no_input|C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/ps_ppl_platform_no_input/export/ps_ppl_platform_no_input/ps_ppl_platform_no_input.xpfm
+16:11:14 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_2'...
+16:11:51 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_2'...
+16:12:42 INFO  : Disconnected from the channel tcfchan#8.
+16:12:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:12:44 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+16:12:44 INFO  : 'jtag frequency' command is executed.
+16:12:44 INFO  : Context for 'APU' is selected.
+16:12:44 INFO  : System reset is completed.
+16:12:47 INFO  : 'after 3000' command is executed.
+16:12:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+16:12:55 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit"
+16:12:55 INFO  : Context for 'APU' is selected.
+16:12:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa'.
+16:12:55 INFO  : 'configparams force-mem-access 1' command is executed.
+16:12:55 INFO  : Context for 'APU' is selected.
+16:12:55 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl' is done.
+16:12:55 INFO  : 'ps7_init' command is executed.
+16:12:55 INFO  : 'ps7_post_config' command is executed.
+16:12:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:12:56 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:12:56 INFO  : 'configparams force-mem-access 0' command is executed.
+16:12:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:12:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:12:56 INFO  : 'con' command is executed.
+16:12:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:12:56 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\debugger_no_burst_app_v0_2-default.tcl'
+16:13:56 INFO  : Checking for BSP changes to sync application flags for project 'no_burst_app_v0_2'...
+16:14:08 INFO  : Disconnected from the channel tcfchan#12.
+16:14:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:10 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+16:14:10 INFO  : 'jtag frequency' command is executed.
+16:14:10 INFO  : Context for 'APU' is selected.
+16:14:10 INFO  : System reset is completed.
+16:14:13 INFO  : 'after 3000' command is executed.
+16:14:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+16:14:20 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit"
+16:14:20 INFO  : Context for 'APU' is selected.
+16:14:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa'.
+16:14:20 INFO  : 'configparams force-mem-access 1' command is executed.
+16:14:20 INFO  : Context for 'APU' is selected.
+16:14:21 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl' is done.
+16:14:21 INFO  : 'ps7_init' command is executed.
+16:14:21 INFO  : 'ps7_post_config' command is executed.
+16:14:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:14:21 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:14:21 INFO  : 'configparams force-mem-access 0' command is executed.
+16:14:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:14:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:14:21 INFO  : 'con' command is executed.
+16:14:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:14:21 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\debugger_no_burst_app_v0_2-default.tcl'
+16:15:08 INFO  : Disconnected from the channel tcfchan#14.
+16:15:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:09 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251A07C9F' is selected.
+16:15:09 INFO  : 'jtag frequency' command is executed.
+16:15:09 INFO  : Context for 'APU' is selected.
+16:15:09 INFO  : System reset is completed.
+16:15:12 INFO  : 'after 3000' command is executed.
+16:15:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}' command is executed.
+16:15:20 INFO  : FPGA configured successfully with bitstream "C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit"
+16:15:20 INFO  : Context for 'APU' is selected.
+16:15:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa'.
+16:15:20 INFO  : 'configparams force-mem-access 1' command is executed.
+16:15:20 INFO  : Context for 'APU' is selected.
+16:15:20 INFO  : Sourcing of 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl' is done.
+16:15:20 INFO  : 'ps7_init' command is executed.
+16:15:20 INFO  : 'ps7_post_config' command is executed.
+16:15:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:21 INFO  : The application 'C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:15:21 INFO  : 'configparams force-mem-access 0' command is executed.
+16:15:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251A07C9F" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2-210251A07C9F-23731093-0"}
+fpga -file C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/bitstream/no_burst_v0_2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/hw/no_burst_v0_2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_app_v0_2/Debug/no_burst_app_v0_2.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:15:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:15:21 INFO  : 'con' command is executed.
+16:15:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:15:21 INFO  : Launch script is exported to file 'C:\Users\Projet\Desktop\Recherche\gallay_DDR_ZC706\workspace\.sdk\launch_scripts\single_application_debug\debugger_no_burst_app_v0_2-default.tcl'
+16:32:24 INFO  : Disconnected from the channel tcfchan#15.
