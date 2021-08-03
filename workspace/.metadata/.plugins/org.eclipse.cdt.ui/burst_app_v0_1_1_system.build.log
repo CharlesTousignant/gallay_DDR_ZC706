@@ -1,0 +1,10 @@
+12:22:02 **** Incremental Build of configuration Debug for project burst_app_v0_1_1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 60567 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_platform_v0_1_1/export/burst_platform_v0_1_1/burst_platform_v0_1_1.xpfm standalone_domain C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1_system/Debug/system.bif
+sdcard_gen --xpfm C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_platform_v0_1_1/export/burst_platform_v0_1_1/burst_platform_v0_1_1.xpfm --sys_config burst_platform_v0_1_1 --bif C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1_system/Debug/system.bif --bitstream C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1/_ide/bitstream/burst_v_0_1_1.bit --elf C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1/Debug/burst_app_v0_1_1.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1/_ide/bitstream/burst_v_0_1_1.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_app_v0_1_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+12:22:07 Build Finished (took 5s.495ms)
+

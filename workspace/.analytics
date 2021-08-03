@@ -355,3 +355,153 @@ timestamp=[2021-07-27 16:11:52], mode=BUILD, duration=0:00:00.860, duration_ms=8
 timestamp=[2021-07-27 16:11:58], mode=BUILD, duration=0:00:05.397, duration_ms=5397, data={name=no_burst_app_v0_2_system, configuration=Debug, clean_build=false}
 timestamp=[2021-07-27 16:13:57], mode=BUILD, duration=0:00:00.934, duration_ms=934, data={name=no_burst_app_v0_2, configuration=Debug, clean_build=false}
 timestamp=[2021-07-27 16:14:03], mode=BUILD, duration=0:00:05.401, duration_ms=5401, data={name=no_burst_app_v0_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 10:39:21], mode=WORKBENCH_START, duration=0:00:11.517, duration_ms=11517, data={}
+timestamp=[2021-07-29 10:39:23], mode=WORKBENCH_UI_INIT, duration=0:00:01.196, duration_ms=1196, data={editors_count=45, platform_editors_count=6, projects_count=13, platform_projects_count=4, active_platform_editor=false, projects=RemoteSystemsTempFiles,debug_app_ver2_7,debug_app_ver2_7_system,debug_platform_ver2_7,no_burst_app_v0_1,no_burst_app_v0_1_system,no_burst_app_v0_2,no_burst_app_v0_2_system,no_burst_platform_v0_1,no_burst_platform_v0_2,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-29 10:39:23], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.442, duration_ms=442, data={}
+timestamp=[2021-07-29 10:40:10], mode=APP_CREATION, duration=0:00:07.442, duration_ms=7442, data={name=app_sandbox, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=no_burst_platform_v0_2, application_type=application}
+timestamp=[2021-07-29 11:44:29], mode=BUILD, duration=0:00:01.410, duration_ms=1410, data={name=app_sandbox, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 13:38:41], mode=BUILD, duration=0:00:00.758, duration_ms=758, data={name=app_sandbox, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 13:38:46], mode=BUILD, duration=0:00:04.734, duration_ms=4734, data={name=app_sandbox_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 16:15:59], mode=BUILD, duration=0:00:00.729, duration_ms=729, data={name=app_sandbox, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 16:16:06], mode=BUILD, duration=0:00:00.684, duration_ms=684, data={name=app_sandbox, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 16:30:24], mode=BUILD, duration=0:00:00.749, duration_ms=749, data={name=app_sandbox, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 16:30:27], mode=BUILD, duration=0:00:02.389, duration_ms=2389, data={name=app_sandbox_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 17:33:25], mode=PLATFORM_CREATION, duration=0:00:16.453, duration_ms=16453, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-29 17:34:32], mode=PLATFORM_GENERATION, duration=0:00:46.220, duration_ms=46220, data={name=burst_platform_v0_1}
+timestamp=[2021-07-29 17:35:45], mode=APP_CREATION, duration=0:00:08.208, duration_ms=8208, data={name=burst_app_v0_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_1, application_type=application}
+timestamp=[2021-07-29 17:36:24], mode=BUILD, duration=0:00:01.179, duration_ms=1179, data={name=burst_app_v0_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 17:36:30], mode=BUILD, duration=0:00:05.714, duration_ms=5714, data={name=burst_app_v0_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 17:38:33], mode=BUILD, duration=0:00:00.937, duration_ms=937, data={name=burst_app_v0_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-29 17:38:38], mode=BUILD, duration=0:00:05.391, duration_ms=5391, data={name=burst_app_v0_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 08:26:33], mode=WORKBENCH_START, duration=0:00:11.020, duration_ms=11020, data={}
+timestamp=[2021-07-30 08:26:34], mode=WORKBENCH_UI_INIT, duration=0:00:01.255, duration_ms=1255, data={editors_count=52, platform_editors_count=7, projects_count=18, platform_projects_count=5, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_sandbox,app_sandbox_system,burst_app_v0_1,burst_app_v0_1_system,burst_platform_v0_1,debug_app_ver2_7,debug_app_ver2_7_system,debug_platform_ver2_7,no_burst_app_v0_1,no_burst_app_v0_1_system,no_burst_app_v0_2,no_burst_app_v0_2_system,no_burst_platform_v0_1,no_burst_platform_v0_2,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-30 08:26:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.409, duration_ms=409, data={}
+timestamp=[2021-07-30 09:06:11], mode=PLATFORM_CREATION, duration=0:00:17.555, duration_ms=17555, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-30 09:07:12], mode=PLATFORM_GENERATION, duration=0:00:45.739, duration_ms=45739, data={name=burst_platform_v0_1_1}
+timestamp=[2021-07-30 09:08:23], mode=APP_CREATION, duration=0:00:06.857, duration_ms=6857, data={name=burst_app_v0_1_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_1_1, application_type=application}
+timestamp=[2021-07-30 09:10:10], mode=BUILD, duration=0:00:01.139, duration_ms=1139, data={name=burst_app_v0_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:10:16], mode=BUILD, duration=0:00:05.649, duration_ms=5649, data={name=burst_app_v0_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:12:32], mode=BUILD, duration=0:00:00.884, duration_ms=884, data={name=burst_app_v0_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:12:38], mode=BUILD, duration=0:00:05.399, duration_ms=5399, data={name=burst_app_v0_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:45:26], mode=PLATFORM_CREATION, duration=0:00:13.066, duration_ms=13066, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-07-30 09:46:37], mode=PLATFORM_GENERATION, duration=0:00:44.773, duration_ms=44773, data={name=burst_platform_v0_1_2}
+timestamp=[2021-07-30 09:47:17], mode=APP_CREATION, duration=0:00:07.932, duration_ms=7932, data={name=burst_app_v0_1_2, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_1_2, application_type=application}
+timestamp=[2021-07-30 09:48:06], mode=BUILD, duration=0:00:01.125, duration_ms=1125, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:48:12], mode=BUILD, duration=0:00:05.413, duration_ms=5413, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:48:26], mode=BUILD, duration=0:00:00.880, duration_ms=880, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 09:48:32], mode=BUILD, duration=0:00:05.440, duration_ms=5440, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:04:37], mode=BUILD, duration=0:00:00.944, duration_ms=944, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:04:43], mode=BUILD, duration=0:00:05.572, duration_ms=5572, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:09:22], mode=BUILD, duration=0:00:00.893, duration_ms=893, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:09:27], mode=BUILD, duration=0:00:05.430, duration_ms=5430, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:12:45], mode=BUILD, duration=0:00:00.866, duration_ms=866, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:12:51], mode=BUILD, duration=0:00:05.434, duration_ms=5434, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:22:02], mode=BUILD, duration=0:00:00.933, duration_ms=933, data={name=burst_app_v0_1_1, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 12:22:07], mode=BUILD, duration=0:00:05.501, duration_ms=5501, data={name=burst_app_v0_1_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 13:48:21], mode=BUILD, duration=0:00:00.927, duration_ms=927, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 13:48:27], mode=BUILD, duration=0:00:05.489, duration_ms=5489, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 13:49:37], mode=BUILD, duration=0:00:00.949, duration_ms=949, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 13:49:43], mode=BUILD, duration=0:00:05.413, duration_ms=5413, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:06:22], mode=BUILD, duration=0:00:00.325, duration_ms=325, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:06:28], mode=BUILD, duration=0:00:05.533, duration_ms=5533, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:06:31], mode=BUILD, duration=0:00:00.299, duration_ms=299, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:13:29], mode=BUILD, duration=0:00:00.877, duration_ms=877, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:13:34], mode=BUILD, duration=0:00:05.406, duration_ms=5406, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:13:37], mode=BUILD, duration=0:00:00.302, duration_ms=302, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:15:53], mode=BUILD, duration=0:00:01.033, duration_ms=1033, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:16:00], mode=BUILD, duration=0:00:06.536, duration_ms=6536, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:18:15], mode=BUILD, duration=0:00:00.375, duration_ms=375, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:21:14], mode=WORKBENCH_START, duration=0:00:09.043, duration_ms=9043, data={}
+timestamp=[2021-07-30 15:21:15], mode=WORKBENCH_UI_INIT, duration=0:00:00.992, duration_ms=992, data={editors_count=57, platform_editors_count=8, projects_count=24, platform_projects_count=7, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_sandbox,app_sandbox_system,burst_app_v0_1,burst_app_v0_1_1,burst_app_v0_1_1_system,burst_app_v0_1_2,burst_app_v0_1_2_system,burst_app_v0_1_system,burst_platform_v0_1,burst_platform_v0_1_1,burst_platform_v0_1_2,debug_app_ver2_7,debug_app_ver2_7_system,debug_platform_ver2_7,no_burst_app_v0_1,no_burst_app_v0_1_system,no_burst_app_v0_2,no_burst_app_v0_2_system,no_burst_platform_v0_1,no_burst_platform_v0_2,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-07-30 15:21:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.115, duration_ms=115, data={}
+timestamp=[2021-07-30 15:21:21], mode=BUILD, duration=0:00:00.348, duration_ms=348, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:21:30], mode=BUILD, duration=0:00:07.721, duration_ms=7721, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:21:35], mode=BUILD, duration=0:00:00.310, duration_ms=310, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:40:19], mode=BUILD, duration=0:00:00.939, duration_ms=939, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:40:25], mode=BUILD, duration=0:00:05.422, duration_ms=5422, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:48:54], mode=BUILD, duration=0:00:00.871, duration_ms=871, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:48:59], mode=BUILD, duration=0:00:05.425, duration_ms=5425, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 15:49:02], mode=BUILD, duration=0:00:00.304, duration_ms=304, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 16:08:07], mode=BUILD, duration=0:00:00.877, duration_ms=877, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 16:08:13], mode=BUILD, duration=0:00:05.489, duration_ms=5489, data={name=burst_app_v0_1_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-07-30 16:17:32], mode=BUILD, duration=0:00:00.996, duration_ms=996, data={name=burst_app_v0_1_2, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 11:01:21], mode=WORKBENCH_START, duration=0:00:10.507, duration_ms=10507, data={}
+timestamp=[2021-08-03 11:01:22], mode=WORKBENCH_UI_INIT, duration=0:00:01.259, duration_ms=1259, data={editors_count=57, platform_editors_count=8, projects_count=24, platform_projects_count=7, active_platform_editor=false, projects=RemoteSystemsTempFiles,app_sandbox,app_sandbox_system,burst_app_v0_1,burst_app_v0_1_1,burst_app_v0_1_1_system,burst_app_v0_1_2,burst_app_v0_1_2_system,burst_app_v0_1_system,burst_platform_v0_1,burst_platform_v0_1_1,burst_platform_v0_1_2,debug_app_ver2_7,debug_app_ver2_7_system,debug_platform_ver2_7,no_burst_app_v0_1,no_burst_app_v0_1_system,no_burst_app_v0_2,no_burst_app_v0_2_system,no_burst_platform_v0_1,no_burst_platform_v0_2,ps_ppl_platform_no_input,ps_to_pl_fsm_constant,ps_to_pl_fsm_constant_system}
+timestamp=[2021-08-03 11:01:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.442, duration_ms=442, data={}
+timestamp=[2021-08-03 11:02:08], mode=PLATFORM_CREATION, duration=0:00:17.574, duration_ms=17574, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 11:03:15], mode=PLATFORM_CREATION, duration=0:00:12.020, duration_ms=12020, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 11:05:21], mode=PLATFORM_GENERATION, duration=0:00:46.354, duration_ms=46354, data={name=burst_platform_v0_3_1}
+timestamp=[2021-08-03 11:06:18], mode=APP_CREATION, duration=0:00:07.417, duration_ms=7417, data={name=burst_app_v0_3_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_1, application_type=application}
+timestamp=[2021-08-03 12:28:02], mode=BUILD, duration=0:00:01.078, duration_ms=1078, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:28:05], mode=BUILD, duration=0:00:02.518, duration_ms=2518, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:28:19], mode=BUILD, duration=0:00:00.685, duration_ms=685, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:28:22], mode=BUILD, duration=0:00:02.359, duration_ms=2359, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:28:33], mode=BUILD, duration=0:00:00.941, duration_ms=941, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:28:39], mode=BUILD, duration=0:00:05.580, duration_ms=5580, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:31:33], mode=BUILD, duration=0:00:00.883, duration_ms=883, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:31:39], mode=BUILD, duration=0:00:05.435, duration_ms=5435, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:35:03], mode=BUILD, duration=0:00:00.929, duration_ms=929, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:35:09], mode=BUILD, duration=0:00:05.387, duration_ms=5387, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:45:00], mode=BUILD, duration=0:00:00.875, duration_ms=875, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:45:06], mode=BUILD, duration=0:00:05.417, duration_ms=5417, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:52:14], mode=BUILD, duration=0:00:00.864, duration_ms=864, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:52:20], mode=BUILD, duration=0:00:05.412, duration_ms=5412, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:55:16], mode=BUILD, duration=0:00:00.953, duration_ms=953, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 12:55:22], mode=BUILD, duration=0:00:05.376, duration_ms=5376, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 15:32:22], mode=PLATFORM_CREATION, duration=0:00:13.201, duration_ms=13201, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 15:33:19], mode=PLATFORM_GENERATION, duration=0:00:45.027, duration_ms=45027, data={name=burst_platform_v0_3_2}
+timestamp=[2021-08-03 15:52:10], mode=APP_CREATION, duration=0:00:08.479, duration_ms=8479, data={name=burst_app_v0_3_2, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_2, application_type=application}
+timestamp=[2021-08-03 15:53:19], mode=BUILD, duration=0:00:01.130, duration_ms=1130, data={name=burst_app_v0_3_2, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 15:53:25], mode=BUILD, duration=0:00:05.546, duration_ms=5546, data={name=burst_app_v0_3_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 15:53:59], mode=BUILD, duration=0:00:00.867, duration_ms=867, data={name=burst_app_v0_3_2, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 15:54:05], mode=BUILD, duration=0:00:05.441, duration_ms=5441, data={name=burst_app_v0_3_2_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:14:29], mode=PLATFORM_CREATION, duration=0:00:13.044, duration_ms=13044, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 16:15:27], mode=PLATFORM_GENERATION, duration=0:00:44.880, duration_ms=44880, data={name=burst_platform_v0_3_3}
+timestamp=[2021-08-03 16:16:02], mode=APP_CREATION, duration=0:00:08.483, duration_ms=8483, data={name=burst_app_v0_3_3, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_3, application_type=application}
+timestamp=[2021-08-03 16:17:04], mode=BUILD, duration=0:00:01.129, duration_ms=1129, data={name=burst_app_v0_3_3, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:17:11], mode=BUILD, duration=0:00:05.522, duration_ms=5522, data={name=burst_app_v0_3_3_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:18:06], mode=BUILD, duration=0:00:00.875, duration_ms=875, data={name=burst_app_v0_3_3, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:18:12], mode=BUILD, duration=0:00:05.531, duration_ms=5531, data={name=burst_app_v0_3_3_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:21:50], mode=BUILD, duration=0:00:00.878, duration_ms=878, data={name=burst_app_v0_3_3, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:21:56], mode=BUILD, duration=0:00:05.464, duration_ms=5464, data={name=burst_app_v0_3_3_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:22:02], mode=BUILD, duration=0:00:00.362, duration_ms=362, data={name=burst_app_v0_3_3, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:30:15], mode=BUILD, duration=0:00:00.934, duration_ms=934, data={name=burst_app_v0_3_1, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:30:21], mode=BUILD, duration=0:00:05.626, duration_ms=5626, data={name=burst_app_v0_3_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:38:21], mode=PLATFORM_CREATION, duration=0:00:13.534, duration_ms=13534, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 16:39:18], mode=PLATFORM_GENERATION, duration=0:00:44.968, duration_ms=44968, data={name=burst_platform_v0_3_4}
+timestamp=[2021-08-03 16:40:09], mode=APP_CREATION, duration=0:00:08.385, duration_ms=8385, data={name=burst_app_v0_3_4, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_4, application_type=application}
+timestamp=[2021-08-03 16:40:43], mode=BUILD, duration=0:00:01.121, duration_ms=1121, data={name=burst_app_v0_3_4, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:40:49], mode=BUILD, duration=0:00:05.459, duration_ms=5459, data={name=burst_app_v0_3_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:41:40], mode=BUILD, duration=0:00:00.932, duration_ms=932, data={name=burst_app_v0_3_4, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:41:46], mode=BUILD, duration=0:00:05.404, duration_ms=5404, data={name=burst_app_v0_3_4_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 16:41:49], mode=BUILD, duration=0:00:00.308, duration_ms=308, data={name=burst_app_v0_3_4, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:13:59], mode=PLATFORM_CREATION, duration=0:00:13.328, duration_ms=13328, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 17:14:55], mode=PLATFORM_GENERATION, duration=0:00:45.571, duration_ms=45571, data={name=burst_platform_v0_3_5}
+timestamp=[2021-08-03 17:16:07], mode=APP_CREATION, duration=0:00:07.959, duration_ms=7959, data={name=burst_app_v0_3_5, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_5, application_type=application}
+timestamp=[2021-08-03 17:16:50], mode=BUILD, duration=0:00:01.129, duration_ms=1129, data={name=burst_app_v0_3_5, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:16:56], mode=BUILD, duration=0:00:05.510, duration_ms=5510, data={name=burst_app_v0_3_5_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:17:21], mode=BUILD, duration=0:00:00.367, duration_ms=367, data={name=burst_app_v0_3_5, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:49:42], mode=PLATFORM_CREATION, duration=0:00:14.514, duration_ms=14514, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 17:50:44], mode=PLATFORM_GENERATION, duration=0:00:45.886, duration_ms=45886, data={name=burst_platform_v0_3_6}
+timestamp=[2021-08-03 17:51:23], mode=APP_CREATION, duration=0:00:09.015, duration_ms=9015, data={name=burst_app_v0_3_6, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_6, application_type=application}
+timestamp=[2021-08-03 17:52:00], mode=BUILD, duration=0:00:01.176, duration_ms=1176, data={name=burst_app_v0_3_6, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:52:06], mode=BUILD, duration=0:00:05.649, duration_ms=5649, data={name=burst_app_v0_3_6_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:53:52], mode=BUILD, duration=0:00:00.871, duration_ms=871, data={name=burst_app_v0_3_6, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 17:53:58], mode=BUILD, duration=0:00:05.462, duration_ms=5462, data={name=burst_app_v0_3_6_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:16:28], mode=PLATFORM_CREATION, duration=0:00:14.018, duration_ms=14018, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-08-03 18:17:26], mode=PLATFORM_GENERATION, duration=0:00:46.364, duration_ms=46364, data={name=burst_platform_v0_3_7}
+timestamp=[2021-08-03 18:18:00], mode=APP_CREATION, duration=0:00:08.377, duration_ms=8377, data={name=burst_app_v0_3_7, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=burst_platform_v0_3_7, application_type=application}
+timestamp=[2021-08-03 18:22:03], mode=BUILD, duration=0:00:01.188, duration_ms=1188, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:22:09], mode=BUILD, duration=0:00:05.723, duration_ms=5723, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:23:15], mode=BUILD, duration=0:00:00.935, duration_ms=935, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:23:21], mode=BUILD, duration=0:00:05.518, duration_ms=5518, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:25:01], mode=BUILD, duration=0:00:00.923, duration_ms=923, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:25:07], mode=BUILD, duration=0:00:05.531, duration_ms=5531, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:41:24], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:41:30], mode=BUILD, duration=0:00:05.586, duration_ms=5586, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:42:49], mode=BUILD, duration=0:00:00.934, duration_ms=934, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:42:55], mode=BUILD, duration=0:00:05.530, duration_ms=5530, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:46:25], mode=BUILD, duration=0:00:00.945, duration_ms=945, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:46:30], mode=BUILD, duration=0:00:05.462, duration_ms=5462, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:54:57], mode=BUILD, duration=0:00:00.922, duration_ms=922, data={name=burst_app_v0_3_7, configuration=Debug, clean_build=false}
+timestamp=[2021-08-03 18:55:03], mode=BUILD, duration=0:00:05.522, duration_ms=5522, data={name=burst_app_v0_3_7_system, configuration=Debug, clean_build=false}

@@ -1,0 +1,165 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Aug  3 18:13:23 2021
+| Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_v3_wrapper_drc_routed.rpt -pb design_v3_wrapper_drc_routed.pb -rpx design_v3_wrapper_drc_routed.rpx
+| Design       : design_v3_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 24
++-----------+----------+----------------------------+------------+
+| Rule      | Severity | Description                | Violations |
++-----------+----------+----------------------------+------------+
+| PDRC-153  | Warning  | Gated clock check          | 12         |
+| PLCK-23   | Warning  | Clock Placer Checks        | 1          |
+| REQP-1709 | Warning  | Clock output buffering     | 1          |
+| REQP-1840 | Warning  | RAMB18 async control check | 10         |
++-----------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/gpio_rresp_valid_reg_i_1_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/gpio_rresp_valid_reg_i_1/O, cell design_v3_i/fsm_v3_0/inst/gpio_rresp_valid_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/gpio_rvalid_reg_i_1_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/gpio_rvalid_reg_i_1/O, cell design_v3_i/fsm_v3_0/inst/gpio_rvalid_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/gpio_wfifo_ready_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/gpio_wfifo_ready_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/gpio_wfifo_ready_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/rfifo_rd_en_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/rfifo_rd_en_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/rfifo_rd_en_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/rfifo_wr_en_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/rfifo_wr_en_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/rfifo_wr_en_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/s_axi_arvalid_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/s_axi_arvalid_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/s_axi_arvalid_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/s_axi_awvalid_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/s_axi_awvalid_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/s_axi_awvalid_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/s_axi_bready_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/s_axi_bready_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/s_axi_bready_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/s_axi_rready_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/s_axi_rready_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/s_axi_rready_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/s_axi_wvalid_reg_i_1_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/s_axi_wvalid_reg_i_1/O, cell design_v3_i/fsm_v3_0/inst/s_axi_wvalid_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/wfifo_rd_en_reg_i_2_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/wfifo_rd_en_reg_i_2/O, cell design_v3_i/fsm_v3_0/inst/wfifo_rd_en_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net design_v3_i/fsm_v3_0/inst/wfifo_wr_en_reg_i_1_n_0 is a gated clock net sourced by a combinational pin design_v3_i/fsm_v3_0/inst/wfifo_wr_en_reg_i_1/O, cell design_v3_i/fsm_v3_0/inst/wfifo_wr_en_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-23#1 Warning
+Clock Placer Checks  
+Sub-optimal placement for a clock-capable IO pin and MMCM pair. 
+Resolution: A dedicated routing path between the two can be used if: (a) The clock-capable IO (CCIO) is placed on a CCIO capable site (b) The MMCM is placed in the same clock region as the CCIO pin. If the IOB is driving multiple MMCMs, all MMCMs must be placed in the same clock region, one clock region above or one clock region below the IOB. Both the above conditions must be met at the same time, else it may lead to longer and less predictable clock insertion delays.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_clk_ibuf/diff_input_clk.u_ibufg_sys_clk (IBUFDS.O) is locked to H9
+	design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_iodelay_ctrl/clk_ref_mmcm_gen.mmcm_i (MMCME2_ADV.CLKIN1) is provisionally placed by clockplacer on MMCME2_ADV_X0Y0
+
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out on the design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/ENARDEN (net: design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg_i_1__0_n_0) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[0] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[1] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[2] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[3] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/ENARDEN (net: design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg_i_1_n_0) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[0] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[1] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[2] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[3] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+

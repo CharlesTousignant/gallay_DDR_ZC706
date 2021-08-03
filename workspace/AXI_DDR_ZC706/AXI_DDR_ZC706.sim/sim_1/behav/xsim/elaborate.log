@@ -1,6 +1,6 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto f3b8698b199443bf85b32b2366274dd1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fsm_01_behav xil_defaultlib.fsm_01 xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto f3b8698b199443bf85b32b2366274dd1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot fsm_v3_behav xil_defaultlib.fsm_v3 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -8,6 +8,11 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fsm_01
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot fsm_01_behav
+Compiling architecture arch of entity xil_defaultlib.fifo [\fifo(d=64,w=32)\]
+Compiling architecture behavioral of entity xil_defaultlib.fsm_v3
+Built simulation snapshot fsm_v3_behav

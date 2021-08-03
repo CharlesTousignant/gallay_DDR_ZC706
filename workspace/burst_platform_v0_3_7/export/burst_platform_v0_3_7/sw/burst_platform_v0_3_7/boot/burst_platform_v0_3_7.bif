@@ -1,0 +1,7 @@
+/*burst_platform_v0_3_7*/
+the_ROM_image:
+{
+  [bootloader]<burst_platform_v0_3_7/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

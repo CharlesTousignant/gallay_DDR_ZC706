@@ -1,0 +1,90 @@
+15:53:58 **** Incremental Build of configuration Debug for project burst_app_v0_3_2 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_platform_v0_3_2/export/burst_platform_v0_3_2/sw/burst_platform_v0_3_2/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:181:56: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  181 |      printf("Attente donnée valide en lecture, STATE: %d \n",
+      |                                                       ~^
+      |                                                        |
+      |                                                        int
+      |                                                       %ld
+  182 |        XGpio_DiscreteRead(&gpio_debug_state, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:187:57: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  187 |       printf("Attente donnée valide en lecture, STATE: %d \n",
+      |                                                        ~^
+      |                                                         |
+      |                                                         int
+      |                                                        %ld
+  188 |         XGpio_DiscreteRead(&gpio_debug_state, 1));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+      |         |
+      |         u32 {aka long unsigned int}
+../src/helloworld.c:194:17: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  194 |      printf("| %d | \n", XGpio_DiscreteRead(&gpio_rdata, 1)); // Print READ data
+      |                ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 |        |
+      |                 int      u32 {aka long unsigned int}
+      |                %ld
+../src/helloworld.c:254:57: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  254 |       printf("Attente FIFO prête pour écriture, STATE: %d \n",
+      |                                                        ~^
+      |                                                         |
+      |                                                         int
+      |                                                        %ld
+  255 |         XGpio_DiscreteRead(&gpio_debug_state, 1));
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~         
+      |         |
+      |         u32 {aka long unsigned int}
+../src/helloworld.c:264:59: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  264 |      printf("Attente MEMOIRE prête pour écriture, STATE: %d \n",
+      |                                                          ~^
+      |                                                           |
+      |                                                           int
+      |                                                          %ld
+  265 |        XGpio_DiscreteRead(&gpio_debug_state, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~            
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:142:6: warning: unused variable 'write_burst' [-Wunused-variable]
+  142 |  int write_burst = 0;
+      |      ^~~~~~~~~~~
+../src/helloworld.c:137:6: warning: unused variable 'read_burst' [-Wunused-variable]
+  137 |  int read_burst = 0;
+      |      ^~~~~~~~~~
+../src/helloworld.c:131:12: warning: unused variable 'DECERR' [-Wunused-variable]
+  131 |  const int DECERR = 3;
+      |            ^~~~~~
+../src/helloworld.c:130:12: warning: unused variable 'SLVERR' [-Wunused-variable]
+  130 |  const int SLVERR = 2;
+      |            ^~~~~~
+../src/helloworld.c:129:12: warning: unused variable 'EXOKAY' [-Wunused-variable]
+  129 |  const int EXOKAY = 1;
+      |            ^~~~~~
+../src/helloworld.c:128:12: warning: unused variable 'OKAY' [-Wunused-variable]
+  128 |  const int OKAY = 0;
+      |            ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: burst_app_v0_3_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/burst_platform_v0_3_2/export/burst_platform_v0_3_2/sw/burst_platform_v0_3_2/standalone_domain/bsplib/lib -o "burst_app_v0_3_2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: burst_app_v0_3_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size burst_app_v0_3_2.elf  |tee "burst_app_v0_3_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66958	   2934	  22640	  92532	  16974	burst_app_v0_3_2.elf
+'Finished building: burst_app_v0_3_2.elf.size'
+' '
+
+15:53:59 Build Finished (took 860ms)
+

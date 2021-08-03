@@ -1,0 +1,171 @@
+16:30:23 **** Incremental Build of configuration Debug for project app_sandbox ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/sw/no_burst_platform_v0_2/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:33: error: 'XPAR_AXI_GPIO_14_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   74 |  XGpio_Initialize(&gpio_rvalid, XPAR_AXI_GPIO_14_DEVICE_ID);
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                 XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:74:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:76:31: error: 'XPAR_AXI_GPIO_15_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_5_DEVICE_ID'?
+   76 |  XGpio_Initialize(&gpio_resp, XPAR_AXI_GPIO_15_DEVICE_ID);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               XPAR_AXI_GPIO_5_DEVICE_ID
+../src/helloworld.c:77:37: error: 'XPAR_AXI_GPIO_16_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   77 |  XGpio_Initialize(&gpio_resp_valid, XPAR_AXI_GPIO_16_DEVICE_ID);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:83:39: error: 'XPAR_AXI_GPIO_17_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   83 |  XGpio_Initialize(&gpio_wburst_ready, XPAR_AXI_GPIO_17_DEVICE_ID);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                       XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:87:46: error: 'XPAR_AXI_GPIO_18_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   87 |  XGpio_Initialize(&gpio_debug_current_state, XPAR_AXI_GPIO_18_DEVICE_ID);
+      |                                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                              XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:88:38: error: 'XPAR_AXI_GPIO_19_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   88 |  XGpio_Initialize(&gpio_axi_awready, XPAR_AXI_GPIO_19_DEVICE_ID);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:89:37: error: 'XPAR_AXI_GPIO_20_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_0_DEVICE_ID'?
+   89 |  XGpio_Initialize(&gpio_axi_wready, XPAR_AXI_GPIO_20_DEVICE_ID);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     XPAR_AXI_GPIO_0_DEVICE_ID
+../src/helloworld.c:90:38: error: 'XPAR_AXI_GPIO_21_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_12_DEVICE_ID'?
+   90 |  XGpio_Initialize(&gpio_axi_arready, XPAR_AXI_GPIO_21_DEVICE_ID);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      XPAR_AXI_GPIO_12_DEVICE_ID
+../src/helloworld.c:153:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  153 |    printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:154:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  154 |    printf("WREADY: %d", XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |                    ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                     |   |
+      |                     int u32 {aka long unsigned int}
+      |                    %ld
+../src/helloworld.c:155:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  155 |    printf("ARREADY: %d", XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:168:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  168 |     printf("AWREADY: %d", XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:169:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  169 |     printf("WREADY: %d", XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |                     ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |   |
+      |                      int u32 {aka long unsigned int}
+      |                     %ld
+../src/helloworld.c:170:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  170 |     printf("ARREADY: %d", XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |                      ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                       |   |
+      |                       int u32 {aka long unsigned int}
+      |                      %ld
+../src/helloworld.c:181:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  181 |      printf("STATE: %d \n",
+      |                     ~^
+      |                      |
+      |                      int
+      |                     %ld
+  182 |        XGpio_DiscreteRead(&gpio_debug_current_state, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:225:24: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  225 |      printf("AWREADY: %d",
+      |                       ~^
+      |                        |
+      |                        int
+      |                       %ld
+  226 |        XGpio_DiscreteRead(&gpio_axi_awready, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:227:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  227 |      printf("WREADY: %d",
+      |                      ~^
+      |                       |
+      |                       int
+      |                      %ld
+  228 |        XGpio_DiscreteRead(&gpio_axi_wready, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:229:24: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  229 |      printf("ARREADY: %d",
+      |                       ~^
+      |                        |
+      |                        int
+      |                       %ld
+  230 |        XGpio_DiscreteRead(&gpio_axi_arready, 1));
+      |        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        |
+      |        u32 {aka long unsigned int}
+../src/helloworld.c:240:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  240 |       printf("STATE: %d \n",
+      |                      ~^
+      |                       |
+      |                       int
+      |                      %ld
+  241 |         XGpio_DiscreteRead(&gpio_debug_current_state,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         |
+      |         u32 {aka long unsigned int}
+  242 |           1));
+      |           ~~           
+../src/helloworld.c:297:24: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  297 |        printf("STATE: %d \n",
+      |                       ~^
+      |                        |
+      |                        int
+      |                       %ld
+  298 |          XGpio_DiscreteRead(
+      |          ~~~~~~~~~~~~~~~~~~~
+      |          |
+      |          u32 {aka long unsigned int}
+  299 |            &gpio_debug_current_state, 1));
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:308:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  308 |       printf("STATE: %d \n",
+      |                      ~^
+      |                       |
+      |                       int
+      |                      %ld
+  309 |         XGpio_DiscreteRead(&gpio_debug_current_state,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         |
+      |         u32 {aka long unsigned int}
+  310 |           1));
+      |           ~~           
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app_sandbox.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/no_burst_platform_v0_2/export/no_burst_platform_v0_2/sw/no_burst_platform_v0_2/standalone_domain/bsplib/lib -o "app_sandbox.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-xilinx-eabi-gcc.exe: error: ./src/helloworld.o: No such file or directory
+'Finished building target: app_sandbox.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size app_sandbox.elf  |tee "app_sandbox.elf.size"
+arm-none-eabi-size: 'app_sandbox.elf': No such file
+'Finished building: app_sandbox.elf.size'
+' '
+
+16:30:24 Build Finished (took 730ms)
+

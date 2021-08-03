@@ -2,5 +2,7 @@
 2020.1
 May 27 2020
 20:09:33
-C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,axi_vip_v1_1_7;processing_system7_vip_v1_0_9;xilinx_vip,,,,,,
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/fifo.vhd,1627504343,vhdl,,,,fifo,,,,,,,,
 C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/fsm_01.v,1626352488,verilog,,,,fsm_01,,,,,,,,
+C:/Users/Projet/Desktop/Recherche/gallay_DDR_ZC706/workspace/AXI_DDR_ZC706/AXI_DDR_ZC706.srcs/sources_1/new/fsm_v3.vhd,1627997452,vhdl,,,,fsm_v3,,,,,,,,

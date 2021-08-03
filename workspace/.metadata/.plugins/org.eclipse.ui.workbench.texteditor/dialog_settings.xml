@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="do {" key="selection"/>
+		<item value="gpio_rack" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="gpio_rack"/>
+			<item value="resp_valid = XGpio_DiscreteRead(&amp;gpio_resp_valid, 1);"/>
+			<item value="XGpio_Initialize(&amp;gpio_wdata, XPAR_AXI_GPIO_0_DEVICE_ID);"/>
 			<item value="do {"/>
 			<item value="wdata"/>
 			<item value="atoi"/>

@@ -1,8 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ps_to_pl_fsm_constant_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_debug_app_ver2_7-Default,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_debug_app_ver2_7_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_no_burst_app_v0_1-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_no_burst_app_v0_2-Default
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_ps_to_pl_fsm_constant_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_debug_app_ver2_7-Default,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_debug_app_ver2_7_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_no_burst_app_v0_2-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_no_burst_app_v0_1-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_1-Emulation,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_burst_app_v0_3_1_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_1-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_4-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_5-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_6-Default,org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_7-Default
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_1-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_1-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_1_1-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_1_2-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_1-Default/activeLaunchMode=embrun
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_burst_app_v0_3_4-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_debug_app_ver2_4-Default/activeLaunchMode=embrun
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_debug_app_ver2_5-Default/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_debug_app_ver2_6-Default/activeLaunchMode=embrun
@@ -23,6 +29,8 @@ org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_axi_ddr_no_bur
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_axi_ddr_no_burst_application_07_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_axi_ddr_no_burst_application_ver2_1_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_axi_ddr_no_burst_application_ver2_system/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_burst_app_v0_1_2_system/activeLaunchMode=systemrun
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_burst_app_v0_3_1_system/activeLaunchMode=systemrun
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_debug_app_ver2_2_system/activeLaunchMode=systemrun
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_debug_app_ver2_2_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_debug_app_ver2_3_system/activeLaunchMode=run

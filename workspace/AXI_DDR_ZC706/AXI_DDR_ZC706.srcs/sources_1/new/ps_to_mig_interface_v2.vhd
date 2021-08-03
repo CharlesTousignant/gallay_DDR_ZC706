@@ -82,10 +82,12 @@ entity ps_to_mig_interface_v2 is
         gpio_awlen : IN std_logic_vector(7 downto 0);
         gpio_awburst : IN std_logic_vector(1 downto 0);
         gpio_wburst_ready : OUT std_logic;
+        gpio_wburst_valid : IN std_logic;
         gpio_wack : IN std_logic;
         gpio_last : IN std_logic;
         
         gpio_debug_current_state : OUT std_logic_vector(3 downto 0);
+        gpio_debug_write_fifo_filled : OUT std_logic;
         
         aresetn_in : IN std_logic;
         aresetn_sync_out : OUT std_logic
@@ -94,7 +96,7 @@ end ps_to_mig_interface_v2;
 
 architecture Behavioral of ps_to_mig_interface_v2 is
 
-type STATE_TYPE is (RESET, IDLE, WRITE_BUFFER, WRITE_FIFO_FILLING, WRITE_FIFO_FILLING_WAIT, WRITE_BURST_WAIT, WRITE_FIFO_EMPTYING, SIMPLE_WRITE, WRITE_WAIT, WRITE_RESP, READ_BUFFER_ADDR, READ, READ_WAIT, READ_BUFFER_DATA, READ_RESP);
+type STATE_TYPE is (RESET, IDLE, WRITE_BUFFER, WRITE_FIFO_FILLING, WRITE_FIFO_FILLING_WAIT, WRITE_BURST_WAIT, WRITE_FIFO_EMPTYING_WAIT, WRITE_FIFO_EMPTYING, SIMPLE_WRITE, WRITE_WAIT, WRITE_RESP, READ_BUFFER_ADDR, READ, READ_WAIT, READ_BUFFER_DATA, READ_RESP);
 signal STATE : STATE_TYPE := RESET;
 
 signal wdata_buffer : std_logic_vector(31 downto 0);
@@ -213,7 +215,7 @@ begin
                 when WRITE_FIFO_FILLING =>
                     if write_fifo_filled = '1' then
                         STATE <= WRITE_BURST_WAIT;
-                    else
+                    elsif gpio_wburst_valid = '1' then
                         STATE <= WRITE_FIFO_FILLING_WAIT;
                     end if;
                     
@@ -224,11 +226,15 @@ begin
                     
                 when WRITE_BURST_WAIT =>
                     if s_axi_awready = '1' then
-                        STATE <= WRITE_FIFO_EMPTYING;
+                        STATE <= WRITE_FIFO_EMPTYING_WAIT;
                     end if;
                     
+                when WRITE_FIFO_EMPTYING_WAIT =>
+                    STATE <= WRITE_FIFO_EMPTYING;
+                    
                 when WRITE_FIFO_EMPTYING =>
-                    if write_fifo_empty = '1' then
+                -- CORRECTION v0_1
+                    if write_fifo_empty = '1' and s_axi_wready = '1' then
                         STATE <= WRITE_WAIT;
                     end if;
                     
@@ -285,15 +291,17 @@ begin
             when WRITE_FIFO_FILLING =>
                 if write_fifo_filled /= '1' then
                     write_fifo_din <= gpio_wdata;
-                    write_fifo_wr_en <= gpio_wvalid;
+                    write_fifo_wr_en <= gpio_wburst_valid;
                 end if;
-                write_fifo_filled <= gpio_last;
+                gpio_wburst_ready <= '0';
             when WRITE_FIFO_FILLING_WAIT =>
                 write_fifo_wr_en <= '0';
+                write_fifo_filled <= gpio_last;
                 gpio_wburst_ready <= '1';
             when WRITE_BURST_WAIT =>
                 write_fifo_wr_en <= '0';
                 write_fifo_filled <= '0';
+                gpio_wburst_ready <= '1';
             when READ_BUFFER_ADDR =>
                 araddr_buffer <= gpio_address(29 downto 0);
             when others =>
@@ -302,7 +310,7 @@ begin
     end process;
 
     -- Outputs process
-    process(state)
+    process(state, write_fifo_empty, s_axi_wready)
     begin
         case STATE is
                 when IDLE =>
@@ -331,13 +339,22 @@ begin
                     s_axi_awlen <= gpio_awlen;
                     s_axi_awburst <= gpio_awburst;
                     s_axi_awvalid <= '1';
+                    s_axi_wvalid <= '0';
+                    s_axi_wlast <= '0';
+                    
+                when WRITE_FIFO_EMPTYING_WAIT =>
+                    write_fifo_rd_en <= '1';
                 
                 when WRITE_FIFO_EMPTYING =>
                     s_axi_awvalid <= '0';
                     s_axi_wdata <= write_fifo_dout;
-                    s_axi_wvalid <= '1';
                     write_fifo_rd_en <= s_axi_wready and not write_fifo_empty;
-                    s_axi_bready <= not write_fifo_empty;
+                    s_axi_wlast <= write_fifo_empty;
+                    
+                    -- Correction v_0_1_2
+                    s_axi_bready <= write_fifo_empty;
+                    
+                    s_axi_wvalid <= '1';
                     
                 when SIMPLE_WRITE =>
                     s_axi_wdata <= wdata_buffer;
@@ -400,5 +417,6 @@ begin
     end process;
     
     gpio_debug_current_state <= std_logic_vector(to_unsigned(STATE_TYPE'POS(STATE), gpio_debug_current_state'length));
+    gpio_debug_write_fifo_filled <= write_fifo_filled;
 
 end Behavioral;

@@ -1,0 +1,92 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Aug  3 18:09:00 2021
+| Host         : DESKTOP-J3N7B01 running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_v3_wrapper_drc_opted.rpt -pb design_v3_wrapper_drc_opted.pb -rpx design_v3_wrapper_drc_opted.rpx
+| Design       : design_v3_wrapper
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 11
++-----------+----------+----------------------------+------------+
+| Rule      | Severity | Description                | Violations |
++-----------+----------+----------------------------+------------+
+| REQP-1709 | Warning  | Clock output buffering     | 1          |
+| REQP-1840 | Warning  | RAMB18 async control check | 10         |
++-----------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out on the design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/ENARDEN (net: design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg_i_1__0_n_0) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[0] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[1] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#4 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[2] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#5 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/RFIFO/memory_reg/WEBWE[3] (net: design_v3_i/fsm_v3_0/inst/RFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#6 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/ENARDEN (net: design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg_i_1_n_0) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#7 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[0] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#8 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[1] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#9 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[2] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#10 Warning
+RAMB18 async control check  
+The RAMB18E1 design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg has an input control pin design_v3_i/fsm_v3_0/inst/WFIFO/memory_reg/WEBWE[3] (net: design_v3_i/fsm_v3_0/inst/WFIFO/WEBWE[0]) which is driven by a register (design_v3_i/mig_7series_0/u_design_v3_mig_7series_0_0_mig/u_ddr3_infrastructure/rstdiv0_sync_r1_reg_rep) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+
